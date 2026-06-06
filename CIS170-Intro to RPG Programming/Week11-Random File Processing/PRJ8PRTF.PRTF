@@ -1,0 +1,38 @@
+A* Printer File: PRJ8PRTF.PRTF
+A* Programmer: Chris Grimm
+A* Date: 11/02/20
+A* EXTERNAL PRINTER FILE DEFINITION FOR WUHRLYP PAYROLL REGISTER
+A*
+A                                      REF(WUSCTP)
+A          R HEADING                   SKIPB(1)
+A              2DATE(*SYS *YY)
+A                                      EDTCDE(Y)
+A            121'Page'
+A            128PAGNBR
+A                                      EDTCDE(Z)
+A              2'Christopher Doleshal'
+A                                      SPACEB(1)
+A             43'Class Offerings at Wibaux University'
+A              4'Section'
+A                                      SPACEB(2)
+A             14'Department'
+A             28'Course'
+A             44'Course Title'
+A             72'Credit(s)'
+A             89'Time'
+A            105'Days'
+A            117'Room'
+A          R DETAIL                    SPACEB(1)
+A            SECTION   R              5
+A            DEPT      R             17
+A            CRSNO     R             29
+A            CRSTTL    R             44
+A            CREDIT    R             75
+A            SECTIM    R             89EDTWRD(' : ')
+A            SECDAY    R            105
+A            ROOM      R            117
+A          R ERROR                     SPACEB(1)
+A            SECTION   R              5
+A            DEPT      R             17
+A            CRSNO     R             29
+A             44'Course Not Found!'

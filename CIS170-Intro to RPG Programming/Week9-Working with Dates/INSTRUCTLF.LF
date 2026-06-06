@@ -1,0 +1,8 @@
+A* Logical File: INSTRUCTLF.PRTF
+A* Programmer: Chris Grimm
+A* Date: 10/17/20
+A* INSTRUCTOR LOGICAL FILE FOR USE WITH CIS170 PROJ 7
+A*
+A          R INSTREC                   PFILE(WUINSTP)
+A          K ILNAME
+A          K IFNAME

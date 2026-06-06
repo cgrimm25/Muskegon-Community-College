@@ -1,0 +1,56 @@
+A* Printer File: INVREPORT.PRTF
+A* Programmer: Chris Grimm
+A* Date: 09/01/20
+A* CLOUDSERVICES INVENTORY REPORT
+A*
+A            INDARA
+A          R HEADS
+A                                      SPACEA(1)
+A                                      SKIPB(1)
+A              3DATE(*JOB)
+A                                      SPACEB(0)
+A                                      EDTWRD('        ')
+A             51'CloudServices24x7, Inc.'
+A            120'Page'
+A            126PAGNBR
+A             51' Inventory Master Report'
+A                                      SPACEB(1)
+A              2'Prod.'
+A                                      SPACEB(1)
+A             53'Weight'
+A             62'Qty. On'
+A             71'Reorder'
+A             80'Reorder'
+A             91'Shipping'
+A            102'Average'
+A            113'Current'
+A            123'Selling'
+A              2'Num.'
+A                                      SPACEB(1)
+A             11'Description'
+A             53'Lbs-Oz'
+A             62'Hand'
+A             71'Point'
+A             80'Qty'
+A             92'Cost'
+A            103'Cost'
+A            114'Cost'
+A            124'Cost'
+A                                      SPACEA(1)
+A          R DETAIL
+A              2PRODNO    R           REFFLD(INVREC/PRODNO RPGIV_5THS/CSINVP)
+A             11DESCRP    R           REFFLD(INVREC/DESCRP RPGIV_5THS/CSINVP)
+A             53SHIPWT    R           REFFLD(INVREC/SHIPWT RPGIV_5THS/CSINVP)
+A             62QTYOH     R           REFFLD(INVREC/QTYOH RPGIV_5THS/CSINVP)
+A                                      EDTCDE(K)
+A             71RORPNT    R           REFFLD(INVREC/RORPNT RPGIV_5THS/CSINVP)
+A                                      EDTCDE(K)
+A             79RORQTY    R           REFFLD(INVREC/RORQTY RPGIV_5THS/CSINVP)
+A             91SHPCST    R           REFFLD(INVREC/SHPCST RPGIV_5THS/CSINVP)
+A                                      EDTCDE(N)
+A            101AVGCST    R           REFFLD(INVREC/AVGCST RPGIV_5THS/CSINVP)
+A                                      EDTCDE(N)
+A            111CURCST    R           REFFLD(INVREC/CURCST RPGIV_5THS/CSINVP)
+A                                      EDTCDE(N)
+A            121SELLPR    R           REFFLD(INVREC/SELLPR RPGIV_5THS/CSINVP)
+A                                      EDTCDE(N)

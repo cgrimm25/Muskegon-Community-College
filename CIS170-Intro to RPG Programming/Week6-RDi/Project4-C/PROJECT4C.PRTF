@@ -1,0 +1,32 @@
+A* Printer File: PROJECT4C.PRTF
+A* Programmer: Chris Grimm
+A* Date: 09/29/20
+A* EXTERNAL PRINTER FILE DEFINITION FOR ACME WORK REPORT
+A*
+A          R HEADING
+A                                      SKIPB(1)
+A              8DATE(*YY)
+A                                      EDTCDE(Y)
+A            117'Page'
+A            123PAGNBR
+A                                      EDTCDE(Z)
+A                                      SPACEA(1)
+A             53'ACME Work Report'
+A                                      SPACEA(1)
+A              6'Social Security'
+A                                      SPACEB(2)
+A             58'Hours'
+A             10'Number'
+A                                      SPACEB(1)
+A             33'Name'
+A             58'Worked'
+A             90'Pay'
+A                                      SPACEA(2)
+A          R DETAIL
+A                                      SPACEA(1)
+A            SOCSEC    R              7REFFLD(ACMEREC/SOCSEC RPGIV_5THS/ACP001)
+A                                      EDTWRD('   -  -    ')
+A            NAME      R             27REFFLD(ACMEREC/NAME RPGIV_5THS/ACP001)
+A            WKHOURS   R             58REFFLD(ACMEREC/WKHOURS RPGIV_5THS/ACP001)
+A                                      EDTCDE(1)
+A            PAY             5S 2    87EDTCDE(1 $)

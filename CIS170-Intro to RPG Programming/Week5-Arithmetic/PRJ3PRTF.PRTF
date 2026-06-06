@@ -1,0 +1,53 @@
+A* Printer File: PRJ3PRTF.PRTF
+A* Programmer: Chris Grimm
+A* Date: 09/25/20
+A* EXTERNAL PRINTER FILE DEFINITION FOR WUHRLYP PAYROLL REGISTER
+A*
+A          REF(WUHRLYP)
+A          R HEADING
+A                                      SKIPB(1)
+A              1DATE(*SYS *YY)
+A                                      EDTCDE(Y)
+A            113'Page'
+A            123PAGNBR
+A                                      EDTCDE(Z)
+A                                      SPACEA(1)
+A             43'Wibaux University'
+A                                      SPACEA(1)
+A             43'Payroll Register'
+A                                      SPACEA(2)
+A                                      SPACEB(1)
+A              4'Social'
+A             21'Employee'
+A             44'Gross'
+A             60'Federal'
+A             76'State'
+A             89'FICA'
+A            105'Net'
+A                                      SPACEA(1)
+A             15'Initial'
+A             24'Last Name'
+A             44'Pay'
+A             62'Tax'
+A             77'Tax'
+A            105'Pay'
+A                                      SPACEA(1)
+A          R DETAIL
+A                                      SPACEA(1)
+A            EMPNO     R              3EDTWRD('   -  -    ')
+A            INITIAL   R             18
+A            LNAME     R             24
+A            GROSSPAY  R             44EDTCDE(1)
+A            FEDTAX    R             59EDTCDE(1)
+A            STATETAX  R             75EDTCDE(1)
+A            FICA      R             89EDTCDE(1)
+A            NETPAY    R            103EDTCDE(3)
+A                                      SPACEA(1)
+A          R TOTAL
+A                                      SPACEA(1)
+A             24'GRAND TOTALS'
+A            GROSSTOT  R             41EDTCDE(1 $)
+A            FEDTOT    R             56EDTCDE(1 $)
+A            STATETOT  R             71EDTCDE(1 $)
+A            FICATOT   R             85EDTCDE(1 $)
+A            NETPAYTOT R             99EDTCDE(1 $)

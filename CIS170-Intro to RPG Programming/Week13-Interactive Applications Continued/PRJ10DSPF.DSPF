@@ -1,0 +1,45 @@
+A* Display File: PRJ10DSPF.DSPF
+A* Programmer: Chris Grimm
+A* Date: 11/18/20
+A* Inquiry Retrival Screen
+A*
+A                                      REF(WUEXAMP)
+A                                      INDARA
+A          R SCRN1                     CA03(03 'F3=Exit')
+A                                  1 28'Wibaux University'
+A                                  1  2'User ID:'
+A            USER          10A  O  1 11
+A                                  1 69DATE(*JOB)
+A                                      EDTCDE(Y)
+A                                  2 27'Student Exam Results'
+A                                 10 18'Student Number'
+A            STUNO     R        I 10 41
+A  90                                  DSPATR(PC)
+A  90                                  ERRMSG('Invalid Student Number' 90)
+A                                 13 18'Type value, then Press Enter.'
+A                                 20  3'F3=Exit'
+A          R SCRN2                     CA03(03 'F3=Exit')
+A                                      CA12(12 'F12=Cancel')
+A                                  1 28'Wibaux University'
+A                                  1  2'User ID:'
+A            USER          10A  O  1 11
+A                                  1 70DATE
+A                                      EDTCDE(Y)
+A                                  2 27'Student Exam Results'
+A                                  6 18'Last Name'
+A            SLNAME    R        O  6 45
+A                                  7 18'First Name'
+A            SFNAME    R        O  7 45
+A                                  8 18'Exam 1'
+A            EXAM1     R        O  8 45EDTCDE(3)
+A                                  9 18'Exam 2'
+A            EXAM2     R        O  9 45EDTCDE(3)
+A                                 10 18'Exam 3'
+A            EXAM3     R        O 10 45EDTCDE(3)
+A                                 11 18'Exam 4'
+A            EXAM4     R        O 11 45EDTCDE(3)
+A                                 12 18'Exam 5'
+A            EXAM5     R        O 12 45EDTCDE(3)
+A                                 15  4'Press Enter to continue.'
+A                                 18  2'F3=Exit'
+A                                 18 70'F12=Cancel'

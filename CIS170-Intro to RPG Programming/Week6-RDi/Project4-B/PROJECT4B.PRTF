@@ -1,0 +1,39 @@
+A* Printer File: PROJECT4B.PRTF
+A* Programmer: Chris Grimm
+A* Date: 09/29/20
+A* EXTERNAL PRINTER FILE DEFINITION FOR PROFIT REPORT
+A*
+A          R HEADING
+A                                      SKIPB(1)
+A              1DATE(*JOB *YY)
+A                                      EDTCDE(Y)
+A             23'COMPUSELL PROFITS'
+A             52'PAGE'
+A             57PAGNBR
+A                                      EDTCDE(Z)
+A                                      SPACEA(2)
+A              2'PRODUCT'
+A             38'SELLING'
+A             48'CURRENT'
+A             60'NET'
+A                                      SPACEA(1)
+A              2'NUMBER'
+A             18'DESCRIPTION'
+A             39'PRICE'
+A             49'COST'
+A             59'PROFIT'
+A                                      SPACEA(1)
+A          R DETAIL
+A                                      SPACEA(1)
+A            PRODNO    R              2REFFLD(INVREC/PRODNO RPGIV_5THS/CSINVP)
+A                                      EDTCDE(1 $)
+A            DESCRP    R             12REFFLD(INVREC/DESCRP RPGIV_5THS/CSINVP)
+A            SELLPR    R             53REFFLD(INVREC/SELLPR RPGIV_5THS/CSINVP)
+A                                      EDTCDE(1 $)
+A            CURCST    R             63REFFLD(INVREC/CURCST RPGIV_5THS/CSINVP)
+A                                      EDTCDE(1 $)
+A            PROFIT          6S 2    74EDTCDE(1 $)
+A          R TOTAL
+A                                      SPACEB(1)
+A             46'TOTAL'
+A            TOTALPROF       8S 2    54EDTCDE(1 $)
