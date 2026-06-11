@@ -1,0 +1,22 @@
+A* Printer File: PRJ10CPRTF.PRTF
+A* Programmer: Chris Grimm
+A* Date: 04/06/21
+A* EXTERNAL PRINTER FILE DEFINITION FOR PLAYING WITH MONITOR
+A*
+A          R HEADING                   SKIPB(1)
+A                                  3   DATE(*SYS *Y)
+A                                      EDTCDE(Y)
+A                                 57'Playing with Monitor'
+A                                117'Page'
+A            PAGNBR                  123EDTCDE(Z)
+A                                  3'Christopher Doleshal'
+A                                      SPACEB(1)
+A
+A          R DBZERO                    SPACEB(2)
+A                                 79'*** Divide by Zero Not Allowed ***'
+A
+A          R ARRAYIDEX                 SPACEB(2)
+A                                 79'*** Array Index is Out of Bounds ***'
+A
+A          R VTOOSMALL                 SPACEB(2)
+A                                 79'*** Variable is too small ***'

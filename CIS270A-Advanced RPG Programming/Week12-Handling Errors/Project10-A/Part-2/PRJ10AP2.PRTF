@@ -1,0 +1,38 @@
+A* Printer File: PRJ10AP2.PRTF
+A* Programmer: Chris Grimm
+A* Date: 04/05/21
+A* EXTERNAL PRINTER FILE DEFINITION FOR WUHRLYP PAYROLL REGISTER
+A*
+A          REF(GTCPAYP)
+A
+A          R HEADING                   SKIPB(1)
+A                                  3   DATE(*SYS *Y)
+A                                      EDTCDE(Y)
+A                                 52'GTC Telephone Company'
+A                                117'Page'
+A            PAGNBR                  123EDTCDE(Z)
+A                                  3'Christopher Doleshal'
+A                                      SPACEB(1)
+A                                 40'Payment Processing Transaction Audit Report'
+A                                 20'Customer'
+A                                      SPACEB(2)
+A                                 37'Date Received'
+A                                 62'Amount'
+A
+A          R DETAIL                    SPACEB(1)
+A            CPHONE    R            20
+A            DATRCVL   R            38
+A            AMTPD     R            60EDTCDE(1 $)
+A
+A          R ERRORL                    SPACEB(1)
+A            CPHONE    R            20
+A            DATRCVL   R            38
+A            AMTPD     R            60EDTCDE(1 $)
+A                                 79'*** Customer Record Not Found ***'
+A
+A          R ERROR                     SPACEB(2)
+A            ERRORTOT       3S 0O   74
+A                                 79'*** Customers not found in Master file ***'
+A
+A          R INOUTPUT                  SPACEB(2)
+A                                 79'*** Input/Output Error Program will Terminate ***'
