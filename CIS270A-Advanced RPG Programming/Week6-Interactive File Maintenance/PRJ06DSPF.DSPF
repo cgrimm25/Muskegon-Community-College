@@ -1,0 +1,84 @@
+A* Display File: PRJ06DSPF.DSPF
+A* Date: 03/10/21
+A* EXTERNAL DISPLAY FILE DEFINITION FOR INSTRUCTOR FILE MAINTENANCE
+A*
+A          REF(MYINSTP)
+A          INDARA
+A          CA03(03 'F3=Exit')
+A          VLDCMDKEY(25)
+A          R SCRN1
+A                                  1 32'Wibaux University'
+A                                  1 71DATE(*JOB)
+A                                      EDTCDE(Y)
+A                                  2 28'Instructor File Maintenance'
+A                                  3 34'Chris Grimm'
+A                                  6 19'Social Security number'
+A            INSTNO    R        B  6 47REFFLD(INSTREC/INSTNO F20DOLESHA/MYINSTP)
+A                                      CHECK(ME)
+A                                      EDTCDE(Z)
+A  30                                  ERRMSG('Customer already exists' 30)
+A  31                                  ERRMSG('Customer not found' 31)
+A  32                                  ERRMSG('Customer not found' 32)
+A                                  7 19'Action Code'
+A            ACTION         1A  B  7 47
+A  49                                  ERRMSG('Invalid Action Code' 49)
+A                                  8 22'A= Add Record'
+A                                  9 22'C= Change Record'
+A                                 10 22'D= Delete Record'
+A                                 13 20'Type values, then enter.'
+A          R SCRN2                     CA12(12 'F12=Cancel')
+A                                  1 32'Wibaux University'
+A                                  1 71DATE(*JOB)
+A                                      EDTCDE(Y)
+A                                  2 28'Instructor File Maintenance'
+A                                  3 34'Chris Grimm'
+A                                  5 18'Social Security Number'
+A            INSTNO    R        O  5 47REFFLD(INSTREC/INSTNO F20DOLESHA/MYINSTP)
+A                                  6 18'First Name'
+A            IFNAME    R        B  6 47REFFLD(INSTREC/IFNAME F20DOLESHA/MYINSTP)
+A  42                                  DSPATR(PR)
+A                                  7 18'Last Name'
+A            ILNAME    R        B  7 47REFFLD(INSTREC/ILNAME F20DOLESHA/MYINSTP)
+A  42                                  DSPATR(PR)
+A                                  8 18'Department'
+A            DEPT      R        B  8 47REFFLD(INSTREC/DEPT F20DOLESHA/MYINSTP)
+A  42                                  DSPATR(PR)
+A                                  9 18'Salary'
+A            SALARY    R        B  9 47REFFLD(INSTREC/SALARY F20DOLESHA/MYINSTP)
+A                                      EDTCDE(1)
+A  42                                  DSPATR(PR)
+A                                 10 18'Rank'
+A            RANK      R        B 10 47REFFLD(INSTREC/RANK F20DOLESHA/MYINSTP)
+A                                      RANGE('1' '4')
+A  42                                  DSPATR(PR)
+A                                 11 18'Sex'
+A            SEX       R        B 11 47REFFLD(INSTREC/SEX F20DOLESHA/MYINSTP)
+A  46                                  ERRMSG('Only (M)ale or (F)emale allowed' 46)
+A  42                                  DSPATR(PR)
+A                                 12 18'Date of Hire'
+A            DATEIN          10L B 12 47DATFMT(*USA)
+A  42                                  DSPATR(PR)
+A                                 13 18'Marital Status'
+A            MARSTS    R        B 13 47REFFLD(INSTREC/MARSTS F20DOLESHA/MYINSTP)
+A  47                                  ERRMSG('Only (M)arried or (S)ingle allowed' 47)
+A  42                                  DSPATR(PR)
+A                                 14 18'Number of Dependents.'
+A            DEPEND    R        B 14 47REFFLD(INSTREC/DEPEND F20DOLESHA/MYINSTP)
+A                                      EDTCDE(Z)
+A  42                                  DSPATR(PR)
+A                                 15 18'Tenured (Y/N)'
+A            TENURE    R        B 15 47REFFLD(INSTREC/TENURE F20DOLESHA/MYINSTP)
+A  48                                  ERRMSG('Only (Y)es or (N)o allowed' 48)
+A  42                                  DSPATR(PR)
+A                                 16 18'Preferred Title'
+A            TITLE     R        B 16 47REFFLD(INSTREC/TITLE F20DOLESHA/MYINSTP)
+A                                      RANGE('1' '4')
+A  42                                  DSPATR(PR)
+A                                 18 19'When finished, press enter to'
+A  43                             18 50'add'
+A  44                             18 50'update'
+A                                      COLOR(YLW)
+A  45                             18 50'delete'
+A                                      COLOR(RED)
+A                                 20  3'F3=Exit,'
+A                                 20 12'F12=Cancel'

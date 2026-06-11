@@ -1,0 +1,31 @@
+A* Printer File: PRJ12APRTF.PRTF
+A* Programmer: Chris Grimm
+A* Date: 04/17/21
+A* EXTERNAL PRINTER FILE DEFINITION FOR Wibaux University Student Master File
+A          REF(WUSTDP)
+A
+A          R HEADING                   SKIPB(1)
+A                                     2DATE(*SYS *YY)
+A                                      EDTCDE(Y)
+A                                      SPACEB(0)
+A                                    48'"In-District Freshman Listing"'
+A                                   123'Page'
+A            PAGNBR                 128EDTCDE(Z)
+A                                    50'By: Christopher Doleshal'
+A                                      SPACEB(1)
+A                                     6'Student''s SSN'
+A                                      SPACEB(2)
+A                                    29'Last Name'
+A                                    58'First Name'
+A                                    84'Total Earned Credits'
+A                                   123'GPA'
+A
+A          R DETAIL                    SPACEA(1)
+A                                      SPACEB(1)
+A            STUSSN    R              7
+A            SLNAME    R             26
+A            SFNAME    R             58
+A            CRDTOT    R             91
+A                                      EDTCDE(Z)
+A            GPA       R            123
+A                                      EDTCDE(1)

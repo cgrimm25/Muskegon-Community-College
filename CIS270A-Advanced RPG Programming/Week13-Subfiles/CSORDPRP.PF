@@ -1,0 +1,19 @@
+A* Physical File: CSORDPRP.PF
+A* Programmer: Chris Grimm
+A* Date: 04/15/21
+A* Physical file CSORDPRP Compusell's Orders/Products File
+A* Updated by Jim Buck 2010
+A*
+A                                      UNIQUE
+A          R ORDERREC
+A            ORD#           5S 0       COLHDG('Order number')
+A            PRODNO         6S 0       COLHDG('Product number')
+A            QTYORD         4S 0       COLHDG('Quantity ordered')
+A            QTYHOLD        4S 0       COLHDG('Quantity on hold')
+A            LNITMNO        3S 0       COLHDG('Line item number')
+A            TRACK          7A         COLHDG('Tracking number')
+A            STS            2A         COLHDG('Product status')
+A            LINECST       12S 2       COLHDG('Line Cost')
+A          K ORD#
+A          K LNITMNO
+A          K PRODNO

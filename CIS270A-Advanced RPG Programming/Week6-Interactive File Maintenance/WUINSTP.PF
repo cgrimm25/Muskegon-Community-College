@@ -1,0 +1,25 @@
+A* Physical File: WUINSTP.PF
+A* Programmer: Chris Grimm
+A* Date: 03/10/21
+A* Wexler University Instructor File
+A*
+A          UNIQUE
+A          R INSTREC
+A            INSTNO         9S 0       TEXT('Instructor SSN')
+A            IFNAME        10A         TEXT('First Name')
+A            ILNAME        15A         TEXT('Last Name')
+A            DEPT           3A         TEXT('Course Department')
+A            SALARY         8S 2       TEXT('Salary')
+A            RANK           1A         TEXT('Academic Rank')
+A            SEX            1A         TEXT('Sex')
+A            HIRDAT         8S 0       TEXT('Date of Hire')
+A            MARSTS         1A         TEXT('Marital Status')
+A            DEPEND         2S 0       TEXT('Dependents')
+A            TENURE         1A         TEXT('Tenured')
+A            TITLE          1A         TEXT('Preferred Title')
+A            STREET        20A         TEXT('Street Address')
+A            CITY          15A         TEXT('City')
+A            STATE          2A         TEXT('State')
+A            ZIP            9S 0       TEXT('Zip')
+A            IEMAIL        30A         TEXT('Instructor Email')
+A          K INSTNO

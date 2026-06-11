@@ -1,0 +1,65 @@
+A* Display File: PRJ045DSPF.DSPF
+A* Programmer: Chris Grimm
+A* Date: 02/04/21
+A* EXTERNAL DISPLAY FILE DEFINITION FOR STUDENT GRADE CALCULATOR
+A*
+A          REF(WUSTDP)
+A          INDARA
+A          R SCRN1                     CA03(03 'F3=Exit')
+A                                  1  3'Programmer: Chris Grimm'
+A                                  1 70DATE(*JOB)
+A                                      EDTCDE(Y)
+A                                  2 33'Wibaux University'
+A                                  3 29' Student Grade Calculator'
+A                                 10 21'Student Number'
+A            STUNO     R        B 10 44REFFLD(POINTSREC/STUNO +
+A                                      F20DOLESHA/MYPOINTSP)
+A                                      EDTCDE(4)
+A  90                                  DSPATR(PC)
+A  90                                  ERRMSG('Invalid Student Number' 90)
+A                                 13 18'Type value, then Press Enter.'
+A                                 18  2'F3=Exit'
+A          R SCRN2                     CA03(03 'F3=Exit')
+A                                      CA12(12 'F12=Cancel')
+A                                  1  3'Programmer: Chris Grimm'
+A                                  1 70DATE
+A                                      EDTCDE(Y)
+A                                  2 33'Wibaux University'
+A                                  3 29' Student Grade Calculator'
+A                                  6 20'Last Name'
+A            SLNAME    R        O  6 51
+A                                  7 20'First Name'
+A            SFNAME    R        O  7 51
+A                                  8 20'Assignment Description'
+A            ASSIGNDESC    R    I  8 51REFFLD(POINTSREC/ASSIGNDESC +
+A                                      F20DOLESHA/MYPOINTSP)
+A                                  9 20'Points Received'
+A            PTSRECEIVE    R    I  9 51REFFLD(POINTSREC/PTSRECEIVE +
+A                                      F20DOLESHA/MYPOINTSP)
+A  91                                  DSPATR(PC)
+A  91                                  ERRMSG('The points received cannot +
+A                                      exceed the points possible.' 91)
+A                                 10 20'Points Possible'
+A            PTSPOSSIBL    R    I 10 51REFFLD(POINTSREC/PTSPOSSIBL +
+A                                      F20DOLESHA/MYPOINTSP)
+A  92                                  DSPATR(PC)
+A  92                                  ERRMSG('The points possible cannot +
+A                                      be zero or negative.' 92)
+A                                 13 18'Type value, then Press Enter.'
+A                                 18  2'F3=Exit'
+A                                 18 70'F12=Cancel'
+A          R SCRN3                     CA03(03 'F3=Exit')
+A                                      CA12(12 'F12=Cancel')
+A                                  1  3'Programmer: Chris Grimm'
+A                                  1 70DATE(*JOB)
+A                                      EDTCDE(Y)
+A                                  2 33'Wibaux University'
+A                                  3 29' Student Grade Calculator'
+A                                  5 32'Grade'
+A            GRADE          5Y 2O  5 44EDTWRD('  0.  %')
+A                                  7 30'Message'
+A  93        MSGF          14A  O  7 44COLOR(RED)
+A N93        MSGP          14A  O  7 44
+A                                 15 24'Press Enter to continue.'
+A                                 18  2'F3=Exit'
+A                                 18 70'F12=Cancel'

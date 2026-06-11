@@ -1,0 +1,9 @@
+/* Binding Directory: PROJ9BND.BND                         */
+/* Programmer: Chris Grimm                                 */
+/* Date: 04/01/21                                          */
+/* EXTERNAL BINDING DIRECTORY FOR BUILDING SERVICE PROGRAM */
+
+             STRPGMEXP PGMLVL(*CURRENT)
+                EXPORT    SYMBOL(MODID)
+                EXPORT    SYMBOL(MODPASS)
+             ENDPGMEXP

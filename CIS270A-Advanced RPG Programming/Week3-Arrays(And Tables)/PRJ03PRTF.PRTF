@@ -1,0 +1,26 @@
+A* Printer File: PRJ03PRTF.PRTF
+A* Programmer: Chris Grimm
+A* Date: 01/27/21
+A* EXTERNAL PRINTER FILE DEFINITION FOR GRADEBOOK REPORT
+A*
+A          REF(GRADEBOOK)
+A          R HEADING                   SKIPB(1)
+A              3DATE(*SYS *YY)
+A                                      EDTCDE(Y)
+A             47'Wexler University Student Exam Rep-'
+A                                      'ort'
+A            122'Page'
+A            PAGNBR                    127EDTCDE(Z)
+A              3'Chris Grimm'
+A                                      SPACEB(1)
+A              5'Student Number'
+A                                      SPACEB(2)
+A             38'Student Name'
+A             72'Student''s Average'
+A            111'Student''s Grade'
+A          R DETAIL                    SPACEB(1)
+A            STUNO     R              7
+A            COMBNAME      26A        37
+A            AVGSCORE       5S 2     78EDTCDE(2)
+A                                    84'%'
+A            GRADE          2A       118

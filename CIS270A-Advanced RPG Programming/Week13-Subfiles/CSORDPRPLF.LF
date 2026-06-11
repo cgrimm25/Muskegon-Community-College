@@ -1,0 +1,9 @@
+A* Logical File: CSORDPRPLF.LF
+A* Programmer: Chris Grimm
+A* Date: 04/15/21
+A* Logical file over my copy of CSORDPRP Compusell's Orders/Products File
+A*  
+A          R ORDERREC                  PFILE(MYORDPRP)
+A          K STS
+A          K ORD#
+A          K PRODNO

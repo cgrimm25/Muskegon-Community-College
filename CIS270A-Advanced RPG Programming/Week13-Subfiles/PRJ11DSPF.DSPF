@@ -1,0 +1,64 @@
+A* Display File: PRJ11DSPF.DSPF
+A* Programmer: Chris Grimm
+A* Date: 04/15/21
+A* EXTERNAL DISPLAY FILE DEFINITION FOR COMPUSELL ORDER INQUIRY AND
+A* UPDATE
+A*
+A                                      REF(MYORDPRP)
+A                                      INDARA
+A                                      CA03(03 'F3=Exit')
+A
+A          R SCRN1
+A                                  1 24'CompuSell Order Inquiry and Update'
+A                                  1  2DATE(*JOB)
+A                                      EDTCDE(Y)
+A                                 20 62'By: Chris Doleshal'
+A                                  3 24'Type SH for shipped BO for backord-
+A                                      ered'
+A                                  5 24'Product Status:'
+A            STSIN          2A  B  5 41
+A  N90                                 DSPATR(HI UL)
+A   90                                 ERRMSG('No corresponding records fo-
+A                                      und' 90)
+A                                 20  4'F3=Exit'
+A
+A          R SFLSHBO                   SFL
+A            ORD#      R        O  7  5
+A            PRODNO    R        O  7 14
+A            XQTYORD        4Y 0B  7 28CHECK(RB)
+A                                      EDTCDE(Z)
+A            XQTYHOLD       4Y 0B  7 41CHECK(RB)
+A                                      EDTCDE(Z)
+A            XTRACK         7A  B  7 56
+A            XSTS           2A  B  7 75
+A
+A          R CTLSHBO                   SFLCTL(SFLSHBO)
+A                                      SFLPAG(12)
+A                                      SFLSIZ(80)
+A                                      CA12(12 'F12=Cancel')
+A  50                                  SFLCLR
+A  51                                  SFLDSPCTL
+A  51                                  SFLDSP
+A  52                                  SFLEND(*MORE)
+A                                      OVERLAY
+A                                  1  2DATE(*JOB)
+A                                      EDTCDE(Y)
+A                                  1 37'CompuSell'
+A                                  3 30'Order Inquiry & Update'
+A                                  5  3'Order'
+A                                  6  4'Number'
+A                                  5 13'Product'
+A                                  6 14'Number'
+A                                  5 26'Quantity'
+A                                  6 27'Ordered'
+A                                  5 39'Quantity'
+A                                  6 40'on Hold'
+A                                  5 55'Tracking'
+A                                  6 56'Number'
+A                                  5 73'Product'
+A                                  6 74'Status'
+A
+A          R FOOTER
+A                                 20  3'F3=Exit'
+A                                 20 12'F12=Cancel'
+A                                 20 62'By: Chris Doleshal'

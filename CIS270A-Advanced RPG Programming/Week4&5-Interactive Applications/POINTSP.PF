@@ -1,0 +1,10 @@
+A* Physical File: POINTSP.PF
+A* Programmer: Chris Grimm
+A* Date: 02/07/21
+A* Points File for CIS270A Project 4 and 5
+A*
+A          R POINTSREC
+A            STUNO          9S 0       TEXT('STUDENT NUMBER')
+A            ASSIGNDESC    20A         TEXT('ASSIGNMENT DESCRIPTION')
+A            PTSRECEIVE     3S 0       TEXT('POINTS RECEIVED')
+A            PTSPOSSIBL     3S 0       TEXT('POINTS POSSIBLE')

@@ -1,0 +1,37 @@
+A* Printer File: PROFITR.PRTF
+A* Programmer: Chris Grimm
+A* Date: 01/17/21
+A* EXTERNAL PRINTER FILE DEFINITION FOR PROFIT REPORT
+A*
+A          R HEADING                   SKIPB(1)
+A              1DATE(*JOB *YY)
+A                                      EDTCDE(Y)
+A             23'COMPUSELL PROFITS'
+A             52'PAGE'
+A            PAGNBR                    57EDTCDE(Z)
+A             90'Christopher Doleshal'
+A              1'PRODUCT'                  SPACEB(2)
+A             56' SELLING'
+A             66'CURRENT'
+A             78'NET'
+A             85'COMMISSION'
+A                                      SPACEA(1)
+A              1'NUMBER'
+A              9'DESCRIPTION'
+A             57'PRICE'
+A             67'COST'
+A             77' PROFIT'
+A             88'RATE'
+A                                      SPACEA(1)
+A          R DETAIL                    SPACEA(1)
+A            PRODNO    R              1REFFLD(INVREC/PRODNO RPGIV_5THS/CSINVP)
+A            DESCRP    R              9REFFLD(INVREC/DESCRP RPGIV_5THS/CSINVP)
+A            SELLPR    R             56REFFLD(INVREC/SELLPR RPGIV_5THS/CSINVP)
+A                                      EDTCDE(1)
+A            CURCST    R             66REFFLD(INVREC/CURCST RPGIV_5THS/CSINVP)
+A                                      EDTCDE(1)
+A            PROFIT         6S 2     75EDTCDE(1 $)
+A            COMMISSION     6S 2     85EDTCDE(1 $)
+A          R TOTAL                     SPACEB(1)
+A             66'TOTAL'
+A            TOTALPROF      7S 2     74EDTCDE(1 $)
