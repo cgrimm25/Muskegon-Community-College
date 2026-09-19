@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letter Guessing Game</title>
+    <!--
+        Filename: letters_game.html
+        Institution: Muskegon Community College
+        Semester: Fall 2026
+        CIS-228-F01X JavaScript
+        Assignment 2 - Data Types & Operators
+        Letter Picking Assignment
+        Author: Chris Grimm
+        Date: 9/13/26
+        Description: Asks the user to pick a letter between A-Z and tells them if they are too high or 
+          too low until they guess correctly, displaying the number of guesses.
+
+      -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        line-height: 1.5;
+        color: #333;
+      }
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+      }
+      .game-container {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+      }
+      .message {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        border-radius: 4px;
+      }
+      .too-high {
+        background: #ffd6d6;
+        color: #c0392b;
+      }
+      .too-low {
+        background: #d6ffd6;
+        color: #27ae60;
+      }
+      .correct {
+        background: #d5f5e3;
+        color: #27ae60;
+        text-align: center;
+      }
+      .guesses {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        text-align: center;
+      }
+      input {
+        padding: 0.5rem;
+        width: 60%;
+        max-width: 200px;
+        font-size: 1rem;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 0.5rem;
+      }
+      button:hover {
+        background: #2980b9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Letter Guessing Game</h1>
+    <div class="game-container">
+      <p>I'm thinking of a letter between A and Z. Can you guess it?</p>
+      <input
+        type="character"
+        id="guessInput"
+        min="A"
+        max="Z"
+        placeholder="Enter guess"
+      />
+      <button id="guessBtn">Submit Guess</button>
+      <div id="message" class="message"></div>
+      <div class="guesses">Guesses: <span id="guessCount">0</span></div>
+    </div>
+
+    <script>
+      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const targetLetter = letters[Math.floor(Math.random() * letters.length)];
+      let guessCount = 0;
+      const messageDiv = document.getElementById("message");
+      const guessCountSpan = document.getElementById("guessCount");
+      const guessBtn = document.getElementById("guessBtn");
+      const guessInput = document.getElementById("guessInput");
+
+      guessBtn.addEventListener("click", () => {
+        // Standarize to uppercase and trim white space
+        const guess = guessInput.value.trim().toUpperCase();
+
+        // Validate input is one letter from A to Z
+        if (!/^[A-Z]$/.test(guess)) {
+          messageDiv.textContent = "Please enter a single letter (A-Z).";
+          messageDiv.className = "message";
+          guessInput.value = "";
+          guessInput.focus();
+          return;
+        }
+
+        // Increment guess count
+        guessCount++;
+        guessCountSpan.textContent = guessCount;
+
+        // Let user know if their guess is too high, low, or they guessed it correctly
+        if (guess > targetLetter) {
+          messageDiv.textContent =
+            "Too high (later in the alphabet)! Try again.";
+          messageDiv.className = "message too-high";
+        } else if (guess < targetLetter) {
+          messageDiv.textContent =
+            "Too low (earlier in the alphabet)! Try again.";
+          messageDiv.className = "message too-low";
+        } else {
+          messageDiv.textContent = `Congratulations! You guessed the letter in ${guessCount} guesses!`;
+          messageDiv.className = "message correct";
+
+          // Game is over, the user won
+          guessBtn.disabled = true;
+          guessInput.disabled = true;
+        }
+
+        guessInput.value = "";
+        guessInput.focus();
+      });
+    </script>
+  </body>
+</html>
