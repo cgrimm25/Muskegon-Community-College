@@ -1,0 +1,50 @@
+/*
+  Filename: styles.js
+  Institution: Muskegon Community College
+  Semester: Fall 2026
+  CIS-228-F01X JavaScript
+  Assignment 3 Control Flow and Looping
+  Author: Chris Grimm
+  Date: 9/19/26
+  Description: CSS for dynamic_input.html
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+header, main, footer {
+  margin-bottom: 2rem;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.output {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
