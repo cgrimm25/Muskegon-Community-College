@@ -1,10 +1,13 @@
-// Chris Doleshal
-// CIS-280 Java Programming
-// 9/19/24
-// Assignment #1 Number Range Validator
-
-
-
+/*
+ * File: Main.java
+ * Author: Chris Grimm
+ * Date: 9/19/24
+ * Institution: Muskegon Community College
+ * CIS-280 Java Programming 
+ * Project 2 - Decision Structures
+ * Description: Calls the class NumberRangeValidator which contains
+ *   the primary logic for this project.
+*/
 
 package mcc.homeWork;
 

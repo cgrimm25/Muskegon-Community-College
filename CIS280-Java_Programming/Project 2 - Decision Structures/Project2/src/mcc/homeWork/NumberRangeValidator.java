@@ -1,5 +1,18 @@
+/*
+ * File: NumberRangeValidator.java
+ * Author: Chris Grimm
+ * Date: 9/19/24
+ * Institution: Muskegon Community College
+ * CIS-280 Java Programming 
+ * Project 2 - Decision Structures
+ * Description: Asks the user for the min and max value to establish 
+ *   a range to 
+*/
+
 package mcc.homeWork;
+
 import java.util.Scanner;
+
 public class NumberRangeValidator {
 	
 	public void validateRange() {
@@ -12,7 +25,7 @@ public class NumberRangeValidator {
 	  System.out.print("Welcome to the Number Range Validator.\n");
 	  System.out.print("Please set a minimum and maximum limit.\n\n"); 
 	    
-	  // Establish range
+	  // Establish Range
 	  do {
 	    
 	    System.out.print("Minimum limit: ");
