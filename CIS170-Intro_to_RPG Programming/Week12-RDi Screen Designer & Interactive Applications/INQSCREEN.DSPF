@@ -1,0 +1,52 @@
+A* Printer File: INQSCREEN.DSPF
+A* Programmer: Chris Grimm
+A* Date: 11/11/20
+A* EXTERNAL Display FILE DEFINITION FOR CloudServices 24x7, Inc.
+A* Product Supplier Inquiry
+A*
+A                                      INDARA
+A                                      PRINT
+A                                      CA03(03 'F3=Exit')
+A          R SCRN1
+A                                  1 28'CloudServices 24x7, Inc.'
+A                                  1  2'User ID:'
+A            USER          10A  O  1 11
+A                                  1 69DATE(*JOB)
+A                                      EDTCDE(Y)
+A                                  2 26'Product Supplier Inquiry'
+A                                 10 18'Product number'
+A            PRODIN         6Y OB 10 44EDTCDE(Z)
+A  90
+A  95                                  DSPATR(PC)
+A  90                                  ERRMSG('Invalid product number' 90)
+A  95                                  ERRMSG('Product Number valid, but -
+A                                      Supplier code not found' 95)
+A                                 13 18'Type value, then Press Enter.'
+A                                 20  3'F3=Exit'
+A          R SCRN2
+A                                  1 30'CloudServices 24x7, Inc.'
+A                                  1  2'User ID:'
+A            USER          10A  O  1 11
+A                                  1 70DATE
+A                                      EDTCDE(Y)
+A                                  2 31'Supplier Information'
+A                                  6 18'Supplier Code'
+A            SUPCOD    R        O  6 42REFFLD(SUPREC/SUPCOD RPGIV_5THS/CSSUPP)
+A                                  7 18'Name.'
+A            SNAME     R        O  7 42REFFLD(SUPREC/SNAME RPGIV_5THS/CSSUPP)
+A                                  8 18'Contact person'
+A            CONTAC    R        O  8 42REFFLD(SUPREC/CONTAC RPGIV_5THS/CSSUPP)
+A                                  9 18'Street'
+A            SSTRET    R        O  9 42REFFLD(SUPREC/SSTRET RPGIV_5THS/CSSUPP)
+A                                 10 18'City'
+A            SCITY     R        O 10 42REFFLD(SUPREC/SCITY RPGIV_5THS/CSSUPP)
+A                                 11 18'State'
+A            SSTAT     R        O 11 42REFFLD(SUPREC/SSTAT RPGIV_5THS/CSSUPP)
+A                                 12 18'Zip'
+A            SZIP      R        O 12 42REFFLD(SUPREC/SZIP RPGIV_5THS/CSSUPP)
+A                                      EDTWRD('     -    ')
+A                                 13 18'Phone'
+A            SPHONE    R        O 13 42REFFLD(SUPREC/SPHONE RPGIV_5THS/CSSUPP)
+A                                      EDTWRD('(   )   -    ')
+A                                 17  5'Press Enter to continue.'
+A                                 20  2'F3=Exit'

@@ -1,0 +1,26 @@
+A* Physical File: WUSCTP.PF
+A* Programmer: Chris Grimm
+A* Date: 04/17/21
+A* WIBAUX University Current Sections File
+A*
+A                                      UNIQUE
+A          R SECREC
+A            SECTION        5S 0       TEXT('Section Number')
+A                                      COLHDG('SECTION')
+A            DEPT           3A         TEXT('Course Department')
+A                                      COLHDG('DEPT')
+A            CRSNO          3S 0       TEXT('Course Number')
+A                                      COLHDG('CRSNO')
+A            SECTIM         4S 0       TEXT('Meeting Time')
+A                                      COLHDG('SECTIM')
+A            SECDAY         3A         TEXT('Meeting Days')
+A                                      COLHDG('SECDAY')
+A            ROOM           4A         TEXT('Room')
+A                                      COLHDG('ROOM')
+A            CAP            3S 0       TEXT('Maximum Enroll.')
+A                                      COLHDG('CAP')
+A            CURENL         3S 0       TEXT('Current Enroll.')
+A                                      COLHDG('CURENL')
+A            INSTNO         9S 0       TEXT('Instructor SSN')
+A                                      COLHDG('INSTNO')
+A          K SECTION

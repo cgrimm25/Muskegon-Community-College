@@ -1,0 +1,68 @@
+A* Printer File: INVREPORT.PRTF
+A* Programmer: Chris Grimm
+A* Date: 09/01/20
+A* Muskegon Community College
+A* CIS-170 Intro to RPG Programming
+A* Project 1 - CloudServices 24/7 Inventory Report
+A* Description: CLOUDSERVICES INVENTORY REPORT
+A*
+A                                           INDARA
+A               R HEADS
+A                                           SPACEA(1)
+A                                           SKIPB(1)
+A                                          3DATE(*JOB)
+A                                           SPACEB(0)
+A                                           EDTWRD('        ')
+A                                         51'CloudServices24x7, Inc.'
+A                                        120'Page'
+A                                        126PAGNBR
+A                                         51'Inventory Master Report'
+A                                           SPACEB(1)
+A                                          2'Prod.'
+A                                           SPACEB(1)
+A                                         53'Weight'
+A                                         62'Qty. On'
+A                                         71'Reorder'
+A                                         80'Reorder'
+A                                         91'Shipping'
+A                                        102'Average'
+A                                        113'Current'
+A                                        123'Selling'
+A                                          2'Num.'
+A                                           SPACEB(1)
+A                                         11'Description'
+A                                         53'Lbs-Oz'
+A                                         62'Hand'
+A                                         71'Point'
+A                                         80'Qty'
+A                                         92'Cost'
+A                                        103'Cost'
+A                                        114'Cost'
+A                                        124'Cost'
+A          R DETAIL                         SPACEA(1)
+A            PRODNO    R                   2REFFLD(INVREC/PRODNO *LIBL/CSI-
+A                                           NVP)
+A            DESCRP    R                  11REFFLD(INVREC/DESCRP *LIBL/CSI-
+A                                           NVP)
+A            SHIPWT    R                  53REFFLD(INVREC/SHIPWT *LIBL/CSI-
+A                                           NVP)
+A            QTYOH     R                  62REFFLD(INVREC/QTYOH *LIBL/CSI-
+A                                           NVP)
+A                                           EDTCDE(K)
+A            RORPNT    R                  71REFFLD(INVREC/RORPNT *LIBL/CSI-
+A                                           NVP)
+A                                           EDTCDE(K)
+A            RORQTY    R                  79REFFLD(INVREC/RORQTY *LIBL/CSI-
+A                                           NVP)
+A            SHPCST    R                  91REFFLD(INVREC/SHPCST *LIBL/CSI-
+A                                           NVP)
+A                                           EDTCDE(N)
+A            AVGCST    R                 101REFFLD(INVREC/AVGCST *LIBL/CSI-
+A                                           NVP)
+A                                           EDTCDE(N)
+A            CURCST    R                 111REFFLD(INVREC/CURCST *LIBL/CSI-
+A                                           NVP)
+A                                           EDTCDE(N)
+A            SELLPR    R                 121REFFLD(INVREC/SELLPR *LIBL/CSI-
+A                                           NVP)
+A                                           EDTCDE(N)   

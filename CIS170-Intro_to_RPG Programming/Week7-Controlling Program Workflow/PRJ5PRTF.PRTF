@@ -1,0 +1,54 @@
+A* Printer File: PRJ5PRTF.PRTF
+A* Programmer: Chris Grimm
+A* Date: 10/08/20
+A* EXTERNAL PRINTER FILE DEFINITION FOR STUDENT POPULATION REPORT
+A*
+A          R HEADING
+A              1DATE(*SYS *YY)
+A                                      EDTCDE(Y)
+A             33'Wibaux University'
+A             72'Page'
+A             80PAGNBR
+A                                      EDTCDE(Z)
+A             25'Student Population Summary Report'
+A                                      SPACEB(1)
+A             33'Student Residency'
+A                                      SPACEB(1)
+A              6'Classification'
+A                                      SPACEB(1)
+A             23'In-District'
+A             37'Out-Of-District'
+A             54'International'
+A             70'Total'
+A          R TOTAL
+A                                      SPACEB(1)
+A              8'Freshman'
+A                                      SPACEB(1)
+A            IFRESHTOT  4  0         26EDTCDE(1)
+A            OFRESHTOT  4  0         42EDTCDE(1)
+A            FFRESHTOT  4  0         59EDTCDE(1)
+A            FRESHTOT   5  0         70EDTCDE(1)
+A              8'Sophomores'
+A                                      SPACEB(1)
+A            ISOPHTOT   4  0         26EDTCDE(1)
+A            OSOPHTOT   4  0         42EDTCDE(1)
+A            FSOPHTOT   4  0         59EDTCDE(1)
+A            SOPHTOT    5  0         70EDTCDE(1)
+A              8'Juniors'
+A                                      SPACEB(1)
+A            IJUNTOT    4  0         26EDTCDE(1)
+A            OJUNTOT    4  0         42EDTCDE(1)
+A            FJUNTOT    4  0         59EDTCDE(1)
+A            JUNTOT     5  0         70EDTCDE(1)
+A              8'Seniors'
+A                                      SPACEB(1)
+A            ISENTOT    4  0         26EDTCDE(1)
+A            OSENTOT    4  0         42EDTCDE(1)
+A            FSENTOT    4  0         59EDTCDE(1)
+A            SENTOT     5  0         70EDTCDE(1)
+A              8'Total'
+A                                      SPACEB(1)
+A            IDISTOT    5  0         25EDTCDE(1)
+A            ODISTOT    5  0         41EDTCDE(1)
+A            FDISTOT    5  0         58EDTCDE(1)
+A            TOTALTOT   6  0         69EDTCDE(1)

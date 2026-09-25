@@ -1,0 +1,21 @@
+A* Printer File: PRJ08PRTF.PRTF
+A* Programmer: Chris Grimm
+A* Date: 03/14/21
+A* EXTERNAL PRINTER FILE DEFINITION FOR CSCSTP CUSTOMER MASTER FILE
+A          REF(CSCSTP)
+A          R HEADING                   SKIPB(1)
+A              2DATE(*SYS *YY)         EDTCDE(Y)
+A             16'Fun With Modular Programming'
+A             50'Page'
+A            PAGNBR                    58EDTCDE(Z) SPACEA(1)
+A          R DETAIL                    SPACEA(1)
+A              2'Customer:'            SPACEB(1)
+A            CUSTNO    R               12
+A              2'User ID:'             SPACEB(1)
+A            USERID        33A  O      12
+A              2'Password:'            SPACEB(1)
+A            PASSWORD       9A  O      12
+A              2'Last Four of Phone:'  SPACEB(1)
+A            LAST4PHONE     4A  O      22
+A              2'Send Email Reminder:' SPACEB(1)
+A            SENDEMAILR     10L O      23DATFMT(*USA)

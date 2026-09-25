@@ -1,0 +1,38 @@
+A* Printer File: PRJ6PRTF.PRTF
+A* Programmer: Chris Grimm
+A* Date: 10/16/20
+A* EXTERNAL PRINTER FILE DEFINITION FOR CSCSTP CUSTOMER MASTER FILE
+A*
+A                                      REF(CSCSTP)
+A          R HEADING                   SKIPB(1)
+A              1DATE(*SYS *YY)
+A                                      EDTCDE(Y)
+A             14'Fun With Characters'
+A             36'Page'
+A            PAGNBR                    43EDTCDE(Z)
+A                                      SPACEA(1)
+A          R DETAIL                    SPACEA(1)
+A              2'Customer:'
+A            CUSTNO    R              11
+A                                      SPACEB(1)
+A              2'User ID:'
+A            USERID        33A        10
+A                                      SPACEB(1)
+A              2'Password:'
+A            PASSWORD       9A        11
+A                                      SPACEB(1)
+A              2'Name:'
+A            NAME          26A         7
+A                                      SPACEB(1)
+A              2'Zip:'
+A            ZIP           10A         6
+A                                      SPACEB(1)
+A              2'Phone:'
+A            PHONE         14A         8
+A                                      SPACEB(1)
+A              2'Year:'
+A            YEAROUT        4A         7
+A                                      SPACEB(1)
+A              2'Balance:'
+A            BALANCE       10A        10
+A                                      SPACEA(1)

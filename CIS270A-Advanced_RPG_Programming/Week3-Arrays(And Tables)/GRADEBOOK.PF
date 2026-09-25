@@ -1,0 +1,13 @@
+A* Physical File: GRADEBOOK.PF
+A* Programmer: Chris Grimm
+A* Date: 01/25/21
+A* Wexler University Student Exam File
+A*
+A          UNIQUE
+A          R EXAMREC
+A            STUNO          9S 0       TEXT('Student Number')
+A            SFNAME        10A         TEXT('First Name')
+A            SLNAME        15A         TEXT('Last Name')
+A*Twenty five scores per student, each is a 3-digit whole number
+A            SCORES        75A
+A          K STUNO

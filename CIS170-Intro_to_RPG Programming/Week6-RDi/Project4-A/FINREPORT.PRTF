@@ -1,0 +1,47 @@
+A* Printer File: FINREPORT.PRTF
+A* Programmer: Chris Grimm
+A* Date: 09/28/20
+A* EXTERNAL PRINTER FILE DEFINITION FOR CSCFINP BALANCE REPORT
+A*
+A          R HEADING
+A                                      SPACEA(1)
+A              5DATE(*SYS)
+A                                      EDTCDE(Y)
+A             53'CloudServices24x7, Inc.'
+A            118'Page'
+A            125PAGNBR
+A             48'Customer Balance and Payment Report'
+A                                      SPACEA(1)
+A              5'Cust.'
+A             17'Purchase'
+A             30'Purchase'
+A             44'Down'
+A             57'Balance'
+A             73'Monthly'
+A                                      SPACEB(1)
+A              5'Num.'
+A             18'Amount'
+A             32'Date'
+A             43'Payment'
+A             59'Owed'
+A             73'Payment'
+A                                      SPACEA(1)
+A          R DETAIL
+A                                      SPACEB(1)
+A             34'-'
+A            PURMON                    35EDTCDE(3)
+A            CUSTNO                    65
+A            FINAMT                    17EDTWRD('      0.  ')
+A            PURDAY                    32EDTCDE(3)
+A            DWNPAY                    42EDTWRD('      0.  ')
+A            BALDUE                    57EDTWRD('      0.  ')
+A            MONTHPAY                  72EDTWRD('     0.  ')
+A                                      SPACEA(1)
+A          R TOTAL
+A                                      SPACEA(1)
+A              7'Totals'
+A              9'Number of customers processed'
+A            TOTALDOWN                 40EDTWRD('     $0.  ')
+A            TOTALOWED                 55EDTWRD('     $0.  ')
+A            TOTALPAY                  69EDTWRD('     $0.  ')
+A            CUSTCOUNT                 31EDTWRD('  0')

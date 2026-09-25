@@ -1,0 +1,26 @@
+A* Printer File: PRJ2PRTF.PRTF
+A* Programmer: Chris Grimm
+A* Date: 09/10/20
+A* EXTERNAL PRINTER FILE DEFINITION FOR GTCSTP REPORT
+A*
+A          REF(GTCSTP)
+A          R HEADING
+A                                      SKIPB(1)
+A              1DATE(*SYS *YY)
+A                                      EDTCDE(Y)
+A             23'GTC CUSTOMER ACCOUNTS'
+A             52'PAGE'
+A             57PAGNBR
+A                                      EDTCDE(Z)
+A                                      SPACEA(2)
+A              2' LAST NAME'
+A             17' CUSTOMER PHONE'
+A             32'CURRENT BILL AMT.'
+A             50'TOTAL AMOUNT OWED'
+A                                      SPACEA(1)
+A          R DETAIL
+A                                      SPACEA(1)
+A            CLNAME    R              2
+A            CPHONE    R             17EDTWRD('0(   )   -    ')
+A            CURBIL    R             32EDTCDE(J)
+A            AMTOWE    R             50EDTCDE(J $)

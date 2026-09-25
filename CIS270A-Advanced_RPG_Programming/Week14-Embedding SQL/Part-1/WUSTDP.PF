@@ -1,0 +1,44 @@
+A* Physical File: WUSTDP.PF
+A* Programmer: Chris Grimm
+A* Date: 04/17/21
+A* Wibaux University Student Master File
+A*
+A                                      UNIQUE
+A          R STUDREC
+A            STUSSN         9S 0       TEXT('Student SSN')
+A                                      COLHDG('STUSSN')
+A            SLNAME        15A         TEXT('Last Name')
+A                                      COLHDG('SLNAME')
+A            SFNAME        10A         TEXT('First Name')
+A                                      COLHDG('SFNAME')
+A            SMNAME        10A         TEXT('Middle Name')
+A                                      COLHDG('SMNAME')
+A            STREET        20A         TEXT('Street Address')
+A                                      COLHDG('STREET')
+A            CITY          15A         TEXT('City')
+A                                      COLHDG('CITY')
+A            STATE          2A         TEXT('State')
+A                                      COLHDG('STATE')
+A            ZIP            9S 0       TEXT('Zip+4')
+A                                      COLHDG('ZIP')
+A            PHONE         10S 0       TEXT('Phone')
+A                                      COLHDG('PHONE')
+A            CRDTOT         3S 0       TEXT('Tot. Earned Credits')
+A                                      COLHDG('CRDTOT')
+A            DCODE          1A         TEXT('District Code')
+A                                      COLHDG('DCODE')
+A            ADMDAT         8S 0       TEXT('Date Admitted')
+A                                      COLHDG('ADMDAT')
+A            CLASS          1A         TEXT('Classification')
+A                                      COLHDG('CLASS')
+A            GRDDAT         8A         TEXT('Date Graduated')
+A                                      COLHDG('GRDDAT')
+A            SDEPT          3A         TEXT('Dept. of Major')
+A                                      COLHDG('SDEPT')
+A            GPA            3S 2       TEXT('Grade Point Avg.')
+A                                      COLHDG('GPA')
+A            DEGREE         3A         TEXT('Degree granted')
+A                                      COLHDG('DEGREE')
+A            SEMAIL        30A         TEXT('Student Email')
+A                                      COLHDG('SEMAIL')
+A          K STUSSN
