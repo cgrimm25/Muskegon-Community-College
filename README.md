@@ -1,2 +1,2 @@
 # Muskegon-Community-College
-Muskegon Community College Software Development Classes
+Muskegon Community College Software Development Courses
