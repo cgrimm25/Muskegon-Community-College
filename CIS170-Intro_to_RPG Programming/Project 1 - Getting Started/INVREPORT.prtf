@@ -1,0 +1,66 @@
+     A*=========================================================================
+     A* Institution: Muskegon Community College
+     A* Course:      CIS170 - Intro to RPG Programming
+     A* Instructor:  Char Parker
+     A* Project:     Project #1 - CloudServices 24/7 Inventory Report
+     A* File:        INVREPORT.PRTF
+     A* Programmer:  Chris Grimm
+     A* Date:        09/01/2020
+     A*
+     A* Description:
+     A*   External printer file definition containing report headings,
+     A*   detail formatting, and spacing specifications for the
+     A*   CloudServices 24/7 inventory summary report.
+     A*
+     A* Used By:     PROJECT1.RPGLE
+     A*=========================================================================
+     A
+     A                                      INDARA
+     A          R HEADS
+     A                                      SPACEA(1)
+     A                                      SKIPB(1)
+     A                                     3DATE(*JOB)
+     A                                      EDTWRD('  /  /  ')
+     A                                    51'CloudServices24x7, Inc.'
+     A                                   120'Page'
+     A                                   126PAGNBR
+     A                                    51'Inventory Master Report'
+     A                                      SPACEB(1)
+     A                                     2'Prod.'
+     A                                      SPACEB(1)
+     A                                    53'Weight'
+     A                                    62'Qty. On'
+     A                                    71'Reorder'
+     A                                    80'Reorder'
+     A                                    91'Shipping'
+     A                                   102'Average'
+     A                                   113'Current'
+     A                                   123'Selling'
+     A                                     2'Num.'
+     A                                      SPACEB(1)
+     A                                    11'Description'
+     A                                    53'Lbs-Oz'
+     A                                    62'Hand'
+     A                                    71'Point'
+     A                                    80'Qty'
+     A                                    92'Cost'
+     A                                   103'Cost'
+     A                                   114'Cost'
+     A                                   124'Cost'
+     A          R DETAIL                    SPACEA(1)
+     A            PRODNO    R              2REFFLD(PRODNO *LIBL/CSINVP)
+     A            DESCRP    R             11REFFLD(DESCRP *LIBL/CSINVP)
+     A            SHIPWT    R             53REFFLD(SHIPWT *LIBL/CSINVP)
+     A            QTYOH     R             62REFFLD(QTYOH *LIBL/CSINVP)
+     A                                      EDTCDE(K)
+     A            RORPNT    R             71REFFLD(RORPNT *LIBL/CSINVP)
+     A                                      EDTCDE(K)
+     A            RORQTY    R             79REFFLD(RORQTY *LIBL/CSINVP)
+     A            SHPCST    R             91REFFLD(SHPCST *LIBL/CSINVP)
+     A                                      EDTCDE(N)
+     A            AVGCST    R            101REFFLD(AVGCST *LIBL/CSINVP)
+     A                                      EDTCDE(N)
+     A            CURCST    R            111REFFLD(CURCST *LIBL/CSINVP)
+     A                                      EDTCDE(N)
+     A            SELLPR    R            121REFFLD(SELLPR *LIBL/CSINVP)
+     A                                      EDTCDE(N)
