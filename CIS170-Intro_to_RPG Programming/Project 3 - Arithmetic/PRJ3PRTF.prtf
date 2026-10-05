@@ -1,0 +1,62 @@
+     A*=========================================================================
+     A* Institution: Muskegon Community College
+     A* Course:      CIS170 - Intro to RPG Programming
+     A* Instructor:  Char Parker
+     A* Project:     Project #3 - Wibaux University Payroll Register
+     A* File:        PRJ3PRTF.PRTF
+     A* Programmer:  Chris Grimm
+     A* Date:        09/25/2020
+     A*
+     A* Description:
+     A*   External printer file definition specifying report titles, system
+     A*   date, zero-suppressed page numbering (EDTCDE(Z)), column headers,
+     A*   detail rows with SSN edit words (EDTWRD), and a grand total summary
+     A*   format displaying accumulated payroll metrics with floating dollar
+     A*   signs (EDTCDE(1 $)).
+     A*
+     A* Used By:     PROJECT3.RPGLE
+     A*=========================================================================
+     A                                      REF(WUHRLYP)
+     A          R HEADING                   SKIPB(1)
+     A                                     1DATE(*SYS *YY)
+     A                                      EDTCDE(Y)
+     A                                   113'Page'
+     A                                   123PAGNBR
+     A                                      EDTCDE(Z)
+     A                                      SPACEA(1)
+     A                                    43'Wibaux University -
+     A                                      Payroll Register'
+     A                                      SPACEA(2)
+     A                                      SPACEB(1)
+     A                                     4'Social'
+     A                                    21'Employee'
+     A                                    44'Gross'
+     A                                    60'Federal'
+     A                                    76'State'
+     A                                    89'FICA'
+     A                                   105'Net'
+     A                                      SPACEA(1)
+     A                                    15'Initial'
+     A                                    24'Last Name'
+     A                                    44'Pay'
+     A                                    62'Tax'
+     A                                    77'Tax'
+     A                                   105'Pay'
+     A                                      SPACEA(1)
+     A          R DETAIL                    SPACEA(1)
+     A            EMPNO     R              3EDTWRD('   -  -    ')
+     A            INITIAL        1A       18
+     A            LNAME     R             24
+     A            GROSSPAY       6  2     44EDTCDE(1)
+     A            FEDTAX         6  2     59EDTCDE(1)
+     A            STATETAX       5  2     75EDTCDE(1)
+     A            FICA           5  2     89EDTCDE(1)
+     A            NETPAY         6  2    103EDTCDE(3)
+     A                                      SPACEA(1)
+     A          R TOTAL                     SPACEA(1)
+     A                                    24'GRAND TOTALS'
+     A            GROSSTOT       8  2     41EDTCDE(1 $)
+     A            FEDTOT         8  2     56EDTCDE(1 $)
+     A            STATETOT       7  2     71EDTCDE(1 $)
+     A            FICATOT        7  2     85EDTCDE(1 $)
+     A            NETPAYTOT      8  2     99EDTCDE(1 $)
