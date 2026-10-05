@@ -1,0 +1,36 @@
+     A*=========================================================================
+     A* Institution: Muskegon Community College
+     A* Course:      CIS170 - Intro to RPG Programming
+     A* Instructor:  Char Parker
+     A* Project:     Project #2 - GTC Customer Accounts Report
+     A* File:        PRJ2PRTF.PRTF
+     A* Programmer:  Chris Grimm
+     A* Date:        09/10/2020
+     A*
+     A* Description:
+     A*   External printer file definition specifying report titles, system
+     A*   job date, dynamic page numbering, column headings, and detail row
+     A*   field layouts with edit words (EDTWRD) and edit codes (EDTCDE).
+     A*
+     A* Used By:     PROJECT2.RPGLE
+     A*=========================================================================
+     A
+     A                                      REF(GTCSTP)
+     A          R HEADING                   SKIPB(1)
+     A                                     1DATE(*SYS *YY)
+     A                                      EDTCDE(Y)
+     A                                    23'GTC CUSTOMER ACCOUNTS'
+     A                                    52'PAGE '
+     A                                    57PAGNBR
+     A                                      EDTCDE(Z)
+     A                                      SPACEA(2)
+     A                                     2'LAST NAME'
+     A                                    17'CUSTOMER PHONE'
+     A                                    32'CURRENT BILL AMT.'
+     A                                    50'TOTAL AMOUNT OWED'
+     A                                      SPACEA(1)
+     A          R DETAIL                    SPACEA(1)
+     A            CLNAME    R              2
+     A            CPHONE    R             17EDTWRD('0(   )   -    ')
+     A            CURBIL    R             32EDTCDE(J)
+     A            AMTOWE    R             50EDTCDE(J $)

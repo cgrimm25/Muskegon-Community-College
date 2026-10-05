@@ -17,7 +17,7 @@
       //
       // Input File:  CSINVP     (DDS Physical File - Inventory Master)
       // Output File: INVREPORT  (DDS Printer File - Spool Report)
-      //=======================================================================
+      //========================================================================
 
       // ------Control Options----------------------------------------------
         Ctl-Opt Option(*Nodebugio);
