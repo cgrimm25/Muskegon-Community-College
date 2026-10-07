@@ -1,14 +1,22 @@
 /*
-  Filename: script.js
-  Institution: Muskegon Community College
-  Semester: Fall 2026
-  CIS-228-F01X JavaScript
-  Assignment 3 Control Flow and Looping
-  Author: Chris Grimm
-  Date: 9/19/26
-  Description: JavaScript for dynamic_input.html. Provides validaiton
-    for input boxes ensuring the numbers entered are valid and letting the user know
-    if their number is positive, negative or zero; or their number corresponds to a specific day of the week.
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-228-F01X JavaScript
+// Instructor:  Clayton Corrello
+// Project:     Assignment #3 - Control Flow and Looping
+// File Name:   script.js
+// Author:      Chris Grimm
+// Date:        09/19/2026
+//
+// Description:
+//   Implements client-side dynamic evaluation logic for user inputs. Contains functions
+//   to validate numeric input, determine polarity (positive, negative, zero) using
+//   if-else branch structures, and map numerical indices (0-6) to weekdays via switch statements.
+//
+// Input File:  None (DOM User Input)
+// Output File: Dynamic DOM Container Updates (#if-else-output, #switch-output)
+//==================================================================================
 */
 
 function runIfElse() {

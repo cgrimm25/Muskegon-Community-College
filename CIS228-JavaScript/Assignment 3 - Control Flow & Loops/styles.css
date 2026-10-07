@@ -1,12 +1,21 @@
 /*
-  Filename: styles.js
-  Institution: Muskegon Community College
-  Semester: Fall 2026
-  CIS-228-F01X JavaScript
-  Assignment 3 Control Flow and Looping
-  Author: Chris Grimm
-  Date: 9/19/26
-  Description: CSS for dynamic_input.html
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-228-F01X JavaScript
+// Instructor:  Clayton Corrello
+// Project:     Assignment #3 - Control Flow and Looping
+// File Name:   styles.css
+// Author:      Chris Grimm
+// Date:        09/19/2026
+//
+// Description:
+//   Defines global layout styles, container dimensions, typography, button hover states,
+//   and presentation formatting for output feedback panels across the application.
+//
+// Input File:  None
+// Output File: Rendered Browser Stylesheet
+//==================================================================================
 */
 
 body {

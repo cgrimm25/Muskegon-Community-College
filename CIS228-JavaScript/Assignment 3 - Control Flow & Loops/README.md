@@ -1,71 +1,61 @@
-# Assignment: Dynamic Input for Control Flows and Loops
+# Assignment 3 - Control Flow and Looping: Dynamic Input
 
-## Objective
-Modify the starter application to accept dynamic user input instead of using hardcoded values. This assignment focuses on two core JavaScript concepts:
-1. **If-Else Statements** — Accept a number input and determine if it is positive, negative, or zero.
-2. **Switch Statements** — Accept a day number (0–6) and output the corresponding day name.
+## Overview
+This laboratory assignment demonstrates JavaScript control flow, decision branching, and user-driven input processing within the browser runtime. Building upon a baseline static starter project, the application replaces hardcoded values with dynamic DOM input fields. It evaluates numeric polarity (positive, negative, zero) using multi-branch `if-else` conditionals and maps integer indices (`0`–`6`) to calendar weekday names via a `switch` statement with fallback error handling.
 
 ---
 
-## Step 1: Project Files Setup
+## File Directory
 
-Create the following files in your project directory:
-- `dynamic_input.html` — HTML structure containing input controls, buttons, and display containers.
-- `styles.css` — Layout styling, button formatting, and `.output` container presentation.
-- `script.js` — JavaScript logic for handling dynamic input and conditional flow.
+### Web Source Objects
+* **`dynamic_input.html`**: The primary single-page application markup providing semantic containers, numeric inputs, execution buttons, and dynamic output containers.
+* **`script.js`**: Client-side logic reading user inputs from the DOM, coercing values to numeric types, and executing conditional decision trees.
+* **`styles.css`**: Application stylesheet defining layout geometry, button interaction states, and output card styling.
 
-Ensure `dynamic_input.html` links to both `styles.css` and `script.js`.
+### Reference Starter Package (`Example/`)
+* **`index.html`**: Original starter file demonstrating hardcoded implementations of five core control flow concepts (`if-else`, `switch`, `for`, `while`, `do-while`).
+* **`script.js`**: Baseline script executing hardcoded iterations and static conditional logic.
+* **`styles.css`**: Baseline presentation stylesheet.
+* **`README.md`**: Starter package documentation describing the baseline lab structure.
 
----
-
-## Step 2: Implement the HTML Structure
-
-In `dynamic_input.html`, build two `<section>` elements within `<main>`:
-
-1. **Section 1: If-Else (Positive or Negative Number)**
-   - Input element: `<input type="number" id="num-input" placeholder="Enter a number">`
-   - Trigger button: `<button onclick="runIfElse()">Run</button>`
-   - Output container: `<div id="if-else-output" class="output"></div>`
-
-2. **Section 2: Switch (Day of the Week)**
-   - Input element: `<input type="number" id="day-input" placeholder="Enter day (0-6)">`
-   - Trigger button: `<button onclick="runSwitch()">Run</button>`
-   - Output container: `<div id="switch-output" class="output"></div>`
+### Documentation & Reference Materials (`Docs/`)
+* **`Assignment #3 Instructions.pdf`**: Official laboratory guidelines, functional requirements, and submission deliverables.
 
 ---
 
-## Step 3: Implement the JavaScript Functions
+## Instructor Resources & Video Walkthroughs
 
-Open `script.js` and implement the logic for each function using dynamic values read from the DOM:
-
-### 1. `runIfElse()`
-- Read the input value using `document.getElementById('num-input').value`.
-- Convert the value into a numeric type using `Number()`.
-- Validate the value and set the inner text of `#if-else-output`:
-  - If input is not a number: display `"Please enter a valid number."`
-  - If number > 0: display `"The number X is positive."`
-  - If number < 0: display `"The number X is negative."`
-  - If number === 0: display `"The number is zero."`
-
-### 2. `runSwitch()`
-- Read the input value from `#day-input` and convert it with `Number()`.
-- Use a `switch` statement to map numbers `0` through `6` to day names:
-  - `0` → Sunday
-  - `1` → Monday
-  - `2` → Tuesday
-  - `3` → Wednesday
-  - `4` → Thursday
-  - `5` → Friday
-  - `6` → Saturday
-- Provide a `default` case to handle numbers outside `0–6` or invalid entries:
-  - Display `"Invalid day."` (or `"Invalid day! Please enter a number from (0-6)."`)
-- Display the resulting message in `#switch-output`.
+* [CIS 228 JavaScript Control Flow Lab Assignment](https://www.youtube.com/watch?v=yxnE5XNocRE) – Instructor lab walkthrough demonstrating control flow mechanics, baseline starter review, and dynamic input conversion.
+* [CIS 228 JavaScript Flows and Functions](https://www.youtube.com/watch?v=9vomgcqEwig) – Topic lecture covering Boolean logic, conditional execution, switch branching, and code scoping.
 
 ---
 
-## Hints & Tips
+## Technical Program Flow & Execution Summary
 
-### Selecting Input Values
-Use `document.getElementById('input-id').value` to read values from an `<input>` element. Because input values are always retrieved as strings, convert them using `Number()`:
-```javascript
-const num = Number(document.getElementById('num-input').value);
+The application processes user data through two discrete, event-driven pathways triggered by button click events:
+
+| Component / Function | Target Input | Evaluation Structure | Execution Behavior & Output Scope |
+| :--- | :--- | :--- | :--- |
+| **`runIfElse()`** | `#num-input` | `if / else if / else` | Evaluates numeric sign. Injects polarity feedback (`positive`, `negative`, or `zero`) into `#if-else-output`. |
+| **`runSwitch()`** | `#day-input` | `switch (day)` | Evaluates day integer (0–6) to resolve corresponding day strings (`Sunday`–`Saturday`). Triggers `default` case on invalid range. |
+
+---
+
+## Key JavaScript Concepts Demonstrated
+
+* **Dynamic DOM Reading**: Extracting real-time string values from `<input>` controls via `document.getElementById().value`.
+* **Type Conversion**: Explicit coercion of string input to numbers using `Number()`.
+* **Multi-Branch Conditionals**: Evaluating directional inequality (`num > 0`, `num < 0`) and zero equality.
+* **Multi-Way Switching**: Implementing clean mapping with `case` blocks, explicit `break` termination, and default fallback handling.
+* **DOM Output Injection**: Dynamically updating `#if-else-output` and `#switch-output` via `.innerText`.
+
+---
+
+## Getting Started
+
+1. Clone or download this repository to your local machine.
+2. Ensure `Assignment #3 Instructions.pdf` is stored in the `Docs/` directory.
+3. Open `dynamic_input.html` directly in any modern web browser (Chrome, Edge, Firefox).
+4. Enter test values:
+   * **If-Else Section**: Enter positive, negative, and zero values to verify polarity messages.
+   * **Switch Section**: Enter integers `0` through `6` to verify weekday mappings, and out-of-range numbers to verify default validation.
