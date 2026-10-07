@@ -9,6 +9,7 @@ This laboratory assignment demonstrates JavaScript control flow, decision branch
 
 ### Web Source Objects
 * **`dynamic_input.html`**: The primary single-page application markup providing semantic containers, numeric inputs, execution buttons, and dynamic output containers.
+* **`starter.html`**: The baseline assignment HTML scaffold provided for conversion to dynamic inputs.
 * **`script.js`**: Client-side logic reading user inputs from the DOM, coercing values to numeric types, and executing conditional decision trees.
 * **`styles.css`**: Application stylesheet defining layout geometry, button interaction states, and output card styling.
 
