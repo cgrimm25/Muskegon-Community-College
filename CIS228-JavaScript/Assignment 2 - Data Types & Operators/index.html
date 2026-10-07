@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <!--
+    //==================================================================================
+    // Institution: Muskegon Community College
+    // Semester:    Fall 2026
+    // Course:      CIS-228-F01X JavaScript
+    // Instructor:  Clayton Corrello
+    // Project:     Assignment #2 - Data Types & Operators
+    // File Name:   index.html
+    // Author:      Clayton Corrello (Adapted by Chris Grimm)
+    // Date:        09/13/2026
+    //
+    // Description:
+    //   Baseline reference file provided for Assignment 2. Implements an interactive
+    //   numeric guessing game that generates a random integer between 1 and 100, evaluates
+    //   user guesses, provides high/low feedback, and counts the total number of attempts.
+    //
+    // Input File:  None (DOM User Input)
+    // Output File: Browser Webpage View, Dynamic DOM Feedback
+    //==================================================================================
+    -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        line-height: 1.5;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+      }
+
+      .game-container {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+      }
+
+      .message {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        border-radius: 4px;
+      }
+
+      .too-high {
+        background: #ffd6d6;
+        color: #c0392b;
+      }
+
+      .too-low {
+        background: #d6ffd6;
+        color: #27ae60;
+      }
+
+      .correct {
+        background: #d5f5e3;
+        color: #27ae60;
+        text-align: center;
+      }
+
+      .guesses {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        text-align: center;
+      }
+
+      input {
+        padding: 0.5rem;
+        width: 60%;
+        max-width: 200px;
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 0.5rem;
+      }
+
+      button:hover {
+        background: #2980b9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Number Guessing Game</h1>
+    <div class="game-container">
+      <p>I'm thinking of a number between 1 and 100. Can you guess it?</p>
+      <input type="number" id="guessInput" min="1" max="100" placeholder="Enter guess">
+      <button id="guessBtn">Submit Guess</button>
+      <div id="message" class="message"></div>
+      <div class="guesses">Guesses: <span id="guessCount">0</span></div>
+    </div>
+
+    <script>
+      const targetNumber = Math.floor(Math.random() * 100) + 1;
+      let guessCount = 0;
+      const messageDiv = document.getElementById('message');
+      const guessCountSpan = document.getElementById('guessCount');
+      const guessBtn = document.getElementById('guessBtn');
+      const guessInput = document.getElementById('guessInput');
+
+      guessBtn.addEventListener('click', () => {
+        const guess = parseInt(guessInput.value);
+        guessCount++;
+        guessCountSpan.textContent = guessCount;
+
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+          messageDiv.textContent = 'Please enter a number between 1 and 100.';
+          messageDiv.className = 'message';
+          return;
+        }
+
+        if (guess > targetNumber) {
+          messageDiv.textContent = 'Too high! Try again.';
+          messageDiv.className = 'message too-high';
+        } else if (guess < targetNumber) {
+          messageDiv.textContent = 'Too low! Try again.';
+          messageDiv.className = 'message too-low';
+        } else {
+          messageDiv.textContent = `Congratulations! You guessed the number in ${guessCount} guesses!`;
+          messageDiv.className = 'message correct';
+          guessBtn.disabled = true;
+        }
+
+        guessInput.value = '';
+        guessInput.focus();
+      });
+    </script>
+  </body>
+
+</html>

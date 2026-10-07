@@ -13,7 +13,7 @@ This laboratory assignment introduces foundational JavaScript syntax, browser ru
 * **`console_example.html`**: Examples showing JavaScript output, variable inspection, and debugging workflows via the browser developer console (`console.log()`).
 
 ### Documentation & Reference Materials (`Docs/`)
-* **`Docs/Assignment #1 Instructions.pdf`**: Detailed assignment prompt, requirements, and grading criteria.
+* **`Assignment #1 Instructions.pdf`**: Detailed assignment prompt, requirements, and grading criteria.
 
 ---
 

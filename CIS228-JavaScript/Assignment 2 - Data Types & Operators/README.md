@@ -1,44 +1,56 @@
-# LETTER GUESSING GAME - JAVASCRIPT LOGIC SEQUENCE
+# Assignment 2 - Data Types & Operators: Letter Guessing Game
 
 ## Overview
-This game demonstrates basic JavaScript control flow concepts for a CIS-228-F01X JavaScript course at Muskegon Community College. The game generates a random letter between A and Z and prompts the user to guess it.
+This laboratory assignment demonstrates JavaScript primitive data types, string manipulation, array indexing, and conditional decision logic. Converted from a baseline numeric guessing model, the application generates a pseudorandom target character from the English alphabet (`A`–`Z`) and processes user guesses through an event-driven loop. The game normalizes case sensitivity, verifies character boundaries using regular expressions, provides alphabetical guidance hints ("too high" / "too low"), and dynamically alters DOM styling and control state upon victory.
 
-## Logic Flow
+---
 
-1. **Initialization** (letters_game.html:97)
-   - Generate random target letter: 
-     letters[Math.floor(Math.random() * letters.length)]
-   - Initialize guessCount = 0
-   - Cache DOM elements: messageDiv, guessCountSpan, guessBtn, guessInput
+## File Directory
 
-2. **Event Setup** (letters_game.html:105)
-   -Add click event listener to the “Submit Guess” button
+### Web Source Objects
+* **`letters_game.html`**: The complete single-page application containing markup, internal CSS styles, and client-side JavaScript logic for the letter-guessing game.
+* **`index.html`**: The original starter number-picking game file from the course example archive used as the baseline for conversion.
 
-3. **Per-Guess Processing** (on button click): 
-   a. Get user input and convert to uppercase: guessInput.value.trim().toUpperCase()
-   b. Validate input: If not a single letter A-Z, show error message and exit 
-   b. If letter passes validation, increment guessCount and update display otherwise tell the user  to insert a letter
-   d. **Compare guess to target*:      
-      - If guess > targetLetter: Display “Too high (later in the alphabet)! Try again.”  (red        background)
-      - If guess < targetLetter: Display “Too low (earlier in the alphabet)! Try again.'” (green   background)
-      - If guess === targetLetter:
-        - Display “Congratulations! You guessed the letter in X guesses!”
-        - Turn message green with centered text
-        - Disable the guess button & input box
-   e. Clear input field and focus back on it
+### Documentation & Reference Materials (`Docs/`)
+* **`Assignment #2 Instructions.pdf`**: Official assignment requirements, video instructions, and submission deliverables.
+* **`README.md for the Letter Picking Example.pdf`**: Reference documentation outlining the instructor's logic sequence, character conversion math (`charCodeAt`), and control flow architecture.
+
+---
+
+## Instructor Resources & Video Walkthroughs
+
+* [CIS 228 Live Demo Number Picking Game](https://www.youtube.com/watch?v=w1PAkhGVBUU) – Instructor assignment walkthrough covering the baseline number-picking game demonstration, code walkthrough, and conversion guidelines.
+* [CIS 228 JavaScript Variables and Expressions](https://www.youtube.com/watch?v=aD8UJziG6JE) – Lecture video covering data storage, naming standards, expression hierarchies, and variable mechanics.
+
+---
+
+## Technical Program Flow & Execution Summary
+
+The script operates through an event-driven flow triggered by the `click` event listener on `#guessBtn`:
+
+| Stage | Mechanism / Code | Purpose & Execution Behavior |
+| :--- | :--- | :--- |
+| **1. Initialization** | `letters[Math.floor(Math.random() * letters.length)]` | Selects a random character from the string lookup array (`A`–`Z`) and caches DOM element pointers. |
+| **2. Sanitization** | `guessInput.value.trim().toUpperCase()` | Trims whitespace and normalizes character casing to ensure case-insensitive parity ('a' = 'A'). |
+| **3. Input Validation** | `/^[A-Z]$/.test(guess)` | Validates that the input contains exactly one valid alphabetic character before incrementing guess counters. |
+| **4. Comparison Logic** | `guess > targetLetter` / `guess < targetLetter` | Evaluates character sequence to return contextual feedback (`too-high` or `too-low` style classes). |
+| **5. State Termination** | `guess === targetLetter` | Displays congratulatory message, renders total attempt count, and disables input fields (`disabled = true`). |
+
+---
 
 ## Key JavaScript Concepts Demonstrated
-- **Random letter generation within an array**: letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    letters[Math.floor(Math.random() * letters.length)]
-- **Input normalization**: toUpperCase() for case-insensitive handling
-- **Comparison operators**: >, <, ===
-- **Conditional logic**: if / else if / else chain
-- **DOM manipulation**: textContent, className, disabled
-- **Event handling**: addEventListener('click', ...)
-- **Variable tracking**: Counter variable (guessCount) persistence
 
-## Student Takeaways
-- How to generate a random letter within the A-Z range
-- Structuring multi-branch conditional logic
-- Updating the webpage dynamically without refresh
-- Tracking state across multiple user interactions
+* **Character Lookup & Randomization**: Using `Math.random()` scaled against `letters.length` to index into an alphabetical sequence.
+* **Input Normalization**: Utilizing `trim()` and `toUpperCase()` for sanitized comparison against target constants.
+* **Regular Expression Validation**: Enforcing strict character sets via `/^[A-Z]$/` prior to processing state transitions.
+* **Relational Comparison**: Comparing alphabetical characters directly using relational operators (`>`, `<`, `===`).
+* **Dynamic DOM Manipulation**: Updating `.textContent`, switching CSS utility classes (`.too-high`, `.too-low`, `.correct`), and toggling element `disabled` properties.
+
+---
+
+## Getting Started
+
+1. Clone or download this repository to your local machine.
+2. Ensure `Assignment #2 Instructions.pdf` and `README.md for the Letter Picking Example.pdf` are placed in the `Docs/` directory.
+3. Open `letters_game.html` directly in any modern web browser (Chrome, Edge, Firefox).
+4. Enter a letter between **A** and **Z**, submit your guess, and use the alphabetical hints to find the target character.

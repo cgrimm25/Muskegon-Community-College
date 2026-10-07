@@ -1,22 +1,31 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Letter Guessing Game</title>
     <!--
-        Filename: letters_game.html
-        Institution: Muskegon Community College
-        Semester: Fall 2026
-        CIS-228-F01X JavaScript
-        Assignment 2 - Data Types & Operators
-        Letter Picking Assignment
-        Author: Chris Grimm
-        Date: 9/13/26
-        Description: Asks the user to pick a letter between A-Z and tells them if they are too high or 
-          too low until they guess correctly, displaying the number of guesses.
-
-      -->
+    //==================================================================================
+    // Institution: Muskegon Community College
+    // Semester:    Fall 2026
+    // Course:      CIS-228-F01X JavaScript
+    // Instructor:  Clayton Corrello
+    // Project:     Assignment #2 - Data Types & Operators
+    // File Name:   letters_game.html
+    // Author:      Chris Grimm
+    // Date:        09/13/2026
+    //
+    // Description:
+    //   An interactive letter-guessing game that generates a random letter (A-Z)
+    //   and evaluates user guesses. Normalizes input to uppercase, validates single-letter
+    //   entries via regex, provides alphabetical hints (too high/low), tracks total
+    //   attempts, and disables inputs upon a successful guess.
+    //
+    // Input File:  None (DOM User Input)
+    // Output File: Browser Webpage View, Dynamic DOM Feedback
+    //==================================================================================
+    -->
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -26,45 +35,54 @@
         line-height: 1.5;
         color: #333;
       }
+
       h1 {
         text-align: center;
         color: #2c3e50;
       }
+
       .game-container {
         background: #f8f9fa;
         padding: 2rem;
         border-radius: 8px;
         margin-top: 1rem;
       }
+
       .message {
         margin: 1rem 0;
         padding: 0.5rem;
         border-radius: 4px;
       }
+
       .too-high {
         background: #ffd6d6;
         color: #c0392b;
       }
+
       .too-low {
         background: #d6ffd6;
         color: #27ae60;
       }
+
       .correct {
         background: #d5f5e3;
         color: #27ae60;
         text-align: center;
       }
+
       .guesses {
         font-size: 1.2rem;
         margin-top: 1rem;
         text-align: center;
       }
+
       input {
         padding: 0.5rem;
         width: 60%;
         max-width: 200px;
         font-size: 1rem;
       }
+
       button {
         padding: 0.5rem 1rem;
         font-size: 1rem;
@@ -75,22 +93,18 @@
         cursor: pointer;
         margin-left: 0.5rem;
       }
+
       button:hover {
         background: #2980b9;
       }
     </style>
   </head>
+
   <body>
     <h1>Letter Guessing Game</h1>
     <div class="game-container">
       <p>I'm thinking of a letter between A and Z. Can you guess it?</p>
-      <input
-        type="character"
-        id="guessInput"
-        min="A"
-        max="Z"
-        placeholder="Enter guess"
-      />
+      <input type="text" id="guessInput" maxlength="1" placeholder="Enter guess" />
       <button id="guessBtn">Submit Guess</button>
       <div id="message" class="message"></div>
       <div class="guesses">Guesses: <span id="guessCount">0</span></div>
@@ -145,4 +159,5 @@
       });
     </script>
   </body>
+
 </html>
