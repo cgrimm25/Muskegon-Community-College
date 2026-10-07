@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Closure & Scope Demo</title>
+        <link rel="stylesheet" href="style.css">
+        <!--
+        //==================================================================================
+        // Institution: Muskegon Community College
+        // Semester:    Fall 2026
+        // Course:      CIS-228-F01X JavaScript
+        // Instructor:  Clayton Corrello
+        // Project:     Assignment #4 - Advanced Scope and Nested Scope (Starter Example)
+        // File Name:   index.html
+        // Author:      Clayton Corrello (Adapted by Chris Grimm)
+        // Date:        09/28/2026
+        //
+        // Description:
+        //   Baseline reference starter file demonstrating JavaScript closures, nested functions,
+        //   and lexical scope isolation using a logger factory pattern.
+        //
+        // Input File:  None (DOM User Interaction)
+        // Output File: Browser Webpage View, Terminal Output Display (#output)
+        //==================================================================================
+        -->
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>JS Closure & Scope Demo</h1>
+            <p class="description">This demo shows how a function (the closure) remembers variables from its parent scope, even after the parent function has finished executing.</p>
+
+            <div class="control-group">
+                <button id="button1">Log for 'User Module' (Scope 1)</button>
+            </div>
+
+            <div class="control-group">
+                <button id="button2">Log for 'Data Processor' (Scope 2)</button>
+            </div>
+
+            <div class="log-output">
+                <h2>Output Log:</h2>
+                <pre id="output"></pre>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

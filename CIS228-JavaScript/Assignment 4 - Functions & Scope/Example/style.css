@@ -1,0 +1,92 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-228-F01X JavaScript
+// Instructor:  Clayton Corrello
+// Project:     Assignment #4 - Advanced Scope and Nested Scope (Starter Example)
+// File Name:   style.css
+// Author:      Clayton Corrello (Adapted by Chris Grimm)
+// Date:        09/28/2026
+//
+// Description:
+//   Baseline stylesheet providing flexbox alignment, container formatting, button
+//   hover states, and terminal output styling for the scope demonstration.
+//
+// Input File:  None
+// Output File: Rendered Browser Stylesheet
+//==================================================================================
+*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #555;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+.log-output {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.log-output h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+#output {
+    background-color: #333;
+    color: #e4e4e4;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+}

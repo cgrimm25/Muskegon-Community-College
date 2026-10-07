@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Closure & Scope Demo</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--
+    //==================================================================================
+    // Institution: Muskegon Community College
+    // Semester:    Fall 2026
+    // Course:      CIS-228-F01X JavaScript
+    // Instructor:  Clayton Corrello
+    // Project:     Assignment #4 - Advanced Scope and Nested Scope
+    // File Name:   assignment.html
+    // Author:      Chris Grimm
+    // Date:        09/28/2026
+    //
+    // Description:
+    //   Provides the semantic HTML structure and user interface controls for demonstrating
+    //   JavaScript closures and lexical scoping. Contains trigger buttons to increment
+    //   independent counter instances and an output terminal area to display retained state.
+    //
+    // Input File:  None (DOM User Interaction)
+    // Output File: Browser Webpage View, Dynamic DOM Container Updates (#output)
+    //==================================================================================
+    -->
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Assignment 4 JavaScript Advanced Scope and Nested Scope</h1>
+      <p class="description">
+        This assignment shows how a function (the closure) remembers variables from
+        its parent scope, even after the parent function has finished executing.
+      </p>
+
+      <div class="control-group">
+        <button id="button1">Increment 'User Counter' (Scope 1)</button>
+      </div>
+
+      <div class="control-group">
+        <button id="button2">Increment 'Data Counter' (Scope 2)</button>
+      </div>
+
+      <div class="counter-output">
+        <h2>Counter Output:</h2>
+        <pre id="output"></pre>
+      </div>
+    </div>
+
+    <script src="assignment.js"></script>
+  </body>
+
+</html>
