@@ -7,9 +7,13 @@ This project generates a formatted CloudServices 24/7 Inventory Report. Develope
 
 ## File Directory
 
+### Source & Database Objects
 * **`PROJECT1.rpgle`**: The core application logic written in free-form RPGLE. Implements file declarations, an overflow indicator (`EndOfPage`), a priming read loop, dynamic page header control, detail line printing, and clean program termination (`*INLR = *ON`).
 * **`INVREPORT.prtf`**: The external printer file Data Description Specifications (DDS). Defines page header constants, job dates (`*JOB`), dynamic page numbers (`PAGNBR`), detail row field mapping via `REFFLD`, and numeric edit formatting (`EDTCDE(K)` and `EDTCDE(N)`).
 * **`DATA.savf`**: An IBM i binary save file container housing the compiled `CSINVP` physical data file along with all original test database records. Enables complete environment reproduction on any IBM i system.
+
+### Documentation & Reference Materials (`Docs/`)
+* **`Chapter 2 - Getting Started.pdf`**: Lecture slide presentation covering introductory RPGLE program structure, file description specifications, cycle vs. free-form looping, and basic IBM i output formatting.
 * **`CSINVP.PF-DTA.pdf`**: A reference printout showing the raw production inventory records contained within the `CSINVP` database file.
 * **`PROJECT 1-Output.pdf`**: The final spool file execution output demonstrating proper line spacing, numeric mask formatting, and multi-page overflow control.
 * **`Project 1 Instructions.pdf`**: The course assignment specifications, requirements outline, and original visual printchart mockup.
