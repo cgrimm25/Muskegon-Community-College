@@ -1,0 +1,52 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-228-F01X JavaScript
+// Instructor:  Clayton Corrello
+// Project:     Demonstration of Collections, Arrays and Objects
+// File Name:   style.css
+// Author:      Clayton Corrello (Adapted by Chris Grimm)
+// Date:        10/08/2026
+//
+// Description:
+//   Provides clean styling, layout centering, header theming, and preformatted
+//   code container borders for the demonstration panels.
+//
+// Input File:  None
+// Output File: Rendered Browser Stylesheet
+//==================================================================================
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 2rem;
+  text-align: center;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+pre {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 4px;
+}
