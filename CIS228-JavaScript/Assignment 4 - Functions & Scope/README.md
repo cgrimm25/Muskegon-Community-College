@@ -27,7 +27,7 @@ This laboratory assignment demonstrates advanced JavaScript scoping mechanisms, 
 
 * [CIS 228 Live Video Advanced Scope and Functions](https://www.youtube.com/watch?v=eMqTrQt43AA) – Instructor live session covering advanced scope principles, function contexts, and implementation guidance.
 * [CIS 228 JavaScript Nested Functions](https://www.youtube.com/watch?v=6to_U4ey0r8) – Topic lecture detailing functional abstraction, scope chains, lexical scoping, and design patterns.
-* [CIS 228 JavaScript Advanced Scope Concepts](https://www.youtube.com/watch?v=o76HlgCch4s) – Assignment walkthrough focusing on counter factories, closures, execution contexts, and persistent state.
+* [CIS 228 Nested Scope Assignment Review](https://www.youtube.com/watch?v=xJr7lmt3NQo) – Assignment review covering nested lexical scope, closure implementation details, and factory patterns.
 
 ---
 
