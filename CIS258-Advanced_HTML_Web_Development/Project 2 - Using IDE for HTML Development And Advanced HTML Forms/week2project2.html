@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Library Volunteer Application Form</title>
+        <link href="ZookeeperForm.css" rel="stylesheet">
+        <script src="modernizr-latest.js"></script>
+        <!--
+        //==================================================================================
+        // Institution: Muskegon Community College
+        // Semester:    Fall 2026
+        // Course:      CIS-258-F02X Advanced HTML Web Development
+        // Instructor:  Christopher VanOosterhout
+        // Project:     Project #2 - Using IDE for HTML Developmet and Advanced HTML Forms
+        // File Name:   week2project2.html
+        // Live URL:    http://157.245.246.41:8014/Chapter04/week2project2.html 
+        // Author:      Chris Grimm
+        // Date:        10/18/2026
+        //
+        // Description:
+        //   An HTML5 web form for a Library Volunteer Application, adapted from the 
+        //   textbook's Zookeeper Form. Features client-side form validation including 
+        //   a 10-digit regular expression pattern on the required telephone field, 
+        //   input placeholders for user guidance, whole-year step increments for the 
+        //   age field, and custom volunteer area checkboxes.
+        //
+        // Input File:  None
+        // Output File: Browser Webpage View
+        //==================================================================================
+        -->
+        <style>
+            textarea:required:invalid,
+            input:required:invalid {
+                background-color: lightyellow;
+            }
+        </style>
+
+        <script>
+
+            function validateComments(input) {
+                if (input.value.length < 20) {
+                    input.setCustomValidity("You need to comment in more detail.");
+                }
+                else {
+                    // There's no error. Clear any error message.
+                    input.setCustomValidity("");
+                }
+            }
+
+            function validateForm() {
+
+                if (!Modernizr.input.required) {
+                    // The required attribute is not supported, so you need to check the
+                    // required fields yourself.
+
+                    // First, get an array that holds all the elements.
+                    var inputElements = document.getElementById("libraryVolunteerForm").elements;
+
+                    // Next, move through that array, checking eaching element.
+                    for (var i = 0; i < inputElements.length; i++) {
+
+                        // Check if this element is required.
+                        if (inputElements[i].hasAttribute("required")) {
+                            // If this elemnent is required, check if it has a value.
+                            // If not, the form fails validation, and this function returns false.
+                            if (inputElements[i].value == "") {
+                                alert("Custom required-field validation failed. The form will not be submitted.");
+                                return false;
+                            }
+                        }
+                    }
+
+                    // If you reach this point, everything worked out and the browser
+                    // can submit the form.
+                    return true;
+                }
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <h1>Library Volunteer Application Form</h1>
+        <form id="libraryVolunteerForm" action="#" onsubmit="return validateForm()">
+            <p><i>Please complete the form. Mandatory fields are marked with a </i><em>*</em></p>
+            <fieldset>
+                <legend>Contact Details</legend>
+                <label for="name">Name <em>*</em></label>
+                <input id="name" placeholder="Chris Grimm" autofocus required><br>
+                <label for="telephone">Telephone<em>*</em></label>
+                <input id="telephone" placeholder="6165551234" pattern="[0-9]{10}" title="Please enter a 10-digit phone number with no dashes or spaces" required><br>
+                <label for="email">Email <em>*</em></label>
+                <input id="email" type="email" placeholder="chrisgrimm@example.com" required><br>
+            </fieldset>
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="birthDate">Birth Date<em>*</em></label>
+                <input id="birthDate" type="date" required><br>
+
+                <label for="age">Age<em>*</em></label>
+                <input id="age" type="number" min="0" max="120" step="1" required><br>
+                <label for="gender">Gender</label>
+                <select id="gender">
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select><br>
+                <label for="comments">Why are you interested in volunteering at the library?<em>*</em></label>
+                <textarea id="comments" oninput="validateComments(this)" required></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Pick Your Preferred Volunteer Areas</legend>
+                <label for="shelving"><input id="shelving" type="checkbox"> Shelving Books</label>
+                <label for="reading"><input id="reading" type="checkbox"> Children's Storytime</label>
+                <label for="tech"><input id="tech" type="checkbox"> Computer &amp; Tech Help</label>
+                <label for="events"><input id="events" type="checkbox"> Community Events</label>
+                <label for="archiving"><input id="archiving" type="checkbox"> Local History Archiving</label>
+                <label for="sorting"><input id="sorting" type="checkbox"> Book Sale Sorting</label>
+                <label for="tutoring"><input id="tutoring" type="checkbox"> Literacy Tutoring</label>
+                <label for="frontdesk"><input id="frontdesk" type="checkbox"> Welcome Desk</label>
+            </fieldset>
+            <p><input type="submit" value="Submit Application"></p>
+        </form>
+    </body>
+
+</html>
