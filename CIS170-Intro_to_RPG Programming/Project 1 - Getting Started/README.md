@@ -10,7 +10,7 @@ This project generates a formatted CloudServices 24/7 Inventory Report. Develope
 ### Source & Database Objects
 * **`PROJECT1.rpgle`**: The core application logic written in free-form RPGLE. Implements file declarations, an overflow indicator (`EndOfPage`), a priming read loop, dynamic page header control, detail line printing, and clean program termination (`*INLR = *ON`).
 * **`INVREPORT.prtf`**: The external printer file Data Description Specifications (DDS). Defines page header constants, job dates (`*JOB`), dynamic page numbers (`PAGNBR`), detail row field mapping via `REFFLD`, and numeric edit formatting (`EDTCDE(K)` and `EDTCDE(N)`).
-* **`DATA.savf`**: An IBM i binary save file container housing the compiled `CSINVP` physical data file along with all original test database records. Enables complete environment reproduction on any IBM i system.
+
 
 ### Documentation & Reference Materials (`Docs/`)
 * **`Chapter 2 - Getting Started.pdf`**: Lecture slide presentation covering introductory RPGLE program structure, file description specifications, cycle vs. free-form looping, and basic IBM i output formatting.
@@ -63,38 +63,38 @@ The RPGLE program runs sequentially through three stages:
 
 ---
 
-## Environment Reproduction: Restoring Database & Running Code
+## Environment Reproduction: Setup, Compilation & Execution
 
-Follow these steps to restore the test database and run the application in your target IBM i library (`YOURLIB`):
+Follow these steps to unpack the database file from the master course save file and run the application in your target IBM i library (`YOURLIB`):
 
-### 1. Restore the Database File from `DATA.savf`
+### 1. Restore `CSINVP` from Master Save File `RPGIV5THSU.savf`
 
-* **Step 1: Create the target save file on IBM i**
+* **Step 1: Create the target save file on IBM i**  
   Run this command on your 5250 green screen command line:
   ```cl
-  CRTSAVF FILE(YOURLIB/DATA) TEXT('Project 1 Data Save File')
+  CRTSAVF FILE(YOURLIB/RPGIV5THSU) TEXT('RPG IV 5th Ed Student Save File')
   ```
 
-* **Step 2: Upload `DATA.savf` to your IFS home directory**
+* **Step 2: Upload `RPGIV5THSU.savf` to your IFS home directory**  
   1. Open IBM i Access Client Solutions (ACS) and select **Integrated File System**.
   2. Navigate to your user home folder: `/home/USERNAME/`.
-  3. Upload `DATA.savf` from your local `Project 1 - Getting Started` repository folder.
-  4. Ensure **"Save to UTF-8 text file"** (or text conversion) is **UNCHECKED** so the file remains raw binary.
+  3. Upload `RPGIV5THSU.savf` from your local repository data assets folder.
+  4. Ensure **"Save to UTF-8 text file"** (or text conversion) is **UNCHECKED** so the stream file remains raw binary.
 
-* **Step 3: Copy the stream file into the save file object**
+* **Step 3: Copy the stream file into the save file object**  
   Execute this command on the 5250 green screen command line:
   ```cl
-  CPYFRMSTMF FROMSTMF('/home/USERNAME/DATA.savf') TOMBR('/QSYS.LIB/YOURLIB.LIB/DATA.FILE') MBROPT(*REPLACE)
+  CPYFRMSTMF FROMSTMF('/home/USERNAME/RPGIV5THSU.savf') TOMBR('/QSYS.LIB/YOURLIB.LIB/RPGIV5THSU.FILE') MBROPT(*REPLACE)
   ```
 
-* **Step 4: Restore the physical file and all records**
-  Execute `RSTOBJ` to restore `CSINVP` with all records into your library:
+* **Step 4: Restore the physical file and test records**  
+  Execute `RSTOBJ` to extract `CSINVP` from the `RPGIV5THSU` container into your active library:
   ```cl
-  RSTOBJ OBJ(CSINVP) SAVLIB(CGRIMM1) DEV(*SAVF) SAVF(YOURLIB/DATA) RSTLIB(YOURLIB)
+  RSTOBJ OBJ(CSINVP) SAVLIB(RPGIV5THSU) DEV(*SAVF) SAVF(YOURLIB/RPGIV5THSU) RSTLIB(YOURLIB)
   ```
 
-* **Step 5: Verify the restored data**
-  Verify that all 123 records are present in the table:
+* **Step 5: Verify the restored table**  
+  Confirm that all 123 inventory records are present:
   ```cl
   RUNQRY QRYFILE((YOURLIB/CSINVP))
   ```
@@ -120,7 +120,18 @@ Run the program to generate the spooled report:
 CALL PGM(YOURLIB/PROJECT1)
 ```
 
-View the generated output in your spooled files:
-```cl
-WRKSPLF
-```
+---
+
+### 4. View and Verify Spool Output
+
+* **Via 5250 Green Screen:**
+  1. Open your active spool files:
+     ```cl
+     WRKSPLF
+     ```
+  2. Locate `INVREPORT` under the **File** column.
+  3. Enter option **5** (Display) next to `INVREPORT` and press **Enter** to inspect report column alignment and page breaks.
+
+* **Via IBM i Access Client Solutions (ACS):**
+  1. From the main ACS interface, open **Printer Output**.
+  2. Locate and open the generated `INVREPORT` file to review formatted output and compare against `PROJECT 1-Output.pdf`.
