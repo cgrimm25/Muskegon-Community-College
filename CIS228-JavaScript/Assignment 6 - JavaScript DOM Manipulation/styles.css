@@ -1,0 +1,198 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-228-F01X JavaScript
+// Instructor:  Clayton Corrello
+// Project:     Assignment #6 - DOM Manipulation: Interactive Study Task List
+// File Name:   styles.css
+// Author:      Clayton Corrello (Adapted by Chris Grimm)
+// Date:        10/19/2026
+//
+// Description:
+//   Application stylesheet defining CSS custom properties, responsive card layout,
+//   interactive button state transitions, typography, message box styling,
+//   and the completed task visual states (.task-item.done).
+//
+// Input File:  None
+// Output File: Rendered Browser Stylesheet
+//==================================================================================
+*/
+
+/* ========================================
+   Assignment: Study Task List - Styles
+   (You do not need to edit this file)
+   ======================================== */
+
+:root {
+    --primary-color: #2563eb;
+    --success-color: #059669;
+    --warning-color: #d97706;
+    --danger-color: #dc2626;
+    --purple-color: #7c3aed;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --transition: all 0.2s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 24px 12px;
+}
+
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.message {
+    display: inline-block;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--radius-md);
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    min-height: 24px;
+}
+
+/* Main card */
+main {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Input row */
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+}
+
+.input-row input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 16px;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.btn-success { background: var(--success-color); color: white; }
+.btn-warning { background: var(--warning-color); color: white; }
+.btn-primary { background: var(--primary-color); color: white; }
+.btn-purple  { background: var(--purple-color);  color: white; }
+
+/* Task list */
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.task-item {
+    padding: 12px 16px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.task-item:hover {
+    border-color: var(--primary-color);
+}
+
+/* Tasks that are marked done (your JavaScript adds the class "done") */
+.task-item.done {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+    background: #ecfdf5;
+    border-color: var(--success-color);
+}
+
+.task-count {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+/* Control buttons */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Footer tip */
+.tip {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 1px solid #fcd34d;
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    font-size: 0.875rem;
+    color: #78350f;
+}
+
+/* Accessibility */
+*:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Basics - Student Profile Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--
+    //==================================================================================
+    // Institution: Muskegon Community College
+    // Semester:    Fall 2026
+    // Course:      CIS-228-F01X JavaScript
+    // Instructor:  Clayton Corrello
+    // Project:     Assignment #6 Reference Demo - Student Profile Card
+    // File Name:   index.html
+    // Author:      Clayton Corrello (Adapted by Chris Grimm)
+    // Date:        10/19/2026
+    //
+    // Description:
+    //   Baseline demonstration web page presenting an interactive Student Profile Card
+    //   with a control panel, dynamic academic course list, skill badges, live activity 
+    //   log container, and key concept educational reference sidebar.
+    //
+    // Input File:  User button trigger clicks, avatar clicks, and #new-course-input text
+    // Output File: Rendered Browser DOM Elements, On-Screen Activity Log, and DevTools Output
+    //==================================================================================
+    -->
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="demo-header">
+            <h1>🎓 DOM Manipulation Basics</h1>
+            <p class="subtitle">Interactive Student Profile Card Demo</p>
+        </header>
+
+        <!-- Main Demo Area -->
+        <main class="demo-main">
+            <!-- Control Panel - Buttons to trigger DOM operations -->
+            <section class="control-panel">
+                <h2>🎮 Control Panel</h2>
+                <div class="button-group">
+                    <button id="btn-change-name" class="btn btn-primary">Change Name</button>
+                    <button id="btn-toggle-major" class="btn btn-secondary">Toggle Major</button>
+                    <button id="btn-add-course" class="btn btn-success">Add Course</button>
+                    <button id="btn-remove-course" class="btn btn-warning">Remove Last Course</button>
+                    <button id="btn-update-gpa" class="btn btn-info">Update GPA</button>
+                    <button id="btn-highlight-skills" class="btn btn-purple">Highlight Skills</button>
+                    <button id="btn-reset" class="btn btn-danger">Reset All</button>
+                </div>
+                
+                <div class="input-group">
+                    <label for="new-course-input">New Course:</label>
+                    <input type="text" id="new-course-input" placeholder="Enter course name (e.g., CS 301)">
+                </div>
+            </section>
+
+            <!-- Student Profile Card - The target of DOM manipulation -->
+            <section class="profile-card" id="profile-card">
+                <div class="card-header">
+                    <img id="avatar" src="https://api.dicebear.com/7.x/avataaars/svg?seed=student123" alt="Student Avatar" class="avatar">
+                    <div class="student-info">
+                        <h2 id="student-name">Alex Johnson</h2>
+                        <p id="student-major">Computer Science Major</p>
+                        <p id="student-year" class="year-badge">Junior</p>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <!-- GPA Section -->
+                    <div class="info-section">
+                        <h3>📊 Academic Info</h3>
+                        <div class="gpa-display">
+                            <span class="label">Current GPA:</span>
+                            <span id="gpa-value" class="gpa-value">3.75</span>
+                            <button id="btn-edit-gpa" class="mini-btn">Edit</button>
+                        </div>
+                    </div>
+
+                    <!-- Courses Section -->
+                    <div class="info-section">
+                        <h3>📚 Current Courses</h3>
+                        <ul id="courses-list" class="courses-list">
+                            <li class="course-item" data-course="CS 101">CS 101 - Intro to Programming</li>
+                            <li class="course-item" data-course="CS 201">CS 201 - Data Structures</li>
+                            <li class="course-item" data-course="MATH 210">MATH 210 - Discrete Mathematics</li>
+                            <li class="course-item" data-course="ENG 105">ENG 105 - Technical Writing</li>
+                        </ul>
+                        <p id="course-count" class="course-count">Total Courses: 4</p>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="info-section">
+                        <h3>🛠️ Technical Skills</h3>
+                        <div id="skills-container" class="skills-container">
+                            <span class="skill-tag" data-skill="javascript">JavaScript</span>
+                            <span class="skill-tag" data-skill="python">Python</span>
+                            <span class="skill-tag" data-skill="html">HTML/CSS</span>
+                            <span class="skill-tag" data-skill="git">Git</span>
+                            <span class="skill-tag" data-skill="sql">SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Activity Log - Shows DOM operations in real-time -->
+                    <div class="info-section">
+                        <h3>📝 Activity Log</h3>
+                        <div id="activity-log" class="activity-log">
+                            <div class="log-entry">📖 Page loaded - DOM ready</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Educational Sidebar -->
+        <aside class="educational-sidebar">
+            <h3>📖 Key Concepts Demonstrated</h3>
+            <ul class="concept-list">
+                <li><strong>Element Selection:</strong> getElementById, querySelector, querySelectorAll</li>
+                <li><strong>Content Modification:</strong> textContent, innerHTML</li>
+                <li><strong>Attribute Manipulation:</strong> setAttribute, getAttribute, classList</li>
+                <li><strong>Event Handling:</strong> addEventListener, event delegation</li>
+                <li><strong>DOM Creation:</strong> createElement, appendChild, insertBefore</li>
+                <li><strong>DOM Removal:</strong> removeChild, remove()</li>
+                <li><strong>DOM Traversal:</strong> parentNode, children, nextElementSibling</li>
+            </ul>
+            
+            <div class="code-tip">
+                <h4>💡 Pro Tip</h4>
+                <p>Open browser DevTools (F12) → Console to see detailed logs of each DOM operation!</p>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

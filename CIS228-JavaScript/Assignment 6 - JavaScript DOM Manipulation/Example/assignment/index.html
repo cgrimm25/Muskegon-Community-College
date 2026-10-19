@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment: Study Task List</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--
+    //==================================================================================
+    // Institution: Muskegon Community College
+    // Semester:    Fall 2026
+    // Course:      CIS-228-F01X JavaScript
+    // Instructor:  Clayton Corrello
+    // Project:     Assignment #6 - DOM Manipulation: Interactive Study Task List (Starter)
+    // File Name:   index.html
+    // Author:      Clayton Corrello (Adapted by Chris Grimm)
+    // Date:        10/19/2026
+    //
+    // Description:
+    //   Provided HTML structure defining the Interactive Study Task List interface.
+    //   Supplies target element IDs, form inputs, baseline task list items,
+    //   dynamic counter placeholder, and interactive control buttons.
+    //
+    // Input File:  User input from #task-input and UI button interaction
+    // Output File: Rendered Webpage Structure and DOM Mount Point for script.js
+    //==================================================================================
+    -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Study Task List</h1>
+            <!-- Your JavaScript writes feedback into this paragraph -->
+            <p id="message" class="message">Ready to get organized — try a button below!</p>
+        </header>
+
+        <main>
+            <!-- ADD A TASK: type here, then click Add Task -->
+            <section class="input-row">
+                <input type="text" id="task-input" placeholder="e.g., Finish lab 3">
+                <button id="btn-add" class="btn btn-success">Add Task</button>
+            </section>
+
+            <!-- THE LIST: your JavaScript creates new <li> items inside here -->
+            <ul id="task-list" class="task-list">
+                <li class="task-item">Read chapter 4</li>
+                <li class="task-item">Finish lab report</li>
+                <li class="task-item">Review lecture notes</li>
+            </ul>
+
+            <!-- THE COUNTER: your JavaScript keeps this number correct -->
+            <p id="task-count" class="task-count">Total Tasks: 3</p>
+
+            <!-- OTHER BUTTONS: your JavaScript connects these in Step 1 -->
+            <section class="controls">
+                <button id="btn-remove" class="btn btn-warning">Remove Last Task</button>
+                <button id="btn-motivate" class="btn btn-primary">Motivate Me!</button>
+                <button id="btn-done-all" class="btn btn-purple">Toggle Done (All)</button>
+            </section>
+        </main>
+
+        <footer class="tip">
+            <strong>Stuck?</strong> Open DevTools (F12) → <em>Console</em> tab.
+            Red text is an error and usually shows the line number where the problem is.
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
