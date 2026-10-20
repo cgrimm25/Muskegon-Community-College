@@ -9,6 +9,7 @@ This laboratory assignment demonstrates core client-side Document Object Model (
 
 * [DOM Manipulation Example Repository](https://github.com/profcorrello/DOM-Manipulation-Example) – Upstream course repository containing the baseline student profile card demo, interactive control patterns, and assignment starter templates.
 * [CIS 228 JavaScript DOM Manipulation Presentation](https://www.youtube.com/watch?v=CrjF447wRUU) – Instructor walkthrough covering core DOM manipulation concepts, element caching, dynamic event listeners, and assignment implementation steps.
+* [CIS 228 Dom Manipulation](https://www.youtube.com/watch?v=XcG2Il_bhyw) – Instructor video walkthrough covering hands-on DOM manipulation implementation, assignment workflows, and debugging techniques.
 
 ---
 
