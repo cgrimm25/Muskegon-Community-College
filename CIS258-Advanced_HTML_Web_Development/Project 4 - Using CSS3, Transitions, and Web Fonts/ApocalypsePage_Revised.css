@@ -1,0 +1,200 @@
+﻿/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #4 - Using CSS3, Transitions, and Web Fonts (Part 2)
+// File Name:   ApocalypsePage_Revised.css
+// Live URL:    http://157.245.246.41:8014/Chapter06/Fonts/ApocalypsePage_Revised.css
+// Author:      Chris Grimm (Starter template by Matthew MacDonald)
+// Date:        10/21/2026
+//
+// Description:
+//   External CSS3 stylesheet for week3project2.html featuring five Chapter 6 
+//   enhancements: Google Web Fonts, linear/radial gradients, box & text shadows, 
+//   rounded RGBA pull-quote container styling, and interactive CSS transitions 
+//   paired with 2D transforms.
+//==================================================================================
+*/
+
+article, aside, figure, figcaption, footer, header, hgroup, nav, section, summary {   
+  display: block;   
+}
+
+body {
+  font-family: "MetrophobicRegular", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #f5f5f0;
+}
+
+/* Enhancement 2: Linear Gradient Background & Drop Shadows on Header */
+header {
+  background-color: darkkhaki;
+  background-image: linear-gradient(135deg, #2b2d2f 0%, #6b705c 50%, #3a3d32 100%);
+  border: 2px #1f201d solid;
+  padding: 15px 10px;
+  margin: 10px;
+  text-align: center;
+
+  border-top-left-radius: 150px 30px;
+  border-top-right-radius: 150px 30px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+header h1 {
+  font-family: "ZeroZeroIsRegular", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  margin: 0px;
+  color: white;
+  font-size: 50px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Enhancement 1 (Part A): Google Font 'Special Elite' applied to Header Subtitle */
+header p {
+  margin: 5px 0 0 0;
+  font-weight: normal;
+  font-size: 20px;
+  color: #e9edc9;
+  font-family: 'Special Elite', "ImpactLabelReversedRegular", cursive;
+}
+
+header .Byline {
+  font-style: italic;
+  font-size: small;
+  margin: 0px;
+}
+
+.Content {
+  font-size: medium;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 120%;
+
+  text-align: justify;
+  -moz-column-width: 10em;
+  -webkit-column-width: 10em;
+  column-width: 10em;
+
+  -webkit-column-rule: 1px solid red;
+  -moz-column-rule: 1px solid red;
+  column-rule: 1px solid red; 
+}
+
+/* Enhancement 1 (Part B): Google Font 'Oswald' applied to Lead-In text */
+.Content .LeadIn {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: large;
+  font-variant: small-caps;
+  color: #8b0000;
+  letter-spacing: 0.5px;
+}
+
+/* Enhancement 5: Smooth CSS3 Transition & Transform on Subheadings */
+.Content h2 {
+  font-family: "ImpactLabelRegular";
+  font-weight: normal;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.Content h2:hover {
+  -webkit-transform: rotate(0deg) scale(1.05);
+  transform: rotate(0deg) scale(1.05);
+  color: #8b0000;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.Content p {
+  margin-top: 0px;
+}
+
+/* Enhancement 3 (Part B): Rounded Box Background & Shadow on Footer */
+footer {
+  text-align: center;
+  font-size: x-small;
+  background-color: rgba(43, 45, 47, 0.08);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 20px 10px 10px 10px;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer .Disclaimer {
+  font-style: italic;
+}
+
+footer p {
+  margin: 3px;
+}
+
+/* Enhancement 4: Rounded Frame, Shadow & Hover Transition/Transform on Skull Figure */
+.SpanFigure {
+  margin-right: 0px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #d4d4d4;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  -moz-column-span: all;
+  -webkit-column-span: all;
+  column-span: all;
+} 
+
+.SpanFigure img {
+  border-radius: 8px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.SpanFigure img:hover {
+  transform: scale(1.03) rotate(-1deg);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.SpanFigure figcaption {
+  font-size: small;
+  font-style: italic;
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+
+/* Enhancement 3 (Part A): Rounded Corner Box, RGBA Box Background & Shadow on PullQuote */
+.PullQuote {
+  max-width: 300px;
+  background-color: rgba(189, 183, 107, 0.22);
+  border-top: 2px solid #555;
+  border-bottom: 4px solid #222;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  border-radius: 15px 4px 15px 4px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 130%;
+  font-style: italic;
+  padding: 10px 12px;	
+  margin-left: 15px;
+  margin-bottom: 12px;
+}
+
+.PullQuote img {
+  vertical-align: bottom;
+  width: 20px;
+}
