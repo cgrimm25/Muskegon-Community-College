@@ -1,3 +1,23 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #2 - Using IDE for HTML Development and Advanced HTML Forms
+// File Name:   modernizr-latest.js
+// Live URL:    http://157.245.246.41:8014/Chapter04/modernizr-latest.js
+// Author:      Chris Grimm (Library by Faruk Ates, Paul Irish, Alex Sexton)
+// Date:        10/18/2026
+//
+// Description:
+//   Modernizr v2.6.3 JavaScript feature-detection library included to test 
+//   browser support for native HTML5 and CSS3 capabilities. Specifically used 
+//   by the application form to evaluate Modernizr.input.required and trigger 
+//   custom JavaScript required-field fallback validation when unsupported.
+//==================================================================================
+*/
+
 /*!
  * Modernizr v2.6.3
  * www.modernizr.com

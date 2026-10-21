@@ -1,4 +1,4 @@
-# Project #1 - Using IDE for HTML Development and Advanced HTML Forms (Part 1)
+# Project #1 - Using IDE for HTML Development and Advanced HTML Forms
 
 ## Overview
 This assignment establishes the foundational web development workflow in Visual Studio Code and deploys an initial coursework home page (`index.html`) to the remote student web server. Converted from the baseline instructor template, the document implements standard HTML5 boilerplate structure, customized metadata headers, W3C-validated markup, and live remote server publishing.
@@ -24,7 +24,7 @@ This assignment establishes the foundational web development workflow in Visual 
 
 ## Technical Summary & Implementation Details
 
-The project fulfills the Part 1 workflow requirements across four core stages:
+The project fulfills the Project #1 workflow requirements across four core stages:
 
 | Stage | Component / Tool | Implementation Details & Behavior |
 | :--- | :--- | :--- |

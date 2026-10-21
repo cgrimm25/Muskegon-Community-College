@@ -1,0 +1,75 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #3 - Using CSS3, Transitions, and Web Fonts 
+// File Name:   style.css
+// Author:      Chris Grimm
+// Date:        10/21/2026
+//
+// Description:
+//   External CSS3 stylesheet for index.html providing Google Web Font rules,
+//   an RGBA semi-transparent container with rounded borders, and a linear/radial
+//   gradient layout.
+//==================================================================================
+*/
+
+body {
+    /* Subtle radial gradient backdrop so the box transparency stands out */
+    background-color: #1e293b;
+    background-image: radial-gradient(circle at top right, #334155, #0f172a);
+    font-family: 'Open Sans', sans-serif;
+    color: #f8fafc;
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 0 20px;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    /* Applying the second Google Font to headings */
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+}
+
+/* Requirement 1: Box with a transparent colored background and rounded borders */
+.transparent-box {
+    background-color: rgba(255, 255, 255, 0.15); /* 15% opaque white */
+    border: 3px solid #38bdf8;
+    border-radius: 20px; /* Rounded corners */
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Requirement 2: Second box with a linear gradient and asymmetric rounded borders */
+.gradient-box {
+    background: linear-gradient(135deg, #0284c7 0%, #1e3a8a 100%);
+    border: 2px solid #bae6fd;
+    border-radius: 25px 5px 25px 5px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-box ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.gradient-box li {
+    margin: 10px 0;
+}
+
+.gradient-box a {
+    color: #e0f2fe;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.gradient-box a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

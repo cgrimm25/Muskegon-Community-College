@@ -1,4 +1,4 @@
-# Project #2 - Using IDE for HTML Development and Advanced HTML Forms (Part 2)
+# Project #2 - Using IDE for HTML Development and Advanced HTML Forms 
 
 ## Overview
 This assignment demonstrates the implementation of HTML5 web forms, semantic input types, regular expression pattern validation, and client-side JavaScript fallback validation. Adapted from the baseline *Zookeeper Application Form* starter package, the application models a **Library Volunteer Application Form** deployed to a URL-safe `Chapter04` server directory.
@@ -35,7 +35,7 @@ This assignment demonstrates the implementation of HTML5 web forms, semantic inp
 
 ## Technical Summary & Implementation Details
 
-The form adapts the starter template to fulfill all Project 2 specifications across six core stages:
+The form adapts the starter template to fulfill all Project #2 specifications across six core stages:
 
 | Stage | Feature / Element | Implementation Details & Behavior |
 | :--- | :--- | :--- |

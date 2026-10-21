@@ -1,4 +1,22 @@
-﻿body {
+﻿/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #2 - Using IDE for HTML Development and Advanced HTML Forms
+// File Name:   ZookeeperForm.css
+// Live URL:    http://157.245.246.41:8014/Chapter04/ZookeeperForm.css
+// Author:      Chris Grimm (Starter template by Matthew MacDonald)
+// Date:        10/18/2026
+//
+// Description:
+//   External stylesheet for the application form providing Palatino Linotype 
+//   typography, fieldset and small-caps legend formatting, inline-block label 
+//   alignment, red mandatory indicator styling, and input focus/dimension rules.
+//==================================================================================
+*/
+body {
   font-family: 'Palatino Linotype', serif;
   max-width: 600px;
   padding: 0px 30px;
