@@ -8,6 +8,7 @@ This project generates a formatted Payroll Register report for hourly employees 
 ## File Directory
 
 ### Source Files
+* **`Chapter 6 - Using Arithmetic Operations and Functions.pdf`**: Lecture slide presentation covering arithmetic expressions, operator precedence, compound assignment operators (`+=`), half-adjust rounding using the `(H)` operation extender (`EVAL(H)`), numeric precision considerations, and numeric built-in functions.
 * **`PROJECT3.rpgle`**: The primary batch application logic written in fully free-form RPGLE (`**FREE`). Contains named tax constants, file declarations, an unnamed data structure overlay for initial extraction, record read loops, arithmetic calculations with half-adjust rounding, accumulator logic, and spool file output control.
 * **`PRJ3PRTF.prtf`**: The external printer file Data Description Specifications (DDS). Utilizes file-level referencing (`REF(WUHRLYP)`), system job dates (`*SYS *YY`), zero-suppressed page numbering (`EDTCDE(Z)`), Social Security number edit words (`EDTWRD('   -  -    ')`), standard numeric edit codes (`EDTCDE(1)` and `EDTCDE(3)`), and summary total formatting with floating dollar signs (`EDTCDE(1 $)`).
 

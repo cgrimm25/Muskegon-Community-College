@@ -1,0 +1,52 @@
+     A*=======================================================================
+     A* Institution: Muskegon Community College
+     A* Course:      CIS170 - Intro to RPG Programming
+     A* Instructor:  Char Parker
+     A* Project:     Project #4 Part B - CompuSell Profits Report
+     A* File:        PRJ4BPRTF.PRTF
+     A* Programmer:  Chris Grimm
+     A* Date:        09/29/2020
+     A*
+     A* Description:
+     A*   External printer file definition for the CompuSell Profits Report.
+     A*   Defines report page headers, job date (*JOB *YY), zero-suppressed
+     A*   page numbering (EDTCDE(Z)), column headers, product detail fields
+     A*   referencing physical database file CSINVP (REFFLD), calculated
+     A*   net profit formatting (EDTCDE(1 $)), and grand total profit lines.
+     A*
+     A* Used By:     PROJECT4B.RPGLE
+     A*=======================================================================
+     A          R HEADING                   SPACEB(1)
+     A                                     1DATE(*JOB *YY)
+     A                                      EDTCDE(Y)
+     A                                   121'PAGE '
+     A                                   127PAGNBR
+     A                                      EDTCDE(Z)
+     A                                      SPACEA(1)
+     A                                    49'COMPUSELL PROFITS'
+     A                                      SPACEA(1)
+     A                                      SPACEB(1)
+     A                                     2'PRODUCT'
+     A                                    60'SELLING'
+     A                                    79'CURRENT'
+     A                                   113'NET'
+     A                                     2'NUMBER'
+     A                                      SPACEB(1)
+     A                                    13'DESCRIPTION'
+     A                                    61'PRICE'
+     A                                    81'COST'
+     A                                   113'PROFIT'
+     A*-------------------------------------------------------------------------
+     A          R DETAIL                    SPACEB(1)
+     A            PRODNO    R              2REFFLD(INVREC/PRODNO *LIBL/CSINVP)
+     A            DESCRP    R             13REFFLD(INVREC/DESCRP *LIBL/CSINVP)
+     A            SELLPR    R             61REFFLD(INVREC/SELLPR *LIBL/CSINVP)
+     A                                      EDTCDE(1 $)
+     A            CURCST    R             80REFFLD(INVREC/CURCST *LIBL/CSINVP)
+     A                                      EDTCDE(1 $)
+     A            PROFIT         6S 2    113EDTCDE(1 $)
+     A*-------------------------------------------------------------------------
+     A          R TOTAL                     SPACEB(1)
+     A                                     9'TOTAL'
+     A            TOTALPROF      8S 2     16EDTCDE(1 $)
+

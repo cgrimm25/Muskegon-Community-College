@@ -1,0 +1,44 @@
+     A*=======================================================================
+     A* Institution: Muskegon Community College
+     A* Course:      CIS170 - Intro to RPG Programming
+     A* Instructor:  Char Parker
+     A* Project:     Project #4 Part C - ACME Employee Productivity Report
+     A* File:        PRJ4CPRTF.PRTF
+     A* Programmer:  Chris Grimm
+     A* Date:        09/30/2020
+     A*
+     A* Description:
+     A*   External printer file definition for ACME Employee Productivity
+     A*   Report. Defines system report headers, zero-suppressed page
+     A*   numbering (EDTCDE(Z)), two-tier column headings, and employee
+     A*   detail rows with SSN edit words and formatted productivity metrics.
+     A*
+     A* Used By:     PROJECT4C.RPGLE
+     A*=======================================================================
+     A          R HEADING                   SKIPB(1)
+     A                                     8DATE(*YY)
+     A                                      EDTCDE(Y)
+     A                                    45'ACME Employee Productivity Report'
+     A                                   117'Page'
+     A                                   123PAGNBR
+     A                                      EDTCDE(Z)
+     A                                      SPACEA(2)
+     A                                     3'Social Security'
+     A                                    41'Hours'
+     A                                    55'Quantity'
+     A                                    76'Quantity'
+     A                                      SPACEA(1)
+     A                                     6'Number'
+     A                                    21'Name'
+     A                                    41'Worked'
+     A                                    55'Produced'
+     A                                    76'Produced per Hour'
+     A                                      SPACEA(1)
+     A*-----------------------------------------------------------------------
+     A          R DETAIL                    SPACEB(1)
+     A            D_SOCSEC       9S 0      4EDTWRD('   -  -    ')
+     A            D_NAME        16A       21
+     A            D_WKHOURS      5S 2     40EDTCDE(1)
+     A            D_QTY          5S 0     57EDTCDE(1)
+     A            D_QTYPHR       5S 2     78EDTCDE(1)
+
