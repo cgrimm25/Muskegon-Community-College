@@ -1,0 +1,143 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #5 - Responsive Web Design
+// File Name:   style.css
+// Author:      Chris Grimm
+// Date:        10/22/2026
+//
+// Description:
+//   External stylesheet implementing Chapter 7 fluid layout rules, percentage-based 
+//   margins, REM font sizes, and a 384px media query for mobile stacking and color 
+//   shifts.
+//==================================================================================
+*/
+
+/* Ensure padding and borders don't break percentage width math */
+* {
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Requirement 3: Use EM or REM Text Sizes (Textbook pp. 228-230)
+   - Converted all typography to REM units to allow scalable layout rendering.
+   - Three distinct sizes implemented
+   ========================================================================== */
+
+body {
+  background-color: #1e293b;
+  background-image: radial-gradient(circle at top right, #334155, #0f172a);
+  font-family: "Open Sans", sans-serif;
+  color: #f8fafc;
+  /* REM Size 1: Base body copy */
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+}
+
+/* REM Size 2: Primary Heading */
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+/* REM Size 3: Secondary Heading */
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   Requirements 1 & 2: Unequal Percentage Widths & Percentage Margins
+   Textbook pp. 222-225: 28.6% + 2.8% margin + 68.6% = 100%
+   ========================================================================== */
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col1 {
+  float: left;
+  width: 28.6%;
+  margin-right: 2.8%;
+}
+
+.col2 {
+  float: left;
+  width: 68.6%;
+}
+
+.transparent-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 3px solid #38bdf8;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-box {
+  background: linear-gradient(135deg, #0284c7 0%, #1e3a8a 100%);
+  border: 2px solid #bae6fd;
+  border-radius: 25px 5px 25px 5px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-box ul {
+  list-style-type: square;
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.gradient-box li {
+  margin: 0.6rem 0;
+}
+
+.gradient-box a {
+  color: #e0f2fe;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.gradient-box a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Requirements 4 & 5: Media Query for Screens 384px or Smaller
+   Textbook pp. 235 & 238:
+   - Removes floats and resets widths so columns stack vertically
+   - Changes the background color of both columns
+   ========================================================================== */
+@media screen and (max-width: 384px) {
+  /* Requirement 5: Stack columns by removing float */
+  .col1,
+  .col2 {
+    float: none;
+    width: auto;
+    margin-right: 0;
+  }
+
+  /* Requirement 4: Change background colors */
+  .col1 {
+    background-color: #3b0764;
+    border-color: #c084fc;
+    margin-bottom: 1.5rem; /* Spacing between stacked columns */
+  }
+
+  .col2 {
+    background: #064e3b;
+    border-color: #34d399;
+  }
+}
