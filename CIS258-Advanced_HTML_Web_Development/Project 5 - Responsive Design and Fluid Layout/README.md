@@ -12,8 +12,7 @@ This project upgrades the CIS-258 homework home page into a responsive layout ba
 * **`style.css`**: The external stylesheet defining global `box-sizing: border-box`, fluid column widths, percentage margins, REM typography rules, clearfix logic, and the 384px responsive media query.
 
 ### Documentation & Reference Materials (`Docs/`)
-* **`README.md`**: Project documentation, directory file inventory, technical implementation matrix, and deployment instructions.
-* **`Docs/Project #5 Instructions.pdf`**: Official assignment instructions detailing requirements for columns, margins, typography, and media query breakpoints.
+* **`Project #5 Instructions.pdf`**: Official assignment instructions detailing requirements for columns, margins, typography, and media query breakpoints.
 * **Course Video Resource**: [Welcome to Week 4 - Responsive Design Using HTML5 and CSS](https://www.youtube.com/watch?v=RElq0Av1A9Q) – Instructor overview lecture covering responsive design principles, fluid columns, and media query implementation.
 
 ---

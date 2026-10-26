@@ -1,0 +1,160 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #6 - Add JavaScript to Your Home Page
+// File Name:   style.css
+// Author:      Chris Grimm
+// Date:        10/26/2026
+//
+// Description:
+//   External stylesheet implementing Chapter 7 fluid layout rules, percentage-based 
+//   margins, REM font sizes, 384px media query, and styles for interactive JavaScript elements.
+//==================================================================================
+*/
+
+/* Ensure padding and borders don't break percentage width math */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e293b;
+  background-image: radial-gradient(circle at top right, #334155, #0f172a);
+  font-family: "Open Sans", sans-serif;
+  color: #f8fafc;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col1 {
+  float: left;
+  width: 28.6%;
+  margin-right: 2.8%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col2 {
+  float: left;
+  width: 68.6%;
+}
+
+.transparent-box {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 3px solid #38bdf8;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-box {
+  background: linear-gradient(135deg, #0284c7 0%, #1e3a8a 100%);
+  border: 2px solid #bae6fd;
+  border-radius: 25px 5px 25px 5px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-box ul {
+  list-style-type: square;
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.gradient-box li {
+  margin: 0.6rem 0;
+}
+
+.gradient-box a {
+  color: #e0f2fe;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.gradient-box a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   JavaScript Interactive Element Styles
+   ========================================================================== */
+.greeting-box {
+  background-color: rgba(15, 23, 42, 0.6);
+  border-left: 3px solid #38bdf8;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.action-btn {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.action-btn:hover {
+  background-color: #7dd3fc;
+  transform: translateY(-1px);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+.status-indicator {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+@media screen and (max-width: 384px) {
+  .col1,
+  .col2 {
+    float: none;
+    width: auto;
+    margin-right: 0;
+  }
+
+  .col1 {
+    background-color: #3b0764;
+    border-color: #c084fc;
+    margin-bottom: 1.5rem; 
+  }
+
+  .col2 {
+    background: #064e3b;
+    border-color: #34d399;
+  }
+}

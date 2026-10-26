@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Christopher Grimm</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <!--
+        //==================================================================================
+        // Institution: Muskegon Community College
+        // Semester:    Fall 2026
+        // Course:      CIS-258-F02X Advanced HTML Web Development
+        // Instructor:  Christopher VanOosterhout
+        // Project:     Project #6 - Add JavaScript to Your Home Page
+        // File Name:   index.html
+        // Live URL:    http://157.245.246.41:8014/index.html 
+        // Author:      Chris Grimm
+        // Date:        10/26/2026
+        //
+        // Description:
+        //   Responsive homework home page enhanced with external JavaScript (script.js).
+        //   Implements three event listeners (mouseover, mouseout, click), interactive DOM 
+        //   content updates, and time-based conditional greeting logic (Appendix B).
+        //
+        // Input File:  style.css, script.js
+        // Output File: Browser Webpage View
+        //==================================================================================
+        -->
+    </head>
+
+    <body>
+        <div class="row">
+            <div id="welcomeBox" class="col1 transparent-box" onmouseover="highlightBox()" onmouseout="resetBox()">
+                <h1>Chris Grimm's Home Page</h1>
+                <p id="timeGreeting" class="greeting-box">Loading greeting...</p>
+                <p id="dynamicMessage">
+                    This is where I build out my HTML home page content this semester.
+                </p>
+
+                <!-- Interactive Event Trigger Button -->
+                <button type="button" id="toggleBtn" class="action-btn" onclick="toggleWelcomeMessage()">Change Content</button>
+                <p id="interactionStatus" class="status-indicator">Status: Ready for interaction.</p>
+            </div>
+
+            <div class="col2 gradient-box">
+                <h2>CIS-258 Coursework Directory</h2>
+                <p>Completed projects and exercises published to the student server:</p>
+                <ul>
+                    <li><a href="index.html">Week 2 Project 1: Initial Homework Home Page</a></li>
+                    <li><a href="Chapter04/week2project2.html">Week 2 Project 2: Library Volunteer Application Form</a></li>
+                    <li><a href="Chapter06/Fonts/week3project2.html">Week 3 Project 2: Apocalypse Now</a></li>
+                </ul>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
