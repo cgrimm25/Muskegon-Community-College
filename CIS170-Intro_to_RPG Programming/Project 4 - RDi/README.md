@@ -1,4 +1,5 @@
-# Project 4: IBM Rational Developer for i (RDi) Development
+# Project 4: RDi
+# IBM Rational Developer for i (RDi) Development
 
 ## Overview
 This project explores modernization workflows on the IBM i platform using Rational Developer for i (RDi). Spanning three distinct lab assignments, the project covers diagnosing and correcting free-form RPGLE program logic, resolving Data Description Specifications (DDS) syntax and field alignment errors, and utilizing the visual RDi Report Designer to construct production printer layouts.

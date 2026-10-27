@@ -1,4 +1,5 @@
-# Project 3: Wibaux University Payroll Register
+# Project 3: Arithmetic
+# Wibaux University Payroll Register
 
 ## Overview
 This project generates a formatted Payroll Register report for hourly employees at Wibaux University. Developed as a structured batch processing application on the IBM i platform, the program processes employee records sequentially from an externally defined physical database file (`WUHRLYP`). It calculates gross pay including time-and-a-half overtime, computes tax withholdings (Federal, State, and FICA) using named constants and half-adjust rounding (`EVAL(H)`), extracts employee initials using an unnamed data structure overlay, and writes formatted detail rows and grand totals to an external printer file (`PRJ3PRTF`).
@@ -13,8 +14,11 @@ This project generates a formatted Payroll Register report for hourly employees 
 * **`PRJ3PRTF.prtf`**: The external printer file Data Description Specifications (DDS). Utilizes file-level referencing (`REF(WUHRLYP)`), system job dates (`*SYS *YY`), zero-suppressed page numbering (`EDTCDE(Z)`), Social Security number edit words (`EDTWRD('   -  -    ')`), standard numeric edit codes (`EDTCDE(1)` and `EDTCDE(3)`), and summary total formatting with floating dollar signs (`EDTCDE(1 $)`).
 
 ### Documentation & Reference Materials (`Docs/`)
+* **`Calculated Fields in External Printer File.pdf`**: Reference guide illustrating how calculated fields and summary accumulators are defined directly within external printer file DDS so the RPGLE compiler automatically inherits field attributes without requiring duplicate `Dcl-S` declarations.
+* **`Chapter 6 - Using Arithmetic Operations and Functions.pdf`**: Lecture slide presentation covering arithmetic expressions, operator precedence, compound assignment operators (`+=`), half-adjust rounding using the `(H)` operation extender (`EVAL(H)`), numeric precision considerations, and numeric built-in functions.
 * **`Project 3 Instructions.pdf`**: The course assignment specifications, business logic rules, tax deduction percentages, and print chart layout.
 * **`PROJECT 3-OUTPUT.pdf`**: The final spool output report demonstrating proper header alignment, SSN masking, initial extraction, calculated tax deductions, and the accumulated grand totals line.
+* **`Timing of Calculations and Printing.pdf`**: Architectural flow reference illustrating the proper execution cycle: priming read, loop math and running accumulations, detail printing, reading next records, and executing post-loop summary output (`Write TOTAL`).
 * **`WUHRLYP.PF-DTA.pdf`**: A reference printout showing the raw employee master records contained in the `WUHRLYP` physical database file.
 
 ---

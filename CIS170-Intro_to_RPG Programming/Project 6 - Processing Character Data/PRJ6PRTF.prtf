@@ -1,0 +1,56 @@
+     A*=========================================================================
+     A* Institution: Muskegon Community College
+     A* Course:      CIS170 - Intro to RPG Programming
+     A* Instructor:  Char Parker
+     A* Project:     Project #6 - Fun With Characters
+     A* File:        PRJ6PRTF.PRTF
+     A* Programmer:  Chris Grimm
+     A* Date:        10/16/2026
+     A*
+     A* Description:
+     A*   External printer file definition for the CSCSTP Customer Master
+     A*   Report ("Fun With Characters"). Defines report page headers and
+     A*   multi-line customer detail records displaying manipulated
+     A*   character fields (User ID, Password, Name, Zip, Phone, Year,
+     A*   and Balance Due).
+     A*
+     A* Used By:     PROJECT6.RPGLE
+     A*=========================================================================
+     A
+     A* EXTERNAL PRINTER FILE DEFINITION FOR CSCSTP Customer Master File
+     A*
+     A                                      REF(CSCSTP)
+     A*------ Report Page Heading ----------------------------------------------
+     A          R HEADING                   SKIPB(1)
+     A                                     1DATE(*SYS *YY)
+     A                                      EDTCDE(Y)
+     A                                    14'Fun With Characters'
+     A                                    36'Page'
+     A                                    43PAGNBR
+     A                                      EDTCDE(Z)
+     A                                      SPACEA(1)
+     A          R DETAIL                    SPACEA(1)
+     A                                     2'Customer:'
+     A            CUSTNO    R             11
+     A                                     2'User ID:'
+     A                                      SPACEB(1)
+     A            USERID        33        10
+     A                                     2'Password:'
+     A                                      SPACEB(1)
+     A            PASSWORD       9        11
+     A                                     2'Name:'
+     A                                      SPACEB(1)
+     A            NAME          26         7
+     A                                     2'Zip:'
+     A                                      SPACEB(1)
+     A            ZIP           10         6
+     A                                     2'Phone:'
+     A                                      SPACEB(1)
+     A            PHONE         14         8
+     A                                     2'Year:'
+     A                                      SPACEB(1)
+     A            YEAROUT        4         7
+     A                                     2'Balance:'
+     A                                      SPACEB(1)
+     A            BALANCE       10        12SPACEA(1)
+

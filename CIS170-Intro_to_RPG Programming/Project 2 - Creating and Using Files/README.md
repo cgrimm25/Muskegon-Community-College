@@ -1,4 +1,5 @@
-# Project 2: GTC Customer Accounts Report
+# Project 2: Creating and Using Files
+# GTC Customer Accounts Report
 
 ## Overview
 This project generates a formatted GTC Customer Accounts Report. Developed as a structured, read/write batch application on the IBM i platform, the program processes transactional account records sequentially from a physical database file (`GTCSTP`) and writes formatted lines out to an externally defined printer file (`PRJ2PRTF`) using fully free-form RPGLE logic (`**FREE`).
@@ -15,6 +16,7 @@ This project generates a formatted GTC Customer Accounts Report. Developed as a 
 * **`Chapter 3 - Creating and Using Files.pdf`**: Lecture slide presentation covering DDS physical file definitions, externally described printer files, record formats, field referencing, and file compilation workflows.
 * **`DDS Display & Printer File Template.pdf`**: Reference template guide detailing DDS keyword syntax, edit codes, edit words, and spacing/skipping rules for display and printer files.
 * **`GTCSTP.PF-DTA.pdf`**: A reference printout showing the raw customer account records contained within the `GTCSTP` database file.
+* **`Printer Spacing Chart.pdf`**: Standard printer spacing chart (PSC) "printchart" layout grid specifying character column coordinates (1–62) and line positions (1–12) used to map and verify visual report layouts.
 * **`Project 2 Instructions.pdf`**: The course assignment specifications, requirements outline, and original visual printchart mockup.
 * **`PROJECT 2-Output.pdf`**: The final spool file execution output demonstrating proper line spacing, numeric mask formatting, and multi-page overflow control.
 

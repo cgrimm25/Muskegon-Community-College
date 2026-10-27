@@ -1,4 +1,5 @@
-# Project 1: CloudServices 24/7 Inventory Report
+# Project 1: Getting Started 
+# CloudServices 24/7 Inventory Report
 
 ## Overview
 This project generates a formatted CloudServices 24/7 Inventory Report. Developed as a structured, read/write batch application on the IBM i platform, the program processes transactional inventory records sequentially from a physical database file (`CSINVP`) and writes formatted lines out to an externally defined printer file (`INVREPORT`) using fully free-form RPGLE logic (`**FREE`).
