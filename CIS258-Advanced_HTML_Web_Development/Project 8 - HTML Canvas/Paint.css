@@ -1,0 +1,74 @@
+﻿/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #8 - Customize Canvas Paint Program
+// File Name:   Paint.css
+// Author:      Chris Grimm
+// Date:        11/01/2026
+//
+// Description:
+//   Stylesheet managing visual layout, toolbars, and control states for the
+//   Chapter 8 Canvas Paint application. Structures floating toolbar sections,
+//   borders for the canvas drawing area, pointer interaction styles, and active
+//   border highlights for selected pen color and thickness icons.
+//==================================================================================
+*/
+
+body {
+  background: white;
+}
+
+.Toolbar {
+  float: left;
+  font-family: 'Trebuchet MS'; 
+  font-size: 14px;
+  font-variant: small-caps;
+  text-align: center;
+  background: #F2F7FE;
+  padding: 10px 15px 3px 10px;
+  margin-bottom: 1px;
+  margin-right: 1px;
+  border: 1px solid #7B899B;
+}
+
+.Toolbar button {
+  padding: 6px;
+  margin: 7px 2px;
+  font-variant: normal;
+  font-size: 12px;
+}
+
+.CanvasContainer {
+  clear: both;
+}
+
+canvas {
+  border: 1px solid #7B899B;
+}
+
+img {
+  padding: 2px;
+  border: 2px solid #F2F7FE;
+}
+
+img:hover {
+  border: 2px groove #E4F0FE;
+  background: white;
+}
+
+
+img.Selected {
+  border: 2px groove #E4F0FE;
+}
+
+#savedCopyContainer {
+  display: none;
+}
+
+#savedCopyContainer img {
+  width: 250px;
+  height: 150px;
+}

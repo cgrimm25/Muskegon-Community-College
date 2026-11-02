@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Customize Canvas Paint Program</title>
+  <link rel="stylesheet" href="Paint.css">
+  <script src="Paint.js"></script>
+  <!--
+  //==================================================================================
+  // Institution: Muskegon Community College
+  // Semester:    Fall 2026
+  // Course:      CIS-258-F02X Advanced HTML Web Development
+  // Instructor:  Christopher VanOosterhout
+  // Project:     Project #8 - Customize Canvas Paint Program
+  // File Name:   Paint.html
+  // Live URL:    http://157.245.246.41:8014/paint/Paint.html
+  // Author:      Chris Grimm
+  // Date:        11/02/2026
+  //
+  // Description:
+  //   Customized interactive canvas drawing application (Chapter 8, pp. 263-270).
+  //   - Replaced 3 default colors with Purple, Orange, and Teal.
+  //   - Updated 3 pen thickness options to 3px, 12px, and 25px.
+  //==================================================================================
+  -->
+</head>
+
+<body>
+  <!-- Requirement 1: Three New Colors (Purple, Orange, Teal) -->
+  <div class="Toolbar">
+    - Pen Color -<br>
+    <img id="purplePen" class="Selected" src="Img/pen_purple.gif" alt="Purple Pen" title="Purple Pen" onclick="changeColor('rgb(147, 51, 234)', this)">
+    <img id="orangePen" src="Img/pen_orange.gif" alt="Orange Pen" title="Orange Pen" onclick="changeColor('rgb(249, 115, 22)', this)"> 
+    <img id="tealPen" src="Img/pen_teal.gif" alt="Teal Pen" title="Teal Pen" onclick="changeColor('rgb(6, 182, 212)', this)">
+  </div>
+
+  <!-- Requirement 2: Three New Thicknesses (3px, 12px, 25px) -->
+  <div class="Toolbar">
+    - Pen Thickness -<br>
+    <img id="thinPen" class="Selected" src="Img/pen_thin.gif" alt="Fine Pen (3px)" title="Fine (3px)" onclick="changeThickness(3, this)">
+    <img id="mediumPen" src="Img/pen_medium.gif" alt="Medium Pen (12px)" title="Medium (12px)" onclick="changeThickness(12, this)"> 
+    <img id="thickPen" src="Img/pen_thick.gif" alt="Thick Pen (25px)" title="Thick (25px)" onclick="changeThickness(25, this)">
+  </div>
+
+  <div class="CanvasContainer">
+    <canvas id="drawingCanvas" width="500" height="300"></canvas>
+  </div>
+  
+  <div class="Toolbar">
+    - Operations -<br>
+    <button onclick="saveCanvas()">Save the Canvas</button>
+    <button onclick="clearCanvas()">Clear the Canvas</button>
+    <div id="savedCopyContainer">
+      <img id="savedImageCopy"><br>
+      Right-click to save ...
+    </div>
+  </div>
+</body>
+</html>
