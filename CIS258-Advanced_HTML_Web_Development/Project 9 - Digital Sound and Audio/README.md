@@ -48,7 +48,7 @@ The following video tutorials from *HTML5: The Missing Manual (2nd Edition)* pro
 
 ## Technical Summary & Requirements Implementation
 
-The implementation satisfies all Week 8 Project #9 criteria:
+The implementation satisfies all Week 8 Project 1 criteria:
 
 | Requirement | Textbook Reference | Implementation Details & Methods |
 | :--- | :--- | :--- |
