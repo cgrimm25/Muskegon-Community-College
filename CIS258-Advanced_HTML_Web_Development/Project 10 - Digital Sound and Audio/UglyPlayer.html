@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Video Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!--
+  //==================================================================================
+  // Institution: Muskegon Community College
+  // Semester:    Fall 2026
+  // Course:      CIS-258-F02X Advanced HTML Web Development
+  // Instructor:  Christopher VanOosterhout
+  // Project:     Project #10 - Customized Video Player
+  // File Name:   UglyPlayer.html
+  // Live URL:    http://157.245.246.41:8014/UglyPlayer.html
+  // Author:      Chris Grimm
+  // Date:        11/04/2026
+  //
+  // Description:
+  //   Customized HTML5 video player page featuring a consistent header, navigation
+  //   link to home page, responsive container, progress tracking bar, and customized
+  //   playback controls. References video assets inside Vid/.
+  //
+  // Input File:  style.css, script.js, Vid/
+  // Output File: Browser Webpage View
+  //==================================================================================
+  -->
+  </head>
+
+  <body>
+
+    <!-- Requirement 1: Consistent Header -->
+    <!-- Requirement 3: Navigation Link to Home Page -->
+    <header>
+      <h1>Chris Grimm's Home Page</h1>
+      <p><a href="index.html" class="action-btn">Back to Home Page</a></p>
+    </header>
+
+    <h2>Customized HTML5 Video Player</h2>
+    <p class="canvas-description">Interactive video stream playback with custom speed controls and real-time progress tracking.</p>
+
+    <!-- Video Player Container -->
+    <div class="videoContainer">
+      <video id="videoPlayer" ontimeupdate="progressUpdate()">
+        <source src="Vid/butterfly.mp4" type="video/mp4">
+        <source src="Vid/butterfly.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Duration and Position Progress Bar -->
+    <div class="barContainer">
+      <div id="durationBar">
+        <div id="positionBar"><span id="displayStatus">Idle.</span></div>
+      </div>
+    </div>
+
+    <!-- Player Control Buttons -->
+    <div>
+      &nbsp;&nbsp;&nbsp;
+      <button onclick="play()">Play</button>
+      <button onclick="pause()">Pause</button>
+      <button onclick="stop()">Stop</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button onclick="speedUp()">Fast</button>
+      <button onclick="slowDown()">Slow</button>
+      <button onclick="normalSpeed()">Normal Speed</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>

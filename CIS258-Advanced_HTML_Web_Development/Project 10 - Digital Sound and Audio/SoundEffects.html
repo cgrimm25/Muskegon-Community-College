@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball(s) with Sound</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!--
+  //==================================================================================
+  // Institution: Muskegon Community College
+  // Semester:    Fall 2026
+  // Course:      CIS-258-F02X Advanced HTML Web Development
+  // Instructor:  Christopher VanOosterhout
+  // Project:     Project #10 - Customized Video Player
+  // File Name:   SoundEffects.html
+  // Live URL:    http://157.245.246.41:8014/SoundEffects.html
+  // Author:      Chris Grimm
+  // Date:        11/04/2026
+  //
+  // Description:
+  //   Interactive HTML5 Canvas animation page featuring physics-based bouncing
+  //   balls with gravity, friction, edge collision sound effects, and looping
+  //   background audio with attribution. References audio assets inside Music/.
+  //
+  // Input File:  style.css, script.js, Music/
+  // Output File: Browser Webpage View
+  //==================================================================================
+  -->
+  </head>
+
+  <body>
+
+    <!-- Consistent Header -->
+    <!-- Navigation Link to Home Page -->
+    <header>
+      <h1>Chris Grimm's Home Page</h1>
+      <p><a href="index.html" class="action-btn">Back to Home Page</a></p>
+    </header>
+
+
+    <!-- Audio Elements (Collision & Looping Background Music) -->
+    <audio id="audio1">
+      <source src="Music/boing1.wav" type="audio/wav">
+      <source src="Music/beep.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audio2">
+      <source src="Music/boing2.wav" type="audio/wav">
+      <source src="Music/beep.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audio3">
+      <source src="Music/boing3.wav" type="audio/wav">
+      <source src="Music/beep.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- New Background Music -->
+    <!-- Looping Music -->
+    <audio id="backgroundMusic" loop>
+      <source src="Music/legacy.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Requirement 2: Canvas Dimensions (800 pixels wide by 400 pixels high) -->
+    <div>
+      <canvas id="ballCanvas" width="800" height="400">
+        Your browser does not support the canvas element.
+      </canvas>
+    </div>
+
+    <!-- Canvas Controls -->
+    <div>
+      <button onclick="addBall()">Add Ball</button>
+      <button onclick="clearBalls()">Clear Canvas</button>
+    </div>
+    <div>
+      Ball Size:<input id="ballSize" type="number" min="0" max="50" value="15">
+      <input id="connectedBalls" type="checkbox">Connect Balls<br>
+    </div>
+
+    <!-- Music Credit & Link -->
+    <p>
+      <small>
+        Background Music: "Legacy" by Scott Buckley (<a href="https://www.youtube.com/watch?v=hgXE6xS6pf8" target="_blank">YouTube Source</a>)
+      </small>
+    </p>
+
+    <script src="script.js"></script>
+  </body>
+
+</html>
