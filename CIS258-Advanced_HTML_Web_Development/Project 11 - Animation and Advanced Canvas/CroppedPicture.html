@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Topic 1: Cropped Picture</title>
+    <link href="style.css" rel="stylesheet">
+    <!--
+      //==================================================================================
+      // Institution: Muskegon Community College
+      // Semester:    Fall 2026
+      // Course:      CIS-258-F02X Advanced HTML Web Development
+      // Instructor:  Christopher VanOosterhout
+      // Project:     Project #11 - Advanced Canvas
+      // File Name:   CroppedPicture.html
+      // Live URL:    http://157.245.246.41:8014/Project11/CroppedPicture.html
+      // Author:      Chris Grimm
+      // Date:        11/05/2026
+      //
+      // Description:
+      //   Demonstrates displaying and slicing part of an image onto a canvas.
+      //==================================================================================
+      -->
+  </head>
+
+  <body>
+    <header>
+      <h1>Animation & Advanced Canvas</h1>
+      <p><a href="home.html" class="action-btn">Back to Home Page</a></p>
+    </header>
+
+    <h2>Topic 1: Display Part of an Image on a Canvas</h2>
+    <p class="topic-description">
+      <strong>Project Overview:</strong>
+      I created a canvas that pulls a source image of Charles Darwin from the Img
+      folder and selectively renders only a specific cropped portion of his face.
+      This demonstrates the topic of image slicing by using the overloaded <code>drawImage()</code> method,
+      passing nine distinct arguments to define the source coordinates and the destination placement.
+      While developing this, I learned that keeping the original image tag hidden via CSS ensures the canvas logic
+      can still reference the loaded DOM element without awkwardly displaying the uncropped source image on the page.
+    </p>
+    <canvas id="cropCanvas" width="300" height="200"></canvas>
+    <img id="portrait" src="Img/darwin.jpg" class="hidden-asset" alt="Source Image">
+    <script src="script.js"></script>
+  </body>
+
+</html>

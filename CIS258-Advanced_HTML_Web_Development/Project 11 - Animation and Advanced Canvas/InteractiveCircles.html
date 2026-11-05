@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Topic 4: Interactive Shapes</title>
+    <link href="style.css" rel="stylesheet">
+    <!--
+    //==================================================================================
+    // Institution: Muskegon Community College
+    // Semester:    Fall 2026
+    // Course:      CIS-258-F02X Advanced HTML Web Development
+    // Instructor:  Christopher VanOosterhout
+    // Project:     Project #11 - Advanced Canvas
+    // File Name:   InteractiveCircles.html
+    // Live URL:    http://157.245.246.41:8014/Project11/InteractiveCircles.html
+    // Author:      Chris Grimm
+    // Date:        11/05/2026
+    //
+    // Description:
+    //   Demonstrates making canvas shapes interactive by calculating click coordinates,
+    //   radii, and dynamically highlighting user selections.
+    //==================================================================================
+    -->
+  </head>
+
+  <body>
+    <header>
+      <h1>Animation & Advanced Canvas</h1>
+      <p><a href="home.html" class="action-btn">Back to Home Page</a></p>
+    </header>
+    <h2>Topic 4: Make a Shape Interactive</h2>
+    <p class="topic-description">
+      <strong>Project Overview:</strong>
+      I built an application where clicking a button spawns randomly sized circles, 
+      and clicking directly on the canvas highlights a specific circle with a thick white border. 
+      This demonstrates shape interactivity by calculating the exact mathematical distance between 
+      the user's raw mouse click coordinates and the center point of each generated circle using 
+      the Pythagorean theorem. I changed the textbook's default colors to match my dark-slate theme 
+      and learned that storing shape data in a JavaScript array is strictly required for interactivity, 
+      as the canvas itself immediately forgets shapes once they are drawn.
+    </p>
+    <div class="controls">
+      <button type="button" onclick="addRandomCircle()">Add Circle</button>
+      <button type="button" onclick="clearInteractiveCanvas()">Clear Canvas</button>
+    </div>
+    <canvas id="interactiveCanvas" width="500" height="350"></canvas>
+    <script src="script.js"></script>
+
+  </body>
+
+</html>

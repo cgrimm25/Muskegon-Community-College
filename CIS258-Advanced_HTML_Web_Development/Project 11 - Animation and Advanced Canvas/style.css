@@ -1,0 +1,89 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #11 - Advanced Canvas
+// File Name:   style.css
+// Live URL:    http://157.245.246.41:8014/Project11/style.css
+// Author:      Chris Grimm
+// Date:        11/05/2026
+//
+// Description:
+//   Unified external stylesheet for 5 Advanced Canvas demonstration pages.
+//   Manages dark-slate theme, typography, layout, and canvas elements.
+//==================================================================================
+*/
+
+* { box-sizing: border-box; }
+
+body {
+  background-color: #1e293b;
+  background-image: radial-gradient(circle at top right, #334155, #0f172a);
+  font-family: "Open Sans", sans-serif;
+  color: #f8fafc;
+  margin: 0;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+}
+
+header {
+  margin-bottom: 2rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+  padding-bottom: 1rem;
+}
+
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0;
+}
+
+.action-btn {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.action-btn:hover { background-color: #7dd3fc; }
+
+.topic-description {
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+canvas {
+  background-color: #020617;
+  border: 2px solid #38bdf8;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  display: block;
+  margin: 15px 0;
+  cursor: crosshair;
+}
+
+.controls { margin: 15px 0; }
+.controls button {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.controls button:hover { background-color: #7dd3fc; }
+.controls input[type="number"] { width: 50px; margin-right: 15px; }
+
+/* Hide source images used for canvas rendering */
+img.hidden-asset { display: none; }
+

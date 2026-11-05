@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Topic 2: Drawing Text</title>
+    <link href="style.css" rel="stylesheet">
+    <!--
+    //==================================================================================
+    // Institution: Muskegon Community College
+    // Semester:    Fall 2026
+    // Course:      CIS-258-F02X Advanced HTML Web Development
+    // Instructor:  Christopher VanOosterhout
+    // Project:     Project #11 - Advanced Canvas
+    // File Name:   Text.html
+    // Live URL:    http://157.245.246.41:8014/Project11/Text.html
+    // Author:      Chris Grimm
+    // Date:        11/05/2026
+    //
+    // Description:
+    //   Demonstrates drawing five separate, distinctively styled segments of text 
+    //   on an HTML5 canvas.
+    //==================================================================================
+    -->
+  </head>
+
+  <body>
+    <header>
+      <h1>Animation & Advanced Canvas</h1>
+      <p><a href="home.html" class="action-btn">Back to Home Page</a></p>
+    </header>
+    <h2>Topic 2: Drawing 5 Segments of Text</h2>
+    <p class="topic-description">
+      <strong>Project Overview:</strong>
+      I generated a single canvas that sequentially renders a numbered list of five distinct text segments, 
+      each utilizing a different styling technique. This demonstrates the topic by utilizing 
+      <code>fillText()</code>, <code>strokeText()</code>, and manipulating the <code>context.font</code> 
+      property to adjust families and sizes dynamically. During development, I changed the fourth and 
+      fifth segments to experiment with drop shadows, learning that I must explicitly reset the shadow 
+      properties back to transparent afterward so they do not accidentally inherit onto the final text string.
+    </p>
+    <canvas id="textCanvas" width="500" height="300"></canvas>
+    <script src="script.js"></script>
+  </body>
+
+</html>

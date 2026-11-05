@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Topic 5: Animation</title>
+    <link href="style.css" rel="stylesheet">
+    <!--
+    //==================================================================================
+    // Institution: Muskegon Community College
+    // Semester:    Fall 2026
+    // Course:      CIS-258-F02X Advanced HTML Web Development
+    // Instructor:  Christopher VanOosterhout
+    // Project:     Project #11 - Advanced Canvas
+    // File Name:   Animation.html
+    // Live URL:    http://157.245.246.41:8014//Project11/Animation.html
+    // Author:      Chris Grimm
+    // Date:        11/05/2026
+    //
+    // Description:
+    //   Demonstrates canvas animation using a physics loop with gravity, friction, 
+    //   edge detection, and click-based velocity shifting.
+    //==================================================================================
+    -->
+  </head>
+
+  <body>
+    <header>
+      <h1>Animation & Advanced Canvas</h1>
+      <p><a href="home.html" class="action-btn">Back to Home Page</a></p>
+    </header>
+    <h2>Topic 5: Add animation</h2>
+    <p class="topic-description">
+      <strong>Project Overview:</strong>
+      I developed a physics-based animation loop that spawns colored balls that drop
+      via simulated gravity, bounce off the canvas walls, and gradually slow down due
+      to a friction multiplier. This demonstrates the topic of canvas animation by
+      using <code>setTimeout()</code> to recursively trigger a frame-drawing function, 
+      clearing the canvas completely before redrawing the balls in their new coordinate positions. 
+      I changed the visual styling to match my project theme and learned that true canvas animation 
+      does not involve moving objects, but rather rapidly erasing and redrawing the entire frame
+      to simulate motion based on state variables.
+    </p>
+    <div class="controls">
+      <button type="button" onclick="addBall()">Add Ball</button>
+      <button type="button" onclick="clearBalls()">Clear Canvas</button>
+      <label>Ball Size: <input id="ballSize" type="number" min="0" max="50" value="15"></label>
+      <label><input id="connectedBalls" type="checkbox"> Connect Balls</label>
+    </div>
+    <canvas id="animationCanvas" width="500" height="350"></canvas>
+    <script src="script.js"></script>
+  </body>
+
+</html>

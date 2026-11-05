@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Canvas Topic 3: Pattern Fill</title>
+    <link href="style.css" rel="stylesheet">
+    <!--
+    //==================================================================================
+    // Institution: Muskegon Community College
+    // Semester:    Fall 2026
+    // Course:      CIS-258-F02X Advanced HTML Web Development
+    // Instructor:  Christopher VanOosterhout
+    // Project:     Project #11 - Advanced Canvas
+    // File Name:   Pattern.html
+    // Live URL:    http://157.245.246.41:8014/Project11/Pattern.html
+    // Author:      Chris Grimm
+    // Date:        11/05/2026
+    //
+    // Description:
+    //   Demonstrates filling a canvas shape with a repeating image pattern.
+    //==================================================================================
+    -->
+  </head>
+
+  <body>
+    <header>
+      <h1>Animation & Advanced Canvas</h1>
+      <p><a href="home.html" class="action-btn">Back to Home Page</a></p>
+    </header>
+    <h2>Topic 3: Filling Shapes with Patterns</h2>
+    <p class="topic-description">
+      <strong>Project Overview:</strong>
+      I created a canvas that draws a rectangle and completely fills its interior
+      with a repeating brick tile image from the Img folder. This demonstrates pattern filling by utilizing
+      the <code>context.createPattern()</code> method, passing in the hidden DOM image and
+      the "repeat" string argument. I learned that once a pattern is created, it is treated
+      exactly like a solid hex color by the canvas engine, meaning I could simply assign it
+      to <code>context.fillStyle</code> before invoking the fill method on my path.
+    </p>
+    <canvas id="patternCanvas" width="500" height="350"></canvas>
+    <img id="brickTile" src="Img/brick_tile.gif" class="hidden-asset" alt="Brick Pattern Tile">
+    <script src="script.js"></script>
+  </body>
+
+</html>
