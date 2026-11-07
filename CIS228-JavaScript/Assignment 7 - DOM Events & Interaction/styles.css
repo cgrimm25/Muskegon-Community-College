@@ -1,0 +1,154 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-228 JavaScript
+// Instructor:  Clayton Corrello
+// Project:     Assignment #7 - Advanced DOM Event Handling Lab
+// File Name:   styles.css
+// Author:      Clayton Corrello (Adapted by Chris Grimm)
+// Date:        11/07/2026
+//
+// Description:
+//   Application stylesheet defining the Component Interaction Dashboard layout,
+//   search section styling, feature grid flexbox container, and interaction visual states.
+//
+// Input File:  None
+// Output File: Rendered Browser Stylesheet
+//==================================================================================
+*/
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Search Section Styling */
+.search-section {
+    padding: 20px;
+    background-color: #e6f7ff;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+#feature-search {
+    width: 90%;
+    padding: 12px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+#feature-search:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Feature Grid Styling */
+.feature-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+
+/* Advanced Interaction Styling */
+.advanced-interaction {
+    margin-top: 50px;
+    padding: 30px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#drag-handle {
+    background-color: #fff3cd;
+    border: 2px dashed #ffc107;
+    padding: 30px 10px;
+    margin: 20px auto;
+    width: 80%;
+    cursor: pointer;
+    user-select: none;
+}
+
+#log-output {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: left;
+}
+
+#log-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#log-list li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #eee;
+}

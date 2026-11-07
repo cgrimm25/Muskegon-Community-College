@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment: Advanced Event Handling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Component Interaction Dashboard</h1>
+        <p>Complete the JavaScript logic to make this dashboard fully functional, demonstrating advanced event concepts.</p>
+
+        <!-- 1. Search Input (Requires Debouncing) -->
+        <section class="search-section">
+            <h2>🔍 Search Features</h2>
+            <input type="text" id="feature-search" placeholder="Search features (e.g., 'Pointer', 'Debounce')...">
+            <p class="instruction">Hint: Implement a debounced search function.</p>
+        </section>
+
+        <!-- 2. Feature Cards (Requires Event Delegation) -->
+        <section class="feature-grid">
+            <h2>✨ Available Features</h2>
+            <div class="card-container" id="feature-cards">
+                <!-- Data attributes hold necessary IDs -->
+                <div class="feature-card" data-feature="delegation">
+                    <h3>Event Delegation</h3>
+                    <p>Handles events on a parent container, improving performance.</p>
+                    <button class="card-button">Use</button>
+                </div>
+                <div class="feature-card" data-feature="debounce">
+                    <h3>Debouncing</h3>
+                    <p>Limits function calls to ensure performance during rapid input.</p>
+                    <button class="card-button">Use</button>
+                </div>
+                <div class="feature-card" data-feature="custom-events">
+                    <h3>Custom Events</h3>
+                    <p>Allows decoupled communication between application modules.</p>
+                    <button class="card-button">Use</button>
+                </div>
+                <div class="feature-card" data-feature="pointer-events">
+                    <h3>Pointer Events</h3>
+                    <p>Unifies input handling for mouse, touch, and stylus.</p>
+                    <button class="card-button">Use</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Advanced Interaction Handle (Requires Custom Event Dispatching) -->
+        <section class="advanced-interaction">
+            <h2>👆 Pointer/Drag Interaction</h2>
+            <div id="drag-handle">
+                <p>Drag this handle to trigger a custom 'swipe' event.</p>
+            </div>
+            <div id="log-output">
+                <p>Interaction Log:</p>
+                <ul id="log-list"><li>Awaiting interaction...</li></ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Link to the student's starter script -->
+    <script src="starter.js"></script>
+    <!-- Note: The solution is in assignment.js, which overwrites/augments the starter logic -->
+    <script src="assignment.js"></script>
+</body>
+</html>

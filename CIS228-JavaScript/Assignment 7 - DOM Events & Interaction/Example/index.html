@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event Delegation Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced Event Handling Lab: Delegation</h1>
+        <p>Click on any card below to observe the event delegation process. Check the Console for detailed event object analysis.</p>
+    </header>
+
+    <div id="card-container">
+        <!-- Data attributes store unique identifiers for simulation -->
+        <div class="card" data-id="course-1">
+            <h2>Web Fundamentals</h2>
+            <p>Master the basics of HTML and CSS.</p>
+            <button class="card-button">Enroll</button>
+        </div>
+        <div class="card" data-id="course-2">
+            <h2>JavaScript Deep Dive</h2>
+            <p>Learn advanced event handling and patterns.</p>
+            <button class="card-button">Enroll</button>
+        </div>
+        <div class="card" data-id="course-3">
+            <h2>Modern Frameworks</h2>
+            <p>Explore React, Vue, and modern state management.</p>
+            <button class="card-button">Enroll</button>
+        </div>
+        <div class="card" data-id="course-4">
+            <h2>Performance Optimization</h2>
+            <p>Techniques like throttling and debouncing.</p>
+            <button class="card-button">Enroll</button>
+        </div>
+    </div>
+
+    <div id="output-panel">
+        <h3>Event Output:</h3>
+        <p id="last-action">Waiting for interaction...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
