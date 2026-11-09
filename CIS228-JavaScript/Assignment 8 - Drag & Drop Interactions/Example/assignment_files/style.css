@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    max-width: 1400px;
+}
+
+.inventory-section, .drop-zone {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 350px;
+}
+
+/* Source Inventory Styling */
+.inventory-section {
+    background-color: #e0f7fa; /* Light Aqua */
+    border: 3px dashed #b2ebf2;
+}
+
+/* Drop Zone Styling */
+.drop-zone {
+    border: 2px solid #ccc;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* VISUAL REQUIREMENT: Hover Feedback */
+.drop-zone.drag-over {
+    background-color: #c8e6c9; /* Lighter Green */
+    border-color: #4caf50;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+}
+
+/* Card Styling */
+.card {
+    background-color: #ffffff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    cursor: grab;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+/* VISUAL REQUIREMENT: Dragging Feedback */
+.dragging {
+    opacity: 0.3;
+    transform: scale(0.99);
+    border: 1px dashed #aaa;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CIS 228: Drag and Drop Demonstration</h1>
+    <p>Drag the items from the "Source Inventory" into the "Processing Drop Zone".</p>
+
+    <div class="container">
+        <!-- Source Inventory (The draggable items) -->
+        <div class="inventory-section">
+            <h2>Source Inventory</h2>
+            <div class="card draggable-item" draggable="true" data-id="item1">
+                Card A: Initial Task
+            </div>
+            <div class="card draggable-item" draggable="true" data-id="item2">
+                Card B: Pending Review
+            </div>
+            <div class="card draggable-item" draggable="true" data-id="item3">
+                Card C: Ready for Deployment
+            </div>
+        </div>
+
+        <!-- Processing Drop Zone (The target area) -->
+        <div id="drop-zone" class="drop-zone">
+            <h2>Processing Drop Zone</h2>
+            <p>Drop items here to process them.</p>
+            <!-- Dropped items will appear here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

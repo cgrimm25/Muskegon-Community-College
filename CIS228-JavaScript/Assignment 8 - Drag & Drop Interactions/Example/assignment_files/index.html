@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Sorting Station</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>📁 Digital Sorting Station</h1>
+    <p>Drag the unsorted assets from the Inventory into the appropriate Category Zone.</p>
+
+    <div class="container">
+        <!-- Source Inventory -->
+        <div class="inventory-section">
+            <h2>📥 Unsorted Inventory</h2>
+            <div class="card draggable-item" draggable="true" data-id="asset_A">
+                Project Report Q3
+            </div>
+            <div class="card draggable-item" draggable="true" data-id="asset_B">
+                Client Meeting Notes
+            </div>
+            <div class="card draggable-item" draggable="true" data-id="asset_C">
+                Budget Proposal Draft
+            </div>
+            <div class="card draggable-item" draggable="true" data-id="asset_D">
+                Marketing Strategy V2
+            </div>
+        </div>
+
+        <!-- Target Zones -->
+        <div id="review-zone" class="drop-zone" data-category="Review">
+            <h2>🔎 Needs Review</h2>
+            <p>Items requiring manager approval.</p>
+        </div>
+        <div id="complete-zone" class="drop-zone" data-category="Complete">
+            <h2>✅ Complete</h2>
+            <p>Finalized and ready for archiving.</p>
+        </div>
+        <div id="archive-zone" class="drop-zone" data-category="Archive">
+            <h2>Archived</h2>
+            <p>Old or completed records.</p>
+        </div>
+    </div>
+
+    <script src="solution.js"></script>
+</body>
+</html>
