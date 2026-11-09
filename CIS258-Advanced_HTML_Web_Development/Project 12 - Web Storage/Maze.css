@@ -1,0 +1,29 @@
+﻿/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #12 - Saving and Displaying Data with Web Storage
+// File Name:   Maze.css
+// Live URL:    http://157.245.246.41:8014/Chapter10/Maze.css
+// Author:      Chris Grimm
+// Date:        11/09/2026
+//
+// Description:
+//   Styles for the Canvas Maze Game.
+//==================================================================================
+*/
+
+canvas {
+  border: 6px double black;
+  background: white;
+}
+
+img {
+  display: none;
+}
+
+button {
+  padding: 3px;
+}

@@ -1,0 +1,32 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #12 - Saving and Displaying Data with Web Storage
+// File Name:   FindAllItems.css
+// Live URL:    http://157.245.246.41:8014/Chapter10/FindAllItems.css
+// Author:      Chris Grimm
+// Date:        11/09/2026
+//
+// Description:
+//   Styles for the Local Storage data dump page.
+//==================================================================================
+*/
+
+body {
+  font-family: 'Palatino Linotype', serif;
+  max-width: 600px;
+  padding: 0px 30px;
+}
+
+button {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* Requirement 1: Make the text of each list item bold */
+#itemList {
+  font-weight: bold;
+}
