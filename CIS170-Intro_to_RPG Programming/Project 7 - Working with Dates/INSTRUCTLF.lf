@@ -1,0 +1,20 @@
+     A*=========================================================================
+     A* Institution: Muskegon Community College
+     A* Course:      CIS170 - Intro to RPG Programming
+     A* Instructor:  Char Parker
+     A* Project:     Project #7 - Instructor Retirement Report
+     A* File:        INSTRUCTLF.LF
+     A* Programmer:  Chris Grimm
+     A* Date:        10/21/2020
+     A*
+     A* Description:
+     A*   External logical file over WUINSTP physical file. Provides
+     A*   keyed sequence ordered by Last Name (ILNAME) and First Name
+     A*   (IFNAME) for alphabetical reporting.
+     A*
+     A* Base File:   WUINSTP
+     A*=========================================================================
+     A          R INSTREC                   PFILE(WUINSTP)
+     A          K ILNAME
+     A          K IFNAME
+
