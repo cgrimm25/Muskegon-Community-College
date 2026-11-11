@@ -1,18 +1,23 @@
 **Free
       // This code is in fully free form, as denoted in line 1 above
-      //
+      
       //========================================================================
-      // Program:     PROJECT6
-      // Project:     Project 6 - Fun With Characters
-      // Author:      Chris Grimm
+      // Institution: Muskegon Community College
+      // Course:      CIS170 - Intro to RPG Programming
+      // Instructor:  Char Parker
+      // Project:     Project #6 - Fun With Characters
+      // Program:     PROJECT6.RPGLE
+      // Programmer:  Chris Grimm
       // Date:        10/16/2026
-      // Description: Customer master report program manipulating CSCSTP records
+      //
+      // Description:
+      //   Customer master report program manipulating CSCSTP records
       //   using built-in character functions (%XLATE, %SUBST, %TRIM,
       //   %EDITW, %EDITC) to format customer accounts and output to PRJ6PRTF.
       //
-      // Input File:  CSCSTP   - Customer Master Physical File
-      // Output File: PRJ6PRTF - Character Manipulation Summary Printer File
-      //=======================================================================
+      // Input File:  CSCSTP   (DDS Physical File - Customer Master File)
+      // Output File: PRJ6PRTF (DDS Printer File - Character Manipulation Report)
+      //========================================================================
 
       // ------Control Options----------------------------------------------
         Ctl-opt Option(*Nodebugio);

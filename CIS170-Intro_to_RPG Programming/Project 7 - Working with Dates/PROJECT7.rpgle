@@ -1,5 +1,6 @@
 **Free
       // This code is in fully free form, as denoted in line 1 above
+      
       //========================================================================
       // Institution: Muskegon Community College
       // Course:      CIS170 - Intro to RPG Programming
