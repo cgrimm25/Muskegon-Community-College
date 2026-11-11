@@ -16,7 +16,8 @@
       //   %EDITW, %EDITC) to format customer accounts and output to PRJ6PRTF.
       //
       // Input File:  CSCSTP   (DDS Physical File - Customer Master File)
-      // Output File: PRJ6PRTF (DDS Printer File - Character Manipulation Report)
+      // Output File: PRJ6PRTF (DDS Printer File - Character Manipulation
+      // Report)
       //========================================================================
 
       // ------Control Options----------------------------------------------
