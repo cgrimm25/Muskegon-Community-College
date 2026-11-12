@@ -1,0 +1,57 @@
+     A*=========================================================================
+     A* Institution: Muskegon Community College
+     A* Course:      CIS170 - Intro to RPG Programming
+     A* Instructor:  Char Parker
+     A* Project:     Project #8 - Class Offerings at Wibaux University
+     A* File:        PRJ8PRTF.PRTF
+     A* Programmer:  Chris Grimm
+     A* Date:        11/12/2026
+     A*
+     A* Description:
+     A*   External printer file definition for the Wibaux University
+     A*   Class Offerings report. Defines report page headers,
+     A*   matched section/course detail records (`DETAIL`), and
+     A*   missing course match records (`ERROR`). Utilizes `REFFLD`
+     A*   to pull attributes from `WUCRSP` and `WUSCTP`.
+     A*
+     A* Used By:     PROJECT8.RPGLE
+     A*=========================================================================
+     A
+     A* EXTERNAL PRINTER FILE DEFINITION FOR Wexler University Current Sections
+     A                                      REF(WUSCTP)
+     A          R HEADING                   SKIPB(1)
+     A                                     2DATE(*SYS *YY)
+     A                                      EDTCDE(Y)
+     A                                   121'Page'
+     A                                   128PAGNBR
+     A                                      EDTCDE(Z)
+     A                                     2'Christopher Grimm'
+     A                                      SPACEB(1)
+     A                                    43'Class Offerings at Wibaux Universi-
+     A                                      ty'
+     A                                     4'Section'
+     A                                      SPACEB(2)
+     A                                    14'Department'
+     A                                    28'Course'
+     A                                    44'Course Title'
+     A                                    72'Credit(s)'
+     A                                    89'Time'
+     A                                   105'Days'
+     A                                   117'Room'
+     A          R DETAIL                    SPACEB(1)
+     A            SECTION   R              5
+     A            DEPT      R             17
+     A            CRSNO     R             29
+     A            CRSTTL    R             44REFFLD(CRSREC/CRSTTL *LIBL/WUC-
+     A                                      RSP)
+     A            CREDIT    R             75REFFLD(CRSREC/CREDIT *LIBL/WUC-
+     A                                      RSP)
+     A            SECTIM    R             89EDTWRD('  :  ')
+     A            SECDAY    R            105
+     A            ROOM      R            117
+     A          R ERROR                     SPACEB(1)
+     A            SECTION   R              5
+     A            DEPT      R             17
+     A            CRSNO     R             29
+     A                                    44'Course Not Found!'
+
