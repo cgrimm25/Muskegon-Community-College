@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS 228 Form Validation Demo</title>
+    
+    <!-- Link the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Include jQuery library from CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration Demo</h1>
+        <p>This form uses jQuery to demonstrate client-side form validation.</p>
+        
+        <form id="registrationForm">
+            
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <div class="error-message" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error-message" id="passwordError"></div>
+            </div>
+
+            <button type="submit">Register Account</button>
+        </form>
+    </div>
+
+    <!-- Link the custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

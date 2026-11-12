@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Demo - jQuery</title>
+    
+    <!-- 1. Include jQuery Library (CDN) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- 2. Link Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>jQuery AJAX Demonstration</h1>
+        <p>This demo shows how to fetch data asynchronously from a server and update the page content without reloading.</p>
+        
+        <button id="fetchDataButton">Fetch Data via AJAX</button>
+        
+        <div id="statusMessage" class="status-message">
+            Click the button to start the AJAX request.
+        </div>
+        
+        <h2>Fetched Content:</h2>
+        <div id="resultsArea" class="card results-card">
+            <p class="placeholder-text">Results will appear here...</p>
+        </div>
+    </div>
+
+    <!-- 3. Link JavaScript Logic -->
+    <script src="script.js"></script>
+</body>
+</html>

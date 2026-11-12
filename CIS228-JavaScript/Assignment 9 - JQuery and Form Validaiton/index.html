@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation Assignment</title>
+        <!-- Link the external CSS file -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Include jQuery library from CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!--
+        //==================================================================================
+        // Institution: Muskegon Community College
+        // Semester:    Fall 2026
+        // Course:      CIS-228 JavaScript
+        // Instructor:  Clayton Corrello
+        // Project:     Assignment #9 - Advanced Form Validation with jQuery
+        // File Name:   index.html
+        // Author:      Clayton Corrello (Adapted by Chris Grimm)
+        // Date:        11/12/2026
+        //
+        // Description:
+        //   Semantic HTML structure for the Student Registration Portal. Contains
+        //   four required fields and references the CDN jQuery library and local scripts.
+        //==================================================================================
+        -->
+    </head>
+
+    <body onload="document.getElementById('name').focus()">
+        <div class="container">
+            <h1>Student Registration Portal</h1>
+            <p>Complete the form below. Your goal is to write the validation logic in starter.js.</p>
+
+            <form id="registrationForm">
+
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name">
+                    <div class="error-message" id="nameError"></div>
+                </div>
+
+                <!-- Username Field -->
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter a unique username (min 5 chars)">
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your professional email">
+                    <div class="error-message" id="emailError"></div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password (min 8 chars)">
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+
+                <button type="submit">Register Account</button>
+            </form>
+        </div>
+
+        <!-- Link the student starter script -->
+        <script src="starter.js"></script>
+    </body>
+
+</html>
