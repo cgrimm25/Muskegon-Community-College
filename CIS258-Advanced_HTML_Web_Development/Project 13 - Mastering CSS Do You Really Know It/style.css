@@ -1,0 +1,116 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Project #13 - Top Apple Producing States
+// File Name:   style.css
+// Live URL:    http://157.245.246.41:8014/Project13/style.css
+// Author:      Chris Grimm
+// Date:        11/12/2026
+//
+// Description:
+//   CSS-only DOM manipulation utilizing pseudo-elements, nth-child selectors,
+//   and media queries.
+//==================================================================================
+*/
+
+/* Requirement 1. Change the text style */
+/* Requirement 6. Add a colored border around all content */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  padding: 20px;
+}
+
+.container {
+  border: 4px solid #4caf50;
+  border-radius: 12px;
+  background-color: #83b632;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 40px;
+
+  /* Additonal Enhancement 1: Box Shadow for depth */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Requirement 2. Center the headline */
+h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  /* Additonal Enhancement 2: Adjacent Sibling Combinator */
+}
+
+h4 + ol {
+  margin-top: 25px;
+}
+
+ol {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Requirement 3. Add the phrase "State of " to the beginning of each state name */
+li::before {
+  content: "State of ";
+}
+
+/* Requirement 4. Make every other state in the list bold
+/* Requirement 5. Alternate background colors */
+/* BASE COLORS (Default Screen Size) */
+li:nth-child(odd) {
+  background-color: #c8e6c9; /* Light Green */
+  font-weight: normal;
+}
+
+li:nth-child(even) {
+  background-color: #a5d6a7; /* Darker Green */
+  font-weight: bold;
+}
+
+/* ========================================================================= */
+/* MEDIA QUERIES (Requirement 8: Four rules at 1000, 900, 800, and 700)      */
+/* ========================================================================= */
+
+/* Screen sizes up to 1000px: Blue Theme */
+@media (max-width: 1000px) {
+  li:nth-child(odd) {
+    background-color: #bbdefb;
+  }
+  li:nth-child(even) {
+    background-color: #90caf9;
+  }
+}
+
+/* Screen sizes up to 900px: Yellow/Orange Theme */
+@media (max-width: 900px) {
+  li:nth-child(odd) {
+    background-color: #fff9c4;
+  }
+  li:nth-child(even) {
+    background-color: #ffe082;
+  }
+}
+
+/* Screen sizes up to 800px: Purple Theme */
+@media (max-width: 800px) {
+  li:nth-child(odd) {
+    background-color: #e1bee7;
+  }
+  li:nth-child(even) {
+    background-color: #ce93d8;
+  }
+}
+
+/* Screen sizes up to 700px: Red/Pink Theme */
+@media (max-width: 700px) {
+  li:nth-child(odd) {
+    background-color: #ffcdd2;
+  }
+  li:nth-child(even) {
+    background-color: #ef9a9a;
+  }
+}
