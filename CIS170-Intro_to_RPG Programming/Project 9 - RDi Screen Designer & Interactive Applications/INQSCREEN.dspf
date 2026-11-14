@@ -1,0 +1,76 @@
+     A*=========================================================================
+     A* Institution: Muskegon Community College
+     A* Course:      CIS170 - Intro to RPG Programming
+     A* Instructor:  Char Parker
+     A* Project:     Project #9 - CloudServices24x7, Inc. Supplier Information
+     A* File:        INQSCREEN.DSPF
+     A* Programmer:  Chris Grimm
+     A* Date:        11/11/2020
+     A*
+     A* Description:
+     A*   Interactive display file for the Product Supplier Inquiry
+     A*   application. Defines two screen formats:
+     A*   SCRN1: Prompts for a product number input (PRODIN) and
+     A*          displays conditionally mapped validation error messages.
+     A*   SCRN2: Displays retrieved supplier information utilizing REFFLD
+     A*          to inherit data attributes directly from CSSUPP.
+     A*
+     A* Used By:     PROJECT9.RPGLE
+     A*=========================================================================
+     A
+     A                                      INDARA
+     A                                      CA03(03 'F3=Exit')
+     A          R SCRN1
+     A                                  1 28'CloudServices24x7, Inc.'
+     A                                 13 18'Type value, then Press Enter.'
+     A                                 10 18'Product number . . . .'
+     A            PRODIN         6Y 0B 10 44EDTCDE(Z)
+     A  90
+     AO 95                                  DSPATR(PC)
+     A  90                                  ERRMSG('Invalid product number' 90)
+     A  95                                  ERRMSG('Product Number valid, but-
+     A                                       Supplier Code not found' 95)
+     A                                 20  3'F3=Exit'
+     A                                  1  2'User ID:'
+     A                                  1 11USER
+     A                                  1 69DATE(*JOB)
+     A                                      EDTCDE(Y)
+     A                                  2 26'Product Supplier Inquiry'
+     A          R SCRN2
+     A                                  1 30'CloudServices24x7, Inc.'
+     A            SUPCOD    R        O  6 42REFFLD(SUPREC/SUPCOD *LIBL/CSSU-
+     A                                      PP)
+     A                                  6 18'Supplier Code . . . . .'
+     A                                  7 18'Name. . . . . . . . . .'
+     A                                  8 18'Contact person . . . .'
+     A                                  9 18'Street . . . . . . . .'
+     A                                 10 18'City . . . . . . . . .'
+     A                                 11 18'State . . . . . . . . .'
+     A                                 12 18'Zip . . . . . . . . . .'
+     A                                 13 18'Phone . . . . . . . . .'
+     A            SNAME     R        O  7 42REFFLD(SUPREC/SNAME *LIBL/CSSU-
+     A                                      PP)
+     A            CONTAC    R        O  8 42REFFLD(SUPREC/CONTAC *LIBL/CSSU-
+     A                                      PP)
+     A            SSTRET    R        O  9 42REFFLD(SUPREC/SSTRET *LIBL/CSSU-
+     A                                      PP)
+     A            SCITY     R        O 10 42REFFLD(SUPREC/SCITY *LIBL/CSSU-
+     A                                      PP)
+     A            SSTAT     R        O 11 42REFFLD(SUPREC/SSTAT *LIBL/CSSU-
+     A                                      PP)
+     A            SZIP      R        O 12 42REFFLD(SUPREC/SZIP *LIBL/CSSU-
+     A                                      PP)
+     A                                      EDTWRD('     -    ')
+     A            SPHONE    R        O 13 42REFFLD(SUPREC/SPHONE *LIBL/CSSU-
+     A                                      PP)
+     A                                      EDTWRD('   &   -    ')
+     A                                  2 31'Supplier Information'
+     A                                 20  2'F3=Exit'
+     A                                  1  2'User ID:'
+     A                                  1 11USER
+     A                                  1 70DATE
+     A                                      EDTCDE(Y)
+     A                                 17  5'Press Enter to continue.'
+
+
+
