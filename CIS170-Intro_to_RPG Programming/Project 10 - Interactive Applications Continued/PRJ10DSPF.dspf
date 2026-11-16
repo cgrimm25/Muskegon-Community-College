@@ -1,0 +1,63 @@
+     A*=========================================================================
+     A* Institution: Muskegon Community College
+     A* Course:      CIS170 - Intro to RPG Programming
+     A* Instructor:  Char Parker
+     A* Project:     Project #10 - Student Exam Results
+     A* File:        PRJ10DSPF.DSPF
+     A* Programmer:  Chris Grimm
+     A* Date:        11/18/2020
+     A*
+     A* Description:
+     A*   Interactive display file for the Student Exam Results inquiry
+     A*   application. Defines two screen formats:
+     A*   SCRN1: Prompts for a student number input (STUNO) and displays
+     A*          a conditionally mapped validation error message (Ind 90).
+     A*   SCRN2: Displays retrieved student information and test scores
+     A*          utilizing REFFLD to inherit data attributes from WUEXAMP.
+     A*
+     A* Used By:     PROJECT10.RPGLE
+     A*=========================================================================
+     A
+     A                                      REF(WUEXAMP)
+     A                                      INDARA
+     A          R SCRN1
+     A                                      CA03(03 'F3=Exit')
+     A                                  1 28'Wibaux University'
+     A                                 13 18'Type value, then Press Enter.'
+     A                                 10 18'Student Number . . . .'
+     A            STUNO     R        I 10 41
+     A  90                                  DSPATR(PC)
+     A  90                                  ERRMSG('Invalid Student Number' 90)
+     A                                 20  3'F3=Exit'
+     A                                  1  2'User ID:'
+     A                                  1 11USER
+     A                                  1 69DATE(*JOB)
+     A                                      EDTCDE(Y)
+     A                                  2 27'Student Exam Results'
+     A          R SCRN2
+     A                                      CA03(03 'F3=Exit')
+     A                                      CA12(12 'F12=Cancel')
+     A                                  1 28'Wibaux University'
+     A                                  2 27'Student Exam Results'
+     A                                  1  2'User ID:'
+     A                                  1 11USER
+     A                                  1 69DATE
+     A                                      EDTCDE(Y)
+     A            SLNAME    R        O  6 45
+     A                                  6 18'Last Name . . . . . . . .'
+     A            SFNAME    R        O  7 45
+     A                                  7 18'First Name . . . . . . . .'
+     A            EXAM1     R        O  8 45EDTCDE(3)
+     A                                  8 18'Exam 1 . . . . . . . . . .'
+     A            EXAM2     R        O  9 45EDTCDE(3)
+     A                                  9 18'Exam 2 . . . . . . . . . .'
+     A            EXAM3     R        O 10 45EDTCDE(3)
+     A                                 10 18'Exam 3 . . . . . . . . . .'
+     A            EXAM4     R        O 11 45EDTCDE(3)
+     A                                 11 18'Exam 4 . . . . . . . . . .'
+     A            EXAM5     R        O 12 45EDTCDE(3)
+     A                                 12 18'Exam 5 . . . . . . . . . .'
+     A                                 15  4'Press Enter to continue.'
+     A                                 18  2'F3=Exit'
+     A                                 18 70'F12=Cancel'
+
