@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Portfolio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="custom.css">
+        <link rel="shortcut icon" href="Images/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="Images/apple.png">
+        <link rel="icon" sizes="192x192" href="Images/android.png">
+        <!--
+        //==================================================================================
+        // Institution: Muskegon Community College
+        // Semester:    Fall 2026
+        // Course:      CIS-258-F02X Advanced HTML Web Development
+        // Instructor:  Christopher VanOosterhout
+        // Project:     Final Project - Professional Portfolio
+        // File Name:   home.html
+        // Live URL:    http://157.245.246.41:8014/FinalProject/home.html
+        // Author:      Chris Grimm
+        // Date:        11/23/2026
+        //
+        // Description:
+        //   Home page for the personal portfolio Final Project, featuring an introduction,
+        //   Bootstrap layout integration, and an interactive HTML5 Canvas.
+        //==================================================================================
+        -->
+    </head>
+
+    <!--
+        RUBRIC REQUIREMENT 9: HTML Validation (50 points)
+        Validated via the W3C Nu HTML Checker with zero HTML errors.
+    -->
+    <body class="d-flex flex-column min-vh-100">
+        <a class="visually-hidden-focusable" href="#contentstart">Skip navigation</a>
+
+        <!-- 
+            RUBRIC REQUIREMENT 6: CSS Color Gradient (10 points) 
+            The custom .hero-gradient class applies a linear-gradient background from custom.css.
+            RUBRIC REQUIREMENT 4: Visual Design and Consistency (20 points)
+            Maintains a cohesive, professional appearance across all pages using a shared 
+            Bootstrap 5 + custom.css design system, consistent gradient header, dark navbar 
+            and footer, unified typography, and balanced card spacing.
+        -->
+        <header class="hero-gradient text-dark py-4">
+            <div class="container d-flex align-items-center justify-content-between">
+                <a href="home.html" class="d-flex align-items-center text-dark text-decoration-none">
+                    <img src="Images/icon.png" alt="Logo" width="50" height="50" class="me-3 rounded">
+                    <h1 class="h3 mb-0">My Professional Portfolio</h1>
+                </a>
+            </div>
+        </header>
+
+        <!-- 
+            RUBRIC REQUIREMENT 1: Framework Implementation (20 points)
+            RUBRIC REQUIREMENT 8: Responsive Design (50 points)
+            Utilizes Bootstrap 5's responsive navbar component and toggler for mobile devices.
+            RUBRIC REQUIREMENT 3: Content, Navigation, and Organization (10 points)
+            Consistent sticky navigation bar across all pages with active-page indicators 
+            and logical separation of portfolio sections (Home, Skills, Education, Experience, 
+            Projects, and Contact) for intuitive user flow.
+        
+        -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Documents/resume.pdf" target="_blank">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Documents/README.txt" target="_blank">Read Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactme.html">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="contentstart" class="container my-5 flex-grow-1">
+            <!-- 
+                RUBRIC REQUIREMENT 5: Multi-Column Layouts (35 points)
+                Implements a responsive two-column grid (col-md-8 and col-md-4) that adapts to screen size.
+            -->
+            <div class="row align-items-center g-4 mb-5">
+                <div class="col-md-8">
+                    <h2 class="display-6 fw-bold">I'm Chris Grimm,<br><span class="text-primary">a Software Engineer</span></h2>
+                    <p class="lead mt-3">Welcome to my portfolio website. Here you can learn about my skills, education, experience, and projects I have worked on. Watch below to learn more about me and the content found on this site.</p>
+
+                    <div class="mt-4">
+                        <a href="https://www.linkedin.com/in/cgrimm25/" target="_blank" class="btn btn-outline-primary d-inline-flex align-items-center gap-2">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="20" height="20">
+                            Connect with me on LinkedIn
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="Images/self.jpg" class="img-fluid rounded shadow profile-photo" width="216" height="288" alt="Photo of Chris Grimm">
+                </div>
+            </div>
+
+            <!-- Two-Column Media & Canvas Row -->
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 card-title mb-3">Welcome to My Website!</h3>
+                            <div class="ratio ratio-16x9">
+                                <video src="Video/introductionvideo.mp4" controls poster="Images/introductionvideo.png" class="rounded"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 
+                     RUBRIC REQUIREMENT 7: HTML Canvas (25 points) 
+                     A working interactive implementation of the <canvas> element.
+                     RUBRIC REQUIREMENT 11: Going Beyond the Basics (40 points)
+                     Implements interactive object-oriented JavaScript animation (requestAnimationFrame) 
+                     and mouse-tracking geometry logic not covered in standard coursework.
+                -->
+                <div class="col-lg-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title mb-3">Interactive Skill Visualization</h3>
+                            <p class="small text-muted">Move your mouse to connect the tech stack nodes.</p>
+                            <div class="border rounded flex-grow-1 d-flex align-items-center justify-content-center canvas-wrapper">
+                                <canvas id="portfolioCanvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-4 mt-auto">
+            <div class="container">
+                <p class="mb-1">Grand Rapids, MI</p>
+                <p class="mb-1"><a href="mailto:thechrischarlesgrimm@gmail.com" class="text-white text-decoration-none">thechrischarlesgrimm@gmail.com</a></p>
+                <p class="mb-0">(616) 888-9791</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="JavaScript/canvas.js"></script>
+    </body>
+
+</html>

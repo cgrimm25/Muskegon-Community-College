@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Experience</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="custom.css">
+        <link rel="shortcut icon" href="Images/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="Images/apple.png">
+        <link rel="icon" sizes="192x192" href="Images/android.png">
+        <!--
+        //==================================================================================
+        // Institution: Muskegon Community College
+        // Semester:    Fall 2026
+        // Course:      CIS-258-F02X Advanced HTML Web Development
+        // Instructor:  Christopher VanOosterhout
+        // Project:     Final Project - Professional Portfolio
+        // File Name:   experience.html
+        // Live URL:    http://157.245.246.41:8014/FinalProject/experience.html
+        // Author:      Chris Grimm
+        // Date:        11/23/2026
+        //
+        // Description:
+        //   Relevant work experience structured using responsive Bootstrap cards instead 
+        //   of legacy HTML tables to meet rubric layout requirements.
+        //==================================================================================
+        -->
+    </head>
+
+    <!--
+        RUBRIC REQUIREMENT 9: HTML Validation (50 points)
+        Validated via the W3C Nu HTML Checker with zero HTML errors.
+    -->
+    <body class="d-flex flex-column min-vh-100">
+        <a class="visually-hidden-focusable" href="#contentstart">Skip navigation</a>
+
+        <!-- 
+            RUBRIC REQUIREMENT 6: CSS Color Gradient (10 points) 
+            The custom .hero-gradient class applies a linear-gradient background from custom.css.
+            RUBRIC REQUIREMENT 4: Visual Design and Consistency (20 points)
+            Maintains a cohesive, professional appearance across all pages using a shared 
+            Bootstrap 5 + custom.css design system, consistent gradient header, dark navbar 
+            and footer, unified typography, and balanced card spacing.
+        -->
+        <header class="hero-gradient text-dark py-4">
+            <div class="container d-flex align-items-center justify-content-between">
+                <a href="home.html" class="d-flex align-items-center text-dark text-decoration-none">
+                    <img src="Images/icon.png" alt="Logo" width="50" height="50" class="me-3 rounded">
+                    <h1 class="h3 mb-0">Experience</h1>
+                </a>
+            </div>
+        </header>
+
+        <!-- 
+            RUBRIC REQUIREMENT 1: Framework Implementation (20 points)
+            RUBRIC REQUIREMENT 8: Responsive Design (50 points)
+            Utilizes Bootstrap 5's responsive navbar component and toggler for mobile devices.
+            RUBRIC REQUIREMENT 3: Content, Navigation, and Organization (10 points)
+            Consistent sticky navigation bar across all pages with active-page indicators 
+            and logical separation of portfolio sections (Home, Skills, Education, Experience, 
+            Projects, and Contact) for intuitive user flow.
+        -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="experience.html">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Documents/resume.pdf" target="_blank">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Documents/README.txt" target="_blank">Read Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contactme.html">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main id="contentstart" class="container my-5 flex-grow-1">
+            <div class="mb-4">
+                <h2>Relevant Work Experience</h2>
+                <p class="text-muted">Read below for a list of my current and past work experience.</p>
+            </div>
+
+            <!-- 
+                RUBRIC REQUIREMENT 5: Multi-Column Layouts (35 points)
+                Implements a responsive two-column grid inside cards (col-md-3 for logos, col-md-9 for text).
+                No HTML tables are used for this layout.
+            -->
+            <div class="card mb-4 shadow-sm experience-card">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-3 text-center p-4 bg-light border-end">
+                        <h3 class="h6 fw-bold mb-2">MEDHOST</h3>
+                        <img src="Images/medhost.png" alt="Company 1 Logo" class="img-fluid" style="max-height: 100px;">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h4 class="h5 card-title fw-bold mb-1">Senior Software Engineer </h4>
+                            <p class="text-muted fst-italic mb-3">12/15/25 – 5/15/26</p>
+                            <ul class="mb-0">
+                                <li>Developed and maintained backend healthcare software functionality using IBM i technologies, including advanced RPGLE and SQL-based programming.</li>
+                                <li>Implemented customer-requested enhancements and resolved complex production issues through thorough code analysis and debugging.</li>
+                                <li>Collaborated with R&D team to streamline development methodologies and ensure consistent software delivery processes.</li>
+                                <li>Investigated escalated application behaviors, conducted design reviews, and partnered with Support teams to troubleshoot across environments.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm experience-card">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-3 text-center p-4 bg-light border-end">
+                        <h3 class="h6 fw-bold mb-2">WellSky</h3>
+                        <img src="Images/wellsky.png" alt="Company 2 Logo" class="img-fluid" style="max-height: 100px;">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h4 class="h5 card-title fw-bold mb-1">Associate Software Engineer</h4>
+                            <p class="text-muted fst-italic mb-3">3/4/24 – 12/12/25</p>
+                            <ul class="mb-0">
+                                <li>Engineered core electronic health record (EHR) features by writing procedural backend logic and embedded SQL for IBM i environments.</li>
+                                <li>Developed SQL stored procedures and leveraged JSON payloads to interface DB2 for i core database systems with frontend web applications.</li>
+                                <li>Participated in Agile ceremonies-including sprint planning, stand-ups, and backlog refinement-to deliver product releases on schedule.</li>
+                                <li>Authored comprehensive technical documentation to facilitate future system maintainability, troubleshooting, and continuous development.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm experience-card">
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-3 text-center p-4 bg-light border-end">
+                        <h3 class="h6 fw-bold mb-2">CU*Answers</h3>
+                        <img src="Images/cua.png" alt="Company 3 Logo" class="img-fluid" style="max-height: 100px; transform: scale(1.3);">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h4 class="h5 card-title fw-bold mb-1">Jr. Programmer</h4>
+                            <p class="text-muted fst-italic mb-3">6/14/21 – 1/12/24</p>
+                            <ul class="mb-0">
+                                <li>Programmed high-volume transactional backend systems using RPGLE, CLLE, and SQLRPGLE to support credit union financial operations and vendor integrations.</li>
+                                <li>Utilized DB2 for i and embedded SQL to securely retrieve, process, and validate financial data across relational database structures.</li>
+                                <li>Improved application reliability by debugging legacy programs, executing rigorous data validation, and implementing standard-compliant code modifications.</li>
+                                <li>Partnered with business analysts and operations staff to translate functional requirements into efficient, reliable IBM i technical solutions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-4 mt-auto">
+            <div class="container">
+                <p class="mb-1">Grand Rapids, MI</p>
+                <p class="mb-1"><a href="mailto:thechrischarlesgrimm@gmail.com" class="text-white text-decoration-none">thechrischarlesgrimm@gmail.com</a></p>
+                <p class="mb-0">(616) 888-9791</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>

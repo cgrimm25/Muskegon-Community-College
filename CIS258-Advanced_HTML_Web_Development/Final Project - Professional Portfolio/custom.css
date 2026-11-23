@@ -1,0 +1,100 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-258-F02X Advanced HTML Web Development
+// Instructor:  Christopher VanOosterhout
+// Project:     Final Project - Professional Portfolio
+// File Name:   custom.css
+// Live URL:    http://157.245.246.41:8014/FinalProject/custom.css
+// Author:      Chris Grimm
+// Date:        11/23/2026
+//
+// Description:
+//   Custom stylesheet to override Bootstrap defaults and satisfy the CSS Color
+//   Gradient and CSS nth Selector requirements for the Final Project.
+//==================================================================================
+*/
+
+/* ==========================================================
+   RUBRIC REQUIREMENT 6: CSS Color Gradient (10 points)
+   Applies a linear-gradient background to page headers.
+   ========================================================== */
+.hero-gradient {
+    /* Brushed steel gray gradient */
+    background: linear-gradient(135deg, #8e9eab 0%, #eef2f3 100%);
+}
+
+/* ==========================================================
+   RUBRIC REQUIREMENT 2: CSS nth Selectors (10 points)
+   Uses :nth-child selectors to style alternating items.
+   ========================================================== */
+/* First Use: Alternate background colors on the Skills list (skills.html) */
+.skills-list li:nth-child(odd) {
+  background-color: #ffffff; /* White */
+}
+.skills-list li:nth-child(even) {
+  background-color: #f8f9fa; /* Subtle light gray */
+}
+
+/* Second Use: Highlight alternating project list items (projects.html) */
+.project-links li:nth-child(even) span {
+  color: #0a3d62;
+}
+
+/* ==========================================================
+   RUBRIC REQUIREMENT 4: Visual Design and Consistency (20 points)
+   RUBRIC REQUIREMENT 8: Responsive Design (50 points)
+   Smooth hover elevation, canvas styling, and responsive container sizing.
+   ========================================================== */
+
+/* Make the experience and project cards smoothly elevate when you hover over them */
+.card,
+.skills-list,
+.profile-photo {
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.card:hover,
+.skills-list:hover,
+.profile-photo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ==========================================================
+   RUBRIC REQUIREMENT 7: HTML Canvas (25 points)
+   RUBRIC REQUIREMENT 11: Going Beyond the Basics (40 points)
+   Container and responsive fill rules for interactive canvas animation (home.html).
+   ========================================================== */
+
+/* Container wrapper to hold the canvas */
+.canvas-wrapper {
+    background-color: #1e272e;
+    overflow: hidden;
+    position: relative;
+    min-height: 250px;
+}
+
+/* Force canvas to strictly fill its responsive parent */
+#portfolioCanvas {
+    background-color: #1e272e;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================================
+   RUBRIC REQUIREMENT 3: Content, Navigation, and Organization (10 points)
+   RUBRIC REQUIREMENT 8: Responsive Design (50 points)
+   Scrollable project list container for clean layout flow (projects.html).
+   ========================================================== */
+.project-scroll-box {
+    max-height: 230px;
+    overflow-y: auto;
+}
