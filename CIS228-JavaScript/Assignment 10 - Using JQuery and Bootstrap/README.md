@@ -5,6 +5,13 @@ The Personal Portfolio Landing Page is a responsive single-page web application 
 
 ---
 
+## Instructor Resources & Video Walkthroughs
+
+* [jQuery and Bootstrap Repository](https://github.com/profcorrello/JQuery-and-Bootstrap) – Upstream course repository containing the responsive Bootstrap and jQuery live demonstration, starter templates, and assignment instructions.
+* [CIS 228 Modern JavaScript Frameworks](https://www.youtube.com/watch?v=VSa8NS9UncQ&feature=youtu.be) – Course lecture and demonstration covering modern JavaScript libraries and frameworks, Bootstrap integration, and jQuery interactivity.
+
+---
+
 ## File Directory
 
 ### Primary Application Objects (`/`)
