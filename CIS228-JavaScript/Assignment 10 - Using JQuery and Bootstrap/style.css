@@ -1,0 +1,38 @@
+/*
+//==================================================================================
+// Institution: Muskegon Community College
+// Semester:    Fall 2026
+// Course:      CIS-228-F01X JavaScript
+// Instructor:  Clayton Corrello
+// Project:     Assignment #10 - Using jQuery and Bootstrap
+// File Name:   style.css
+// Author:      Clayton Corrello (Adapted by Chris Grimm)
+// Date:        11/24/2026
+//
+// Description:
+//   Custom stylesheet supplementing Bootstrap 5 styles for the hero section,
+//   collapsible feature card details, and contact form validation messages.
+//==================================================================================
+*/
+
+/* Custom CSS Styling for the Portfolio */
+ 
+/* Styles for the Hero Section */
+.hero-section {
+    background-color: #eef7ff; /* Light blue background */
+    border-radius: 0 0 30px 30px; /* Rounded bottom corners */
+}
+ 
+/* Styling for the hidden content area */
+.hidden-content {
+    background-color: #fff3cd; /* Light yellow background for emphasis */
+    border-color: #ffc107;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+ 
+/* Styling for the error message area */
+.error-message {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}

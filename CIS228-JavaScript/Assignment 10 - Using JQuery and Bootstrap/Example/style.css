@@ -1,0 +1,29 @@
+/* Custom CSS for the Demo Project */
+
+body {
+    background-color: #f8f9fa; /* Light background */
+}
+
+header {
+    padding: 20px 0;
+    background-color: #e9ecef; /* Light header background */
+    border-bottom: 3px solid #007bff; /* Highlight the header */
+}
+
+/* Styling for the card grid to give it visual separation */
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the tab content background to make the interaction clear */
+.tab-pane {
+    border-left: 3px solid #007bff;
+}

@@ -1,0 +1,27 @@
+/* Custom CSS Styling for the Portfolio */
+
+/* Styles for the Hero Section */
+.hero-section {
+    background-color: #eef7ff; /* Light blue background */
+    border-radius: 0 0 30px 30px; /* Rounded bottom corners */
+}
+
+/* Styling for the hidden content area */
+.hidden-content {
+    background-color: #fff3cd; /* Light yellow background for emphasis */
+    border-color: #ffc107;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Styling for the error message area */
+.error-message {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+}
+
+/* Optional: Visual feedback for the main button */
+#start-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+}
